@@ -1,5 +1,5 @@
 from contextlib import asynccontextmanager
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import get_settings
 
@@ -30,7 +30,18 @@ def create_app() -> FastAPI:
 
 app = create_app()
 
+from app.auth.router import router as auth_router
+app.include_router(auth_router)
+
 
 @app.get("/health")
 async def health():
     return {"status": "ok"}
+
+
+from app.core.deps import get_current_user
+
+# Placeholder work-orders route (will be replaced in Phase 2)
+@app.get("/work-orders")
+async def work_orders_placeholder(user: dict = Depends(get_current_user)):
+    return {"code": 0, "message": "success", "data": []}
