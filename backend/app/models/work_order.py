@@ -27,9 +27,9 @@ class WoLine(Base, TimestampMixin, TenantMixin):
     __tablename__ = "wo_line"
 
     id: Mapped[str] = mapped_column(primary_key=True, default=lambda: str(uuid.uuid4()))
-    wo_id: Mapped[str] = mapped_column(nullable=False)
+    wo_id: Mapped[str] = mapped_column(ForeignKey("work_order.id"), nullable=False)
     line_no: Mapped[int] = mapped_column(SmallInteger, nullable=False)
-    material_id: Mapped[str] = mapped_column(nullable=False)
+    material_id: Mapped[str] = mapped_column(ForeignKey("material.id"), nullable=False)
     qty_ordered: Mapped[int] = mapped_column(Integer, nullable=False)
     qty_shipped: Mapped[int] = mapped_column(Integer, default=0)
     qty_received: Mapped[int] = mapped_column(Integer, default=0)

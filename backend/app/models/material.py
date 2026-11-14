@@ -1,6 +1,6 @@
 import uuid
 from decimal import Decimal
-from sqlalchemy import String, Boolean, Numeric
+from sqlalchemy import String, Boolean, Numeric, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.models.base import Base, TimestampMixin, TenantMixin
 
@@ -23,7 +23,7 @@ class MaterialAlias(Base, TimestampMixin, TenantMixin):
     __table_args__ = ()
 
     id: Mapped[str] = mapped_column(primary_key=True, default=lambda: str(uuid.uuid4()))
-    material_id: Mapped[str] = mapped_column(nullable=False)
+    material_id: Mapped[str] = mapped_column(ForeignKey("material.id"), nullable=False)
     alias_code: Mapped[str] = mapped_column(String(50), nullable=False)
     source: Mapped[str] = mapped_column(String(50), default="idh")
 
