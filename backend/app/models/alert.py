@@ -1,6 +1,7 @@
 import uuid
 from datetime import datetime
-from sqlalchemy import String, Text, Boolean, DateTime
+from sqlalchemy import func, String, Text, Boolean, DateTime
+from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column
 from app.models.base import Base, TimestampMixin, TenantMixin
 
@@ -8,7 +9,7 @@ from app.models.base import Base, TimestampMixin, TenantMixin
 class Alert(Base, TimestampMixin, TenantMixin):
     __tablename__ = "alert"
 
-    id: Mapped[str] = mapped_column(primary_key=True, default=lambda: str(uuid.uuid4()))
+    id: Mapped[str] = mapped_column(UUID(as_uuid=True), primary_key=True, server_default=func.gen_random_uuid())
     alert_type: Mapped[str] = mapped_column(String(30), nullable=False, index=True)
     severity: Mapped[str] = mapped_column(String(20), default="warning")
     title: Mapped[str] = mapped_column(String(200), nullable=False)

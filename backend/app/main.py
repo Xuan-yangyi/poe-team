@@ -2,6 +2,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import get_settings
+from app.core.response import JSONResponse
 
 
 @asynccontextmanager
@@ -13,10 +14,12 @@ async def lifespan(app: FastAPI):
 
 def create_app() -> FastAPI:
     settings = get_settings()
+
     app = FastAPI(
         title=settings.app_name,
         version="0.1.0",
         lifespan=lifespan,
+        default_response_class=JSONResponse,
     )
     app.add_middleware(
         CORSMiddleware,

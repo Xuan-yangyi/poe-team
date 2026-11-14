@@ -1,6 +1,7 @@
 import uuid
 from datetime import date
-from sqlalchemy import String, Integer, SmallInteger, Date
+from sqlalchemy import func, String, Integer, SmallInteger, Date
+from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column
 from app.models.base import Base, TimestampMixin, TenantMixin
 
@@ -8,9 +9,9 @@ from app.models.base import Base, TimestampMixin, TenantMixin
 class Shipment(Base, TimestampMixin, TenantMixin):
     __tablename__ = "shipment"
 
-    id: Mapped[str] = mapped_column(primary_key=True, default=lambda: str(uuid.uuid4()))
+    id: Mapped[str] = mapped_column(UUID(as_uuid=True), primary_key=True, server_default=func.gen_random_uuid())
     dn_no: Mapped[str] = mapped_column(String(30), unique=True, nullable=False)
-    wo_id: Mapped[str] = mapped_column(nullable=False)
+    wo_id: Mapped[str] = mapped_column(UUID(as_uuid=True), nullable=False)
     idh_id: Mapped[str] = mapped_column(String(50), nullable=False, index=True)
     status: Mapped[str] = mapped_column(String(20), default="draft")
     eta: Mapped[date | None] = mapped_column(Date, nullable=True)
@@ -21,11 +22,11 @@ class Shipment(Base, TimestampMixin, TenantMixin):
 class ShipmentLine(Base, TimestampMixin, TenantMixin):
     __tablename__ = "shipment_line"
 
-    id: Mapped[str] = mapped_column(primary_key=True, default=lambda: str(uuid.uuid4()))
-    shipment_id: Mapped[str] = mapped_column(nullable=False)
+    id: Mapped[str] = mapped_column(UUID(as_uuid=True), primary_key=True, server_default=func.gen_random_uuid())
+    shipment_id: Mapped[str] = mapped_column(UUID(as_uuid=True), nullable=False)
     line_no: Mapped[int] = mapped_column(SmallInteger, nullable=False)
-    material_id: Mapped[str] = mapped_column(nullable=False)
-    lot_id: Mapped[str] = mapped_column(nullable=False)
+    material_id: Mapped[str] = mapped_column(UUID(as_uuid=True), nullable=False)
+    lot_id: Mapped[str] = mapped_column(UUID(as_uuid=True), nullable=False)
     container_id: Mapped[str] = mapped_column(String(50), nullable=False)
     parent_container_id: Mapped[str] = mapped_column(String(50), default="")
     container_type: Mapped[str] = mapped_column(String(20), default="reel")
@@ -36,10 +37,10 @@ class ShipmentLine(Base, TimestampMixin, TenantMixin):
 class GoodsReceipt(Base, TimestampMixin, TenantMixin):
     __tablename__ = "goods_receipt"
 
-    id: Mapped[str] = mapped_column(primary_key=True, default=lambda: str(uuid.uuid4()))
+    id: Mapped[str] = mapped_column(UUID(as_uuid=True), primary_key=True, server_default=func.gen_random_uuid())
     dn_no: Mapped[str] = mapped_column(String(30), nullable=False)
     container_id: Mapped[str] = mapped_column(String(50), nullable=False)
-    lot_id: Mapped[str] = mapped_column(nullable=False)
+    lot_id: Mapped[str] = mapped_column(UUID(as_uuid=True), nullable=False)
     qty_received: Mapped[int] = mapped_column(Integer, nullable=False)
     qty_shipped: Mapped[int] = mapped_column(Integer, nullable=False)
     diff_reason: Mapped[str] = mapped_column(String(20), default="")

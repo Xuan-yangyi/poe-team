@@ -1,7 +1,8 @@
 import uuid
 from datetime import date
 from decimal import Decimal
-from sqlalchemy import String, Integer, SmallInteger, Date, Numeric, ForeignKey
+from sqlalchemy import String, Integer, SmallInteger, Date, Numeric, ForeignKey, func
+from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.models.base import Base, TimestampMixin, TenantMixin
 
@@ -9,7 +10,7 @@ from app.models.base import Base, TimestampMixin, TenantMixin
 class WorkOrder(Base, TimestampMixin, TenantMixin):
     __tablename__ = "work_order"
 
-    id: Mapped[str] = mapped_column(primary_key=True, default=lambda: str(uuid.uuid4()))
+    id: Mapped[str] = mapped_column(UUID(as_uuid=True), primary_key=True, server_default=func.gen_random_uuid())
     wo_no: Mapped[str] = mapped_column(String(30), unique=True, nullable=False)
     idh_id: Mapped[str] = mapped_column(String(50), nullable=False, index=True)
     customer_id: Mapped[str] = mapped_column(String(50), default="")
@@ -26,10 +27,10 @@ class WorkOrder(Base, TimestampMixin, TenantMixin):
 class WoLine(Base, TimestampMixin, TenantMixin):
     __tablename__ = "wo_line"
 
-    id: Mapped[str] = mapped_column(primary_key=True, default=lambda: str(uuid.uuid4()))
-    wo_id: Mapped[str] = mapped_column(ForeignKey("work_order.id"), nullable=False)
+    id: Mapped[str] = mapped_column(UUID(as_uuid=True), primary_key=True, server_default=func.gen_random_uuid())
+    wo_id: Mapped[str] = mapped_column(UUID(as_uuid=True), ForeignKey("work_order.id"), nullable=False)
     line_no: Mapped[int] = mapped_column(SmallInteger, nullable=False)
-    material_id: Mapped[str] = mapped_column(ForeignKey("material.id"), nullable=False)
+    material_id: Mapped[str] = mapped_column(UUID(as_uuid=True), ForeignKey("material.id"), nullable=False)
     qty_ordered: Mapped[int] = mapped_column(Integer, nullable=False)
     qty_shipped: Mapped[int] = mapped_column(Integer, default=0)
     qty_received: Mapped[int] = mapped_column(Integer, default=0)

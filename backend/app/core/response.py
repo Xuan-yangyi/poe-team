@@ -1,6 +1,31 @@
 from enum import IntEnum
+import uuid
+import json
+import datetime
+from decimal import Decimal
 from typing import Any, Optional
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse as _JSONResponse
+
+
+class CustomEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, uuid.UUID):
+            return str(obj)
+        if isinstance(obj, datetime.datetime):
+            return obj.isoformat()
+        if isinstance(obj, datetime.date):
+            return obj.isoformat()
+        if isinstance(obj, Decimal):
+            return float(obj)
+        return super().default(obj)
+
+
+class JSONResponse(_JSONResponse):
+    def render(self, content) -> bytes:
+        return json.dumps(
+            content, ensure_ascii=False, allow_nan=False, indent=None,
+            separators=(",", ":"), cls=CustomEncoder,
+        ).encode("utf-8")
 
 
 class ErrorCode(IntEnum):

@@ -1,6 +1,7 @@
 import uuid
 from decimal import Decimal
-from sqlalchemy import String, Boolean, Numeric, ForeignKey
+from sqlalchemy import func, String, Boolean, Numeric, ForeignKey
+from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.models.base import Base, TimestampMixin, TenantMixin
 
@@ -8,7 +9,7 @@ from app.models.base import Base, TimestampMixin, TenantMixin
 class Material(Base, TimestampMixin, TenantMixin):
     __tablename__ = "material"
 
-    id: Mapped[str] = mapped_column(primary_key=True, default=lambda: str(uuid.uuid4()))
+    id: Mapped[str] = mapped_column(UUID(as_uuid=True), primary_key=True, server_default=func.gen_random_uuid())
     material_code: Mapped[str] = mapped_column(String(50), unique=True, nullable=False)
     description: Mapped[str] = mapped_column(String(500), default="")
     unit: Mapped[str] = mapped_column(String(20), default="pcs")
@@ -22,8 +23,8 @@ class MaterialAlias(Base, TimestampMixin, TenantMixin):
     __tablename__ = "material_alias"
     __table_args__ = ()
 
-    id: Mapped[str] = mapped_column(primary_key=True, default=lambda: str(uuid.uuid4()))
-    material_id: Mapped[str] = mapped_column(ForeignKey("material.id"), nullable=False)
+    id: Mapped[str] = mapped_column(UUID(as_uuid=True), primary_key=True, server_default=func.gen_random_uuid())
+    material_id: Mapped[str] = mapped_column(UUID(as_uuid=True), ForeignKey("material.id"), nullable=False)
     alias_code: Mapped[str] = mapped_column(String(50), nullable=False)
     source: Mapped[str] = mapped_column(String(50), default="idh")
 

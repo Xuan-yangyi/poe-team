@@ -1,6 +1,7 @@
 import uuid
 from datetime import datetime, timezone
 from sqlalchemy import String, Integer, DateTime, func
+from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column
 from app.models.base import Base, TenantMixin
 
@@ -8,9 +9,9 @@ from app.models.base import Base, TenantMixin
 class StockLedger(Base, TenantMixin):
     __tablename__ = "stock_ledger"
 
-    id: Mapped[str] = mapped_column(primary_key=True, default=lambda: str(uuid.uuid4()))
-    material_id: Mapped[str] = mapped_column(nullable=False)
-    lot_id: Mapped[str] = mapped_column(nullable=False)
+    id: Mapped[str] = mapped_column(UUID(as_uuid=True), primary_key=True, server_default=func.gen_random_uuid())
+    material_id: Mapped[str] = mapped_column(UUID(as_uuid=True), nullable=False)
+    lot_id: Mapped[str] = mapped_column(UUID(as_uuid=True), nullable=False)
     idh_id: Mapped[str] = mapped_column(String(50), default="")
     owner: Mapped[str] = mapped_column(String(20), default="factory")
     status: Mapped[str] = mapped_column(String(20), default="available")

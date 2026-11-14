@@ -2,7 +2,7 @@ import uuid
 from datetime import datetime
 from decimal import Decimal
 from sqlalchemy import String, Integer, Numeric, DateTime, Text, BigInteger
-from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy.dialects.postgresql import JSONB, UUID
 from sqlalchemy.orm import Mapped, mapped_column
 from app.models.base import Base, TimestampMixin, TenantMixin
 
@@ -26,8 +26,8 @@ class ReconItem(Base, TimestampMixin, TenantMixin):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     period_id: Mapped[int] = mapped_column(Integer, nullable=False)
-    material_id: Mapped[str] = mapped_column(nullable=False)
-    lot_id: Mapped[str] = mapped_column(nullable=False)
+    material_id: Mapped[str] = mapped_column(UUID(as_uuid=True), nullable=False)
+    lot_id: Mapped[str] = mapped_column(UUID(as_uuid=True), nullable=False)
     diff_code: Mapped[str] = mapped_column(String(10), nullable=False)
     qty_a: Mapped[int] = mapped_column(Integer, default=0)
     qty_b: Mapped[int] = mapped_column(Integer, default=0)
@@ -46,7 +46,7 @@ class Adjustment(Base, TimestampMixin, TenantMixin):
     adj_no: Mapped[str] = mapped_column(String(30), unique=True, nullable=False)
     period_id: Mapped[int] = mapped_column(Integer, nullable=False)
     recon_item_id: Mapped[int] = mapped_column(Integer, nullable=False)
-    lot_id: Mapped[str] = mapped_column(nullable=False)
+    lot_id: Mapped[str] = mapped_column(UUID(as_uuid=True), nullable=False)
     qty_before: Mapped[int] = mapped_column(Integer, nullable=False)
     qty_after: Mapped[int] = mapped_column(Integer, nullable=False)
     diff_code: Mapped[str] = mapped_column(String(10), nullable=False)
