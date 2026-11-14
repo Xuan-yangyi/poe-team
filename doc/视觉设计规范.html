@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html data-page-node-id="qJ5POQ5U9LuaUgq8TWtL48" lang="zh-CN">
+<head data-page-node-id="ugyUlWHteSIFzmHOezgonP">
+<script data-page-node-id="oiCjirQWGpU1GuTonZeCl1" src="/page/page_comm/inject.js"></script>
+<meta data-page-node-id="7ijamWCPlQ2QTSDhJMqk4M" charset="UTF-8">
+<meta data-page-node-id="q09A9l8QIsD9A3W9FCaBIg" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="0Jct9kM8LuOqLN4XNRv36j" data-pnid-children="W0s8CunWXYz3LBbjwfvz2h">视觉设计规范 v1.0｜IDH 协同平台</title>
+<style data-page-node-id="bAnnPjdA9qu80p1Bqk6UFW" data-pnid-children="iWpCw1On5rvyaUXK9kaZqN">
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0A0F1E; --ink-2:#1B2436; --body:#3F4B60; --muted:#6B7A90; --faint:#98A4B8;
+  --line:#E7EBF3; --line-2:#F0F3F9; --canvas:#F6F8FC; --paper:#FFFFFF;
+  --brand:#4F46E5; --brand-2:#7C3AED; --brand-soft:#EEF0FF;
+  --cyan:#06B6D4; --lime:#A3E635; --coral:#FB7185;
+  --ok:#10B981; --warn:#F59E0B; --danger:#EF4444; --info:#0EA5E9;
+  --r-sm:8px; --r-md:12px; --r-lg:16px; --r-xl:22px;
+  --sh-1:0 1px 2px rgba(10,15,30,.05);
+  --sh-2:0 2px 4px rgba(10,15,30,.04),0 12px 28px -12px rgba(10,15,30,.10);
+  --sh-3:0 24px 60px -24px rgba(10,15,30,.22);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{
+  background:var(--canvas); color:var(--body);
+  font-family:"Inter",-apple-system,BlinkMacSystemFont,"PingFang SC","HarmonyOS Sans SC","Microsoft YaHei",sans-serif;
+  font-size:15.5px; line-height:1.8;
+}
+#bar{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--brand),var(--cyan));z-index:99;transition:width .1s linear}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:var(--ink);color:#fff;padding:96px 0 88px}
+.hero:before{content:"";position:absolute;inset:-40% -10% auto -10%;height:140%;
+  background:
+    radial-gradient(48% 60% at 18% 22%,rgba(79,70,229,.55),transparent 62%),
+    radial-gradient(42% 54% at 78% 12%,rgba(6,182,212,.34),transparent 66%),
+    radial-gradient(38% 46% at 58% 88%,rgba(124,58,237,.42),transparent 64%);
+  filter:blur(12px)}
+.hero:after{content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:64px 64px;mask-image:radial-gradient(70% 60% at 50% 40%,#000 20%,transparent 78%)}
+.hero .wrap{position:relative;z-index:2}
+.wrap{max-width:1160px;margin:0 auto;padding:0 40px}
+.tagline{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:#C7D2FE;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);
+  border-radius:999px;padding:6px 14px;backdrop-filter:blur(8px)}
+.tagline i{width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 12px var(--lime)}
+h1{font-size:clamp(38px,5.4vw,62px);line-height:1.05;letter-spacing:-.035em;font-weight:800;margin:22px 0 0;color:#fff}
+h1 em{font-style:normal;background:linear-gradient(96deg,#A5B4FC,#67E8F9 58%,#C4B5FD);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.sub{font-size:17px;line-height:1.85;color:#B9C4D6;max-width:620px;margin:20px 0 0}
+.hero .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.hero .chips span{font-size:12px;color:#DCE3F0;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:5px 12px}
+
+/* ---------- sections ---------- */
+section{padding:76px 0 8px}
+section.tight{padding-top:56px}
+.eyebrow{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--brand);font-weight:700;display:flex;align-items:center;gap:10px}
+.eyebrow:before{content:"";width:22px;height:2px;background:linear-gradient(90deg,var(--brand),var(--cyan));border-radius:2px}
+h2{font-size:clamp(26px,3vw,34px);line-height:1.25;letter-spacing:-.025em;font-weight:800;color:var(--ink);margin:12px 0 10px}
+h3{font-size:17px;font-weight:700;letter-spacing:-.01em;color:var(--ink-2);margin:34px 0 10px;display:flex;align-items:center;gap:8px}
+h3:before{content:"";width:5px;height:5px;border-radius:50%;background:var(--brand);flex:none}
+p{color:var(--body);max-width:74ch;margin:12px 0}
+p.lead{font-size:16.5px;color:#4A566B;max-width:70ch}
+strong{color:var(--ink);font-weight:650}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;background:var(--brand-soft);color:#3B2FBE;padding:1px 6px;border-radius:5px}
+
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 28px;box-shadow:var(--sh-1);transition:transform .24s var(--ease),box-shadow .24s var(--ease)}
+.card:hover{transform:translateY(-2px);box-shadow:var(--sh-2)}
+.grid{display:grid;gap:14px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+
+/* keywords */
+.kw .num{font-size:11px;letter-spacing:.18em;color:var(--faint);font-weight:700}
+.kw h4{font-size:20px;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin:8px 0 6px}
+.kw p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.75}
+
+/* swatches */
+.sw{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden}
+.sw .chip{height:78px}
+.sw .meta{padding:12px 14px}
+.sw .meta b{display:block;font-size:13px;color:var(--ink);font-weight:700}
+.sw .meta span{font-size:11.5px;color:var(--faint);font-family:ui-monospace,monospace}
+.sw .meta em{display:block;font-style:normal;font-size:11.5px;color:var(--muted);margin-top:4px;line-height:1.6}
+
+/* type scale */
+.ts{display:flex;align-items:baseline;gap:18px;padding:16px 0;border-bottom:1px dashed var(--line)}
+.ts:last-child{border-bottom:0}
+.ts .spec{flex:0 0 132px;font-family:ui-monospace,monospace;font-size:11px;color:var(--faint);line-height:1.6}
+.ts .demo{color:var(--ink);font-weight:800;letter-spacing:-.02em;line-height:1.15}
+
+/* space ruler */
+.space{display:flex;align-items:center;gap:14px;margin:7px 0;font-size:11.5px;color:var(--faint);font-family:ui-monospace,monospace}
+.space i{display:block;height:12px;background:linear-gradient(90deg,var(--brand),#A5B4FC);border-radius:3px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;font-size:13.5px;font-weight:650;
+  border-radius:10px;padding:0 18px;height:40px;border:1px solid transparent;cursor:pointer;transition:.18s var(--ease);font-family:inherit}
+.btn.primary{background:linear-gradient(135deg,var(--brand),#6366F1);color:#fff;box-shadow:0 6px 18px -6px rgba(79,70,229,.55)}
+.btn.primary:hover{box-shadow:0 10px 24px -8px rgba(79,70,229,.65);transform:translateY(-1px)}
+.btn.ghost{background:var(--paper);border-color:var(--line);color:var(--ink-2)}
+.btn.ghost:hover{border-color:#CBD5E1;background:#FCFDFF}
+.btn.quiet{background:var(--brand-soft);color:var(--brand)}
+.btn.danger{background:#FEF2F2;color:var(--danger);border-color:#FEE2E2}
+.btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none;transform:none}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:650;border-radius:999px;padding:3px 10px}
+.pill:before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor}
+.pill.ok{background:#ECFDF5;color:#047857}
+.pill.warn{background:#FFFBEB;color:#B45309}
+.pill.bad{background:#FEF2F2;color:#B91C1C}
+.pill.info{background:#EFF6FF;color:#1D4ED8}
+
+/* table */
+table{width:100%;border-collapse:collapse;margin:8px 0 4px;font-size:13.5px}
+th{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);font-weight:700;text-align:left;
+  padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:12px;border-bottom:1px solid var(--line-2);color:var(--body);vertical-align:top}
+tr:hover td{background:#FAFBFF}
+td.n{font-variant-numeric:tabular-nums;text-align:right;color:var(--ink);font-weight:600}
+
+/* do dont */
+.dd{border-radius:var(--r-md);padding:18px 20px;font-size:13.5px;line-height:1.75}
+.dd b{display:block;font-size:12px;letter-spacing:.08em;margin-bottom:6px}
+.do{background:#F0FDF9;border:1px solid #CCFBEF}.do b{color:#047857}
+.dont{background:#FFF5F5;border:1px solid #FFE1E1}.dont b{color:#B91C1C}
+
+.note{background:var(--brand-soft);border-radius:var(--r-md);padding:16px 20px;font-size:13.5px;line-height:1.8;color:#3730A3;border-left:3px solid var(--brand)}
+.note b{color:#2E2A8F}
+
+footer{background:var(--ink);color:#8B98AE;padding:54px 0;margin-top:80px;font-size:12.5px}
+footer b{color:#fff;font-weight:650;display:block;margin-bottom:8px;font-size:14px}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .wrap{padding:0 22px}
+  .g3,.g4,.g2{grid-template-columns:1fr 1fr}
+  section{padding:52px 0 6px}
+  .ts{flex-direction:column;gap:6px}
+}
+@media(max-width:560px){.g3,.g4,.g2{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body data-page-node-id="TnAYEgW3PAiRFU0Vo86qXa">
+<div data-page-node-id="KZbFLGqqNwOyibKWX3tigL" id="bar"></div>
+
+<div data-page-node-id="nxJd7SqqKEEhHMjVIOM0gP" class="hero">
+  <div data-page-node-id="shXj4kbvmFD2zI5kRl7uWD" class="wrap">
+    <span data-page-node-id="D3lMVjT1ljqrKQe8YH99HQ" class="tagline"><i data-page-node-id="kTp4LIDTMq0dw88VswJRpW"></i><!--pnid:ux6pgmP3hpqx3k4cXZjgGO-->Design System · v1.0</span>
+    <h1 data-page-node-id="lDElNOChqVuSRTr8zUfomC"><!--pnid:0s0xmIjlHxyayK6vnJA7of-->视觉设计规范<br data-page-node-id="WphSvqsYD1c8j9gK0LsenY"><em data-page-node-id="90CKuxsYjcfHSiHHh7Bo6y"><!--pnid:kiGjb673k6CwMSY0v7htX1-->清爽、锐利、有节奏</em></h1>
+    <p data-page-node-id="W4iyZzdllq6QVZsJVwoqTp" class="sub"><!--pnid:yaWQxPyqTV0du6A6gDjRHp-->这不是一份"好看就行"的偏好清单，而是一套可交付、可验收的规则。开发照着它写样式，设计照着它出图，验收照着它打分。</p>
+    <div data-page-node-id="0wgrZ0UjFLUDrcdP8JimH9" class="chips">
+      <span data-page-node-id="3f6RvbyXPaQ4KbvvvmEeKl"><!--pnid:ICwGjZs46ftVd45VVUVSXs-->适用：平台 Web 端 + 车间 H5</span>
+      <span data-page-node-id="irEQfKSnfEuVn4PXl7HBLA"><!--pnid:UnFMKGMT5gShvGF3hpcB6Q-->基调：浅色为主 / 深色分段</span>
+      <span data-page-node-id="qoNSmhNanJkwBatbeWPYq7"><!--pnid:NEbWovNqRICNUrK4GYUE7m-->更新：2026-11</span>
+      <span data-page-node-id="ZcObXg2DQANhO0G8n8FZuV"><!--pnid:Brx2GuEwnEP4bLDkyDQZwH-->对照实现：IDH 协同平台方案页</span>
+    </div>
+  </div>
+</div>
+
+<section data-page-node-id="4eKcvber1U2vahS30xEKXP">
+<div data-page-node-id="wFqzPab7nw1V7XD0oP7nmg" class="wrap">
+  <div data-page-node-id="TNrCT1eh4Vp0WvpYoYRCpR" class="reveal">
+    <div data-page-node-id="lRgH61Iv762l6nMLZX29Gj" class="eyebrow"><!--pnid:85AYSBS62ztAwYXgsuknvR-->01 / 设计定位</div>
+    <h2 data-page-node-id="haKfzLyjlB1UChTpggw8Zi"><!--pnid:yLtjHOR1I43EaE0zEwBKS7-->让"对账"这种枯燥的事，看起来像一款好用的消费级产品</h2>
+    <p data-page-node-id="EDRquz0DZJXkEFu8dn4wNp" class="lead"><!--pnid:jrstAr86SmbD571GxJiIe5-->传统 To B 系统的问题不是功能少，而是<b data-page-node-id="ZZJS1nan0ZS9it2KFCGEAr"><!--pnid:1qXVrjdt7WgcUJZk66yOig-->看起来就像十年前</b><!--pnid:8DdEe6jDiZxV6FfSfV4cmq-->：灰底、密集表格、到处边框、层级靠加粗。年轻感不等于花哨，它来自三件事：<b data-page-node-id="ILmc5jwbCHyvICSEagUuzV"><!--pnid:WKxyOpcqFVScfLBubN49Bf-->留白够大、层级够清楚、动效够克制</b><!--pnid:9waKBE1sfYmHe2EOYUmpjd-->。</p>
+  </div>
+
+  <div data-page-node-id="G4eWKx1nwYVMrcEGcy47E0" class="grid g3" style="margin-top:26px">
+    <div data-page-node-id="y7wBJDaTJrWhk5FyU2eqZe" class="card kw reveal">
+      <div data-page-node-id="xzdS0H7ylST9iFy4aG6ULf" class="num"><!--pnid:JY2HbSGro8AeBLNv6bW6YY-->KEYWORD 01</div>
+      <h4 data-page-node-id="WsakhIvUqAPaqpksB4TDqK"><!--pnid:zZQlAtfynOZV4pFomq4uaP-->清爽 Airy</h4>
+      <p data-page-node-id="2ymWa3tA3OwKcdi9WBiFl6"><!--pnid:GrdEwsiI5BljnZpRCSoSnY-->大量留白、极少的线、只保留必要信息。一屏只讲一件事，让眼睛知道先看哪里。</p>
+    </div>
+    <div data-page-node-id="3sKP78Je0V07UF9WJp45Pu" class="card kw reveal">
+      <div data-page-node-id="4SU6cHVHBnZ8D23kjD7ASv" class="num"><!--pnid:QdVSn2CaKbP2eBpdWpEsmx-->KEYWORD 02</div>
+      <h4 data-page-node-id="xU9grBbEreR2Uts93yJsOU"><!--pnid:GKZInw1wiVmzDmgXzJqKJ4-->锐利 Precise</h4>
+      <p data-page-node-id="MswYzRB6XbiLEtautd0YSR"><!--pnid:uxtYAB3nFkj10jHYLnS8wB-->数字对齐、字距收紧、边缘干净。芯片行业的气质是精密，不是圆滚滚的可爱。</p>
+    </div>
+    <div data-page-node-id="c1NRI4PnwTpv4R1MtKI4kX" class="card kw reveal">
+      <div data-page-node-id="YAmQUfjyYSFWxFB80jpPpk" class="num"><!--pnid:uwIcwQvNMfzpcm6HsJMItg-->KEYWORD 03</div>
+      <h4 data-page-node-id="xe4rnt6drCVCOiCC89W9Gf"><!--pnid:7whOL86a7RYRxAa9uyvmnD-->有节奏 Rhythmic</h4>
+      <p data-page-node-id="xPAxUAn9R2WULZ5gKl2L2N"><!--pnid:Wdio6oKdnfuqJoRtW641HR-->统一 8pt 间距、统一圆角阶梯、统一动效时长。节奏感来自"一致"，不是来自装饰。</p>
+    </div>
+  </div>
+
+  <h3 data-page-node-id="HsjBsMoGf1FTBcWpTWfEUT"><!--pnid:P9fnqiQzMe8I1Ok6fZQy01-->三条边界：不做这些</h3>
+  <div data-page-node-id="QtVxLgheNNhZ403DwSCc8B" class="grid g3">
+    <div data-page-node-id="YMPow6NhOWFXAiVvwhwNJs" class="dd dont"><b data-page-node-id="4n5cU9jZGVEd8p5Gc7ZKGA"><!--pnid:6J0fdIVC6IcJlUIiTNXuNX-->不要</b><!--pnid:JYunCzszNqmobOv19t54aS-->卡通人物插画、3D 小人、夸张表情包</div>
+    <div data-page-node-id="JnL260bmv6xwKVRPtpj08H" class="dd dont"><b data-page-node-id="kZjcAKFcorGMxfEwuGoSgS"><!--pnid:qTImbXRK7E4BYgOk4eF2Dn-->不要</b><!--pnid:CrQXAzijLYxjaKXKMAiueO-->满屏渐变、霓虹描边、发光字</div>
+    <div data-page-node-id="PmLU8Zu1zXmX7y165EnM36" class="dd dont"><b data-page-node-id="B7PmJrZFhvYDl53P5XziZi"><!--pnid:TwR1QFr5xeKzgGdhZxZQbF-->不要</b><!--pnid:8wBlHy1az2fPaypbYSMI4A-->超过 22px 的大圆角，会显得幼稚</div>
+  </div>
+  <p data-page-node-id="IFpCwNOzTl2m5LwXZXhmHZ" style="margin-top:16px; font-size:13px; color:var(--muted)"><!--pnid:8kuX6cPPi9YAxf6PZx972A-->判断标准很简单：<b data-page-node-id="jhYn5MXh81dTGsPFzyI0ve"><!--pnid:e090fFIaDoPde8WcJFJTZt-->把它给一位 35 岁的采购经理看，他觉得"专业但轻松"就对了；觉得"像游戏界面"就过头了。</b></p>
+</div>
+</section>
+
+<section data-page-node-id="0vykXf5HLNZYnfewQ5XsyS">
+<div data-page-node-id="cGn87WIaXdjfOWDf3ipYSa" class="wrap">
+  <div data-page-node-id="OlEwFVRuLdvPIxUqd8tB3Z" class="reveal">
+    <div data-page-node-id="E1ThiUIPCarc3ssPhunfLq" class="eyebrow"><!--pnid:Itnq8Y6azh2zrwn1oB2dne-->02 / 色彩系统</div>
+    <h2 data-page-node-id="wyiLZSxccaOpVTQdC2FyAM"><!--pnid:8NthUhcS69Y70zWY3lCtvW-->一个主色，两个点缀，剩下交给中性灰</h2>
+    <p data-page-node-id="FVYvGCDsLfOkM8QUD01mSo"><!--pnid:nP96YOc9XekvSP9d0aZ056-->主色承担 90% 的品牌识别，青与柠檬只做"呼吸感"点缀，绝不参与信息编码。信息状态一律用语义色，不用品牌色代替。</p>
+  </div>
+
+  <h3 data-page-node-id="f4UlYM1MkuQI0cdvBDihrF"><!--pnid:J4vqDff7kUkSrvHlkqNQNc-->品牌色</h3>
+  <div data-page-node-id="GlTOvQ91ZPrRteZdEOtE24" class="grid g4">
+    <div data-page-node-id="x5jV33WNFkHLE6cHpXQ1dv" class="sw reveal"><div data-page-node-id="LEDQRV4T7Vlfobmv19zmWG" class="chip" style="background:#4F46E5"></div><div data-page-node-id="GynOGU8aXAxuZLQhGh6axD" class="meta"><b data-page-node-id="nPIGTZE18elnJmYlXdkNbN"><!--pnid:dnbsV2Wudb1zKtGvsj8K1B-->Brand 600</b><span data-page-node-id="QlQQIRDZ2V4YfgTBXqVsEU"><!--pnid:NidnTmcD6ChuxXhqJGdk9N-->#4F46E5</span><em data-page-node-id="rOKyiccWHq7BF9TnNNNZ18"><!--pnid:yYTyzDtyZCaAtGLTqNxgtr-->主按钮、链接、选中态</em></div></div>
+    <div data-page-node-id="BLcKYxLWt4WpHRerEFkvUg" class="sw reveal"><div data-page-node-id="YT7BcwzyOyMAgITYwREQsJ" class="chip" style="background:linear-gradient(135deg,#4F46E5,#7C3AED)"></div><div data-page-node-id="F8UskHUe77XyGblUB2Hf82" class="meta"><b data-page-node-id="PnsqKgDThefZDbGmBENJCy"><!--pnid:PkPTLEtyZpVyfsVBg7vonT-->Brand Gradient</b><span data-page-node-id="04KWByUNHPvAezyLo7kV6w"><!--pnid:RfMGGBK9I4TilbC2zN0LRF-->#4F46E5 → #7C3AED</span><em data-page-node-id="SoHo4zluuzB090xaIIfSmw"><!--pnid:oQvIa4oTdUyPeaQ8mE0Nso-->仅用于主按钮与重点数字</em></div></div>
+    <div data-page-node-id="6M7R1Dz6gbJlzi8VOFwTQT" class="sw reveal"><div data-page-node-id="HlB3ByBzA8qUbeei8zvwr1" class="chip" style="background:#EEF0FF"></div><div data-page-node-id="Qs5m1mSYRJGTMO3yE5wozn" class="meta"><b data-page-node-id="5iRqByuEgcH4EajozsFFt5"><!--pnid:SSRThwU5c4NmFk0LioL9eE-->Brand Soft</b><span data-page-node-id="mUOUio7oLtSSnE1nzD6B8F"><!--pnid:W8L9gl6rqgfZXHDqrRjCXr-->#EEF0FF</span><em data-page-node-id="DqocJuyKDTQ8YcY7For0Pn"><!--pnid:Fx2eF0KMzhZaMB8idUPPQK-->浅底、标签背景、hover 行</em></div></div>
+    <div data-page-node-id="uStoSh2PhnTDT0TvOlmLyl" class="sw reveal"><div data-page-node-id="Q4LTXOsDOdg9wbSASQ1LwR" class="chip" style="background:#06B6D4"></div><div data-page-node-id="ThOaXepgMIFV29qtjHtLNB" class="meta"><b data-page-node-id="5IFFAIOOqAtLmjgs4hzqCp"><!--pnid:AsGExpTbo8qM384oMxFlfe-->Cyan 500</b><span data-page-node-id="egQH8zDSaAeVz4RiFZhfwY"><!--pnid:ExDaFarNTLdLD4ztcjPH3r-->#06B6D4</span><em data-page-node-id="Ci7i7LooRkOlW4SAjmUE3k"><!--pnid:gSunRF7JUewGcnOGrpRcqI-->图表第二色、进度、点缀</em></div></div>
+  </div>
+
+  <h3 data-page-node-id="gTDVBFifPMqqL2Uvyg3nM6"><!--pnid:II45AMd8jb7hZ6F2fgokCD-->中性色（页面的 90%）</h3>
+  <div data-page-node-id="YFosXxs6yib75XKPrFiG1P" class="grid g4">
+    <div data-page-node-id="QXnLSSOiLZ6fWZQUfsUQmu" class="sw reveal"><div data-page-node-id="PXQVpqKIj4FqZ6Q6Z1n5KM" class="chip" style="background:#0A0F1E"></div><div data-page-node-id="LG0G8ZlaQuY9Z6OYqyML5y" class="meta"><b data-page-node-id="hSj9udmGCEm4dtlk8NSSU4"><!--pnid:kRWtpExKK9a6qTgv56wUTb-->Ink 900</b><span data-page-node-id="Tjw8FOm519jKcIkkoHciau"><!--pnid:oKxo2SV2m1yzqKR2VVzNSe-->#0A0F1E</span><em data-page-node-id="jLfmrwyqxZJW7NqK7YkgKb"><!--pnid:6VEbZJhnhUnCiTOVVaqcYj-->标题、深色区块底</em></div></div>
+    <div data-page-node-id="V985oXWy36ZNq6K6KjkZmX" class="sw reveal"><div data-page-node-id="oN6Cp1LcaJhvdR23V6pCDU" class="chip" style="background:#3F4B60"></div><div data-page-node-id="TprvNuf9gbp3puiCViyrNb" class="meta"><b data-page-node-id="aXbVmyNgvjBQfYQZctwvQf"><!--pnid:D0bgdnPhoswoWMD50k8NHm-->Body</b><span data-page-node-id="j7XQtnVzplc4pcJ0mBRMmO"><!--pnid:W1ap626stybBnR2lOhWrlz-->#3F4B60</span><em data-page-node-id="qoewfhNpViMK8KKUh0MAin"><!--pnid:OavY6AHoAS5VwSlDx66AyR-->正文</em></div></div>
+    <div data-page-node-id="CiwBHhY7jVN8W2Byw3Jgdz" class="sw reveal"><div data-page-node-id="tKaITlwq7QOXIjfY1wMknF" class="chip" style="background:#6B7A90"></div><div data-page-node-id="yQiuh5ydjnB2gDyRRAV61W" class="meta"><b data-page-node-id="kbxn5Pc9lmeMOyAEvRsaZA"><!--pnid:yJ5v2Mt1O53s2a9IB75hA9-->Muted</b><span data-page-node-id="jQPV7oa4ldIXGKn5xb0Rr4"><!--pnid:bbUrXavAsGCaFet8PwWcct-->#6B7A90</span><em data-page-node-id="EcOTJGlqmIZon1LH7PDTnn"><!--pnid:5pGuTaaNPKFW6poHeDlsfA-->辅助说明、图注</em></div></div>
+    <div data-page-node-id="bk494pRMIXaDAdeKbuuMut" class="sw reveal"><div data-page-node-id="iwJ0Bm2YJtH2s5nx6T3ecp" class="chip" style="background:#F6F8FC; border-bottom:1px solid #E7EBF3"></div><div data-page-node-id="kx8vxoUCwFR4ZoPYVsExs3" class="meta"><b data-page-node-id="Rm2YGWWSjxIH8lQfpYSTQh"><!--pnid:gKBwKOS5VIMIIXC5fncWLC-->Canvas</b><span data-page-node-id="oqL5xTascWnyiQD7eWJ3gb"><!--pnid:smPDFD0k0VtmMBJjgLkgqP-->#F6F8FC</span><em data-page-node-id="l446F052KfldlcjCQoIlu1"><!--pnid:jnhQ2IblAlQCyqBIpD5Gb2-->页面底色（冷灰，不用纯灰）</em></div></div>
+  </div>
+
+  <h3 data-page-node-id="uNkXbxl7ZCCHHpe2lHAdWg"><!--pnid:X4pTx8tzQanzrQLlksT2xN-->语义色</h3>
+  <div data-page-node-id="midcgd2y3uxzBBdGffe8iD" class="grid g4">
+    <div data-page-node-id="g08qdq3DgWrKCBY2veZdnE" class="sw reveal"><div data-page-node-id="jNdXQPUaVy9V2UwS13sER8" class="chip" style="background:#10B981"></div><div data-page-node-id="2tnl1MEYTNZlp40TvZIKC3" class="meta"><b data-page-node-id="vGGRM3XbOcANHqiP52R0f2"><!--pnid:tCTmDON7RRHr2PaS67cLe8-->Success</b><span data-page-node-id="ZtmBs1wNefItvtYaqNEWxX"><!--pnid:jA15Pnwy4KjjUGQGTVUmbJ-->#10B981</span><em data-page-node-id="stqDZbZ8tJ6CoSjx2rfZWo"><!--pnid:72GBHmWTx0BAs8Kd50pplw-->账实相符、已关闭</em></div></div>
+    <div data-page-node-id="a0b2CmzwNoRJ02Sar5CfFx" class="sw reveal"><div data-page-node-id="wbacZQbgVDIDrg76ahLVMJ" class="chip" style="background:#F59E0B"></div><div data-page-node-id="5VvtaCPn0VXOeh2sk700Zk" class="meta"><b data-page-node-id="w9rdDsqE7V0BsyyPRXVBJu"><!--pnid:rpALT8GAV0EjHlMpzodwMi-->Warning</b><span data-page-node-id="kubmfUMOSgQ3rfFheVnwSV"><!--pnid:weuHRnVNdWjyiEnFZe6k8N-->#F59E0B</span><em data-page-node-id="m8NQM34i4TuwPlYLuwAhgq"><!--pnid:zl9msAO21Nj16udL3eQWt5-->接近安全线、待处理</em></div></div>
+    <div data-page-node-id="hc1rt1DbIbYyLyjF5SFSP6" class="sw reveal"><div data-page-node-id="m6oepCE2PLTOFSZ0SmHv8d" class="chip" style="background:#EF4444"></div><div data-page-node-id="Uqbmt2b75aVsPuzquUMZ1x" class="meta"><b data-page-node-id="utla73P8bkRqpXg20zBwF1"><!--pnid:rcekqEDZGSatMQbRBrkblK-->Danger</b><span data-page-node-id="c5jFQY8yGfNTkVROJAzrKT"><!--pnid:RSOKrNoFZ0jxGBaQ2brvR4-->#EF4444</span><em data-page-node-id="y6MmumGFDCAf4HGyc7hMju"><!--pnid:vnSE8yUJaHR62IwwLMnZDP-->差异超标、超期</em></div></div>
+    <div data-page-node-id="afizZwgV8puxPADw8cKuqN" class="sw reveal"><div data-page-node-id="1x2AJD0WWZQBwUP2jZHz0D" class="chip" style="background:#0EA5E9"></div><div data-page-node-id="Y3OCFl3XlOcJ15FtHaHGcA" class="meta"><b data-page-node-id="KKL2mVAmWVO2HZqpU9XpgE"><!--pnid:aXL0WjHnhHaYC5pw72ZQ2Z-->Info</b><span data-page-node-id="RXC0quRoXn3uLknEKD27k0"><!--pnid:SIuDuRCCu5bHaoVbR35mm6-->#0EA5E9</span><em data-page-node-id="tDIk7osPEHgvM35ylwdGVz"><!--pnid:N2U8usrhmCrAezaHuXM0vW-->在途、进行中</em></div></div>
+  </div>
+
+  <div data-page-node-id="ovesE1thJ4apKnnh8jzCWf" class="note" style="margin-top:22px">
+    <b data-page-node-id="tWu32YdKEajBSupjJTyuD2"><!--pnid:pGmYrT4ocGKmROKylbEwcZ-->配色三条硬规则：</b><!--pnid:OozKm9DF9m3y5PatcMOwkS-->① 一屏内高饱和色不超过 2 处；② 渐变最多两个色相，角度固定 135°（品质感来自一致，不来自变化）；③ 禁止纯黑 <code data-page-node-id="eHocIMmhOwgxqDBBMPjqwR" data-pnid-children="dMgcDfKq7gj5TG56lXfRal">#000</code><!--pnid:6HYMOrFdWkcUANc52vVLPo--> 与纯灰 <code data-page-node-id="HEZwq9qRKPbWt25NLWoYtW" data-pnid-children="rlXy1A8X1fTaI93USyIzfZ">#808080</code><!--pnid:usxNdRvi42Lx3fH6oIsprz-->，全部用带蓝调的墨色与冷灰。正文对比度 ≥ 4.5:1，大字 ≥ 3:1。
+  </div>
+</div>
+</section>
+
+<section data-page-node-id="8zq2OGRgTZgzdbkUz6tzzd">
+<div data-page-node-id="8LdllmkRIKXbQR9dD3sXeA" class="wrap">
+  <div data-page-node-id="N0j78TfCxOD49VabHSVHXu" class="reveal">
+    <div data-page-node-id="KeuCr6nZCvz1xclL82m0rZ" class="eyebrow"><!--pnid:FlbRXS9A8jaVtqZLB8pf0i-->03 / 字体与字阶</div>
+    <h2 data-page-node-id="9xXyx1iLFts72nh6ExjyCt"><!--pnid:GCwkhHZNYxTvqjQwKktvC9-->标题压紧、正文放松、数字对齐</h2>
+    <p data-page-node-id="NVSsJQXkGqWJTNOQdbLBLC"><!--pnid:LjwIFncCiQsZGuwMc5V76R-->年轻感很大程度来自"字距"：大标题收紧 <code data-page-node-id="jspmCgBRbhb1EGTFS35A03" data-pnid-children="D0GqxyUyVYF7f5i2BWQoCL">-0.03em</code><!--pnid:pWCk2ZJi21PwycgpyNnkQ0--> 会显得锋利、现代；正文保持默认字距保证可读。中文优先 HarmonyOS Sans SC / PingFang SC，数字与英文用 Inter。</p>
+  </div>
+
+  <div data-page-node-id="eFSlSlzQ6rFjxEpCMZ38EB" class="card reveal" style="margin-top:22px">
+    <div data-page-node-id="XOGllubCM75PN6d0wWF4HA" class="ts"><div data-page-node-id="YfTbP9VUcjwAM79LC5RKg0" class="spec"><!--pnid:Mf7jh5gFRAjZtMeMOgi02C-->Display / 62 / 800<br data-page-node-id="eJRoX0d5uIC0kRSgaFPmN4"><!--pnid:hD3TGPBGR39CTaaHf4cBCb-->-0.035em</div><div data-page-node-id="d3vSUQ71lWgakHk6vxls0y" class="demo" style="font-size:44px"><!--pnid:mUC3cvEf1HLblXK4c1Sdyt-->对账，不该靠猜</div></div>
+    <div data-page-node-id="xfStSq7qt8Etpk02IldwxZ" class="ts"><div data-page-node-id="h1rcP229BvIHX84RhTpK19" class="spec"><!--pnid:woNuFoLVnwk9RsxLsP6Etj-->H2 / 34 / 800<br data-page-node-id="4MlvCM3oLMY7dZ3sLYipV0"><!--pnid:DYlETA7XsXSFiYmBtjrrZU-->-0.025em</div><div data-page-node-id="iRuDxs6wwgAOJH0PWvSiri" class="demo" style="font-size:30px"><!--pnid:WzmV6177NtreiHLfoK9zCO-->三账对齐模型</div></div>
+    <div data-page-node-id="X3DWfnO9U6owKjpiIPOCUA" class="ts"><div data-page-node-id="oDo9Vu4n2Eqt70e5IPFTEh" class="spec"><!--pnid:6S4FVHVBBbuuucY5ZnGre5-->H3 / 17 / 700<br data-page-node-id="mTpABmDoJULRbSqxT28ZbF"><!--pnid:W8TAFSsBZheDivlM0cUiJA-->-0.01em</div><div data-page-node-id="4s2BLaKpqtR7d6UdpMvQBy" class="demo" style="font-size:17px"><!--pnid:0OejW72RGnfRrKhkrsL8RJ-->差异必须落到可归因的类别</div></div>
+    <div data-page-node-id="JyULH4gJWSIJKhgMJPmArf" class="ts"><div data-page-node-id="0f33TYHXrR1ycL2tfXcwqm" class="spec"><!--pnid:OVw7cdrz6VTWjcqplUdYoW-->Body / 15.5 / 400<br data-page-node-id="pgdHWYviZY1f8LJcgEDRPw"><!--pnid:zLAQgjxdoBrEYEc6QiOGnn-->1.8 行高</div><div data-page-node-id="YcjnxczSO7WsiXwFuAlbXP" class="demo" style="font-size:15.5px; font-weight:400; letter-spacing:0; color:#3F4B60; line-height:1.8"><!--pnid:0NXTYciZN3Ah9PsmP3ttk9-->期初 + 发货 − 退货 − 已确认消耗 = 应在 IDH 库存。所有账目由事件累加得出，不允许人工直接改数。</div></div>
+    <div data-page-node-id="R5VQu9SNiyyi0A93lPi2MW" class="ts"><div data-page-node-id="a0rGGf1X5Akef19QKQwmnO" class="spec"><!--pnid:BSQhvOJ8Ptv1rllx4xGKD1-->Micro / 11 / 700<br data-page-node-id="jwOdiyZJhVmLlvDVXtRwj3"><!--pnid:wqMPzwyLJVEtazSssdgfDx-->0.16em 大写</div><div data-page-node-id="MIEZSXM4NiCsxEU60KgYRI" class="demo" style="font-size:11px; letter-spacing:.16em; color:#6B7A90"><!--pnid:AMD2r5jFfgQXzfEeFTAwfY-->RECONCILIATION · T+1</div></div>
+  </div>
+
+  <h3 data-page-node-id="4IDtv7oiHyIcX4ldzlOZ46"><!--pnid:r0ggka5mWpJf5G3pZEIHlY-->数字排版</h3>
+  <p data-page-node-id="2fcKuO1uN9YHsgVxW4B23I"><!--pnid:t9673Rmr16JSZNZOW1nv5s-->所有数量、金额、比率必须开启 <code data-page-node-id="t8nhixzcHKNb60vRFIusEl" data-pnid-children="EyYa2UUfhv8fSTfCMrpuFz">font-variant-numeric: tabular-nums</code><!--pnid:NX7rtfV7eM0ClWI7w3a0oJ-->，并在表格中右对齐。这是"精密感"最廉价也最有效的来源——错位的数字会立刻让系统显得业余。</p>
+</div>
+</section>
+
+<section data-page-node-id="CfE7D1STQr1egvrp7BWs3y">
+<div data-page-node-id="9W8t1jP0aSOjSHtDJ6RHWu" class="wrap">
+  <div data-page-node-id="6yymSbI4a6VooDlboHZzV6" class="reveal">
+    <div data-page-node-id="EK0IwiJZjJ9pmlrGIIgOcc" class="eyebrow"><!--pnid:wE1RNSAyztWgzUX29QxM7m-->04 / 间距、栅格与形状</div>
+    <h2 data-page-node-id="dvXTyqxO6vG8bPvQlJO97Z"><!--pnid:TdtOxG4Vsp3HDdfKdmVzzc-->8pt 基准，四档圆角</h2>
+    <p data-page-node-id="qQfNyC90A4bxSKOjeqVNcm"><!--pnid:gZdG0OlK15MwcvoPrk7cLB-->所有间距取自 4 的倍数，主用 8/12/16/24/32/48。圆角只有四档，不允许自由取值。</p>
+  </div>
+
+  <div data-page-node-id="rw4rRYm6M4zomYUeTNTSCA" class="grid g2" style="margin-top:22px">
+    <div data-page-node-id="KRXJ41dyd5BoI4fhHVVxJj" class="card reveal">
+      <h3 data-page-node-id="5WoibFnZ3zDM1Ntti5V6ff" style="margin-top:0"><!--pnid:l7Ti6AAx8JWzwQgsvwrdoj-->间距刻度</h3>
+      <div data-page-node-id="ifCbKOFPn6BSmfBwK8DKzW" class="space"><i data-page-node-id="jaTVpJsenQQaSi6yIKNUay" style="width:4px"></i><!--pnid:L7C2dsFPMW5ZXiGHIpwevS-->4 · 图标与文字</div>
+      <div data-page-node-id="5OsYKww8ym8GqdEMH4zFmA" class="space"><i data-page-node-id="LRSqRbX400oieYd04xIO3U" style="width:8px"></i><!--pnid:PVIK3qNPDsWVe56ajMiPFr-->8 · 行内元素</div>
+      <div data-page-node-id="UwMxFFSyU8NOqnLYiqkDel" class="space"><i data-page-node-id="N1ZpzzJZehsr0enXgJWc4d" style="width:12px"></i><!--pnid:Pj6x9URuXaNCT3aLpZKs64-->12 · 表单项</div>
+      <div data-page-node-id="OJcNNR1iJ5fMnoPAaU8G9w" class="space"><i data-page-node-id="kEo1X7xa2uzJraHfr2jfEH" style="width:16px"></i><!--pnid:jI5WXjK1NN3GV9AMhgQajO-->16 · 卡片内边距（小）</div>
+      <div data-page-node-id="ls52tWJCGBaSI3VBwffjCN" class="space"><i data-page-node-id="nq9Ss8FmPEhUBGmToPRVkT" style="width:24px"></i><!--pnid:3zNlwJCOoNbT28g4z8ANLE-->24 · 卡片内边距（中）</div>
+      <div data-page-node-id="OMSWOq3YPwCIoRquTKYt21" class="space"><i data-page-node-id="tnqLFEpwPBHROJejUMRBJG" style="width:32px"></i><!--pnid:QMTlbGRx9el6hNJo8lhrfm-->32 · 卡片间距</div>
+      <div data-page-node-id="Kd8ezPPgV33EIWdUVio0LN" class="space"><i data-page-node-id="2h02mpasHsGuN06138m3oQ" style="width:56px"></i><!--pnid:AdDxxnUa3rBCc4Uj8kZ4X3-->56 · 区块间距</div>
+      <div data-page-node-id="8BJu2ewF9q2fTS5wOiMSCX" class="space"><i data-page-node-id="7gEFFmXQtxewId82gGnw0n" style="width:88px"></i><!--pnid:EzcZcPKlfv4drr6JtjLgr7-->88 · 章节间距</div>
+    </div>
+    <div data-page-node-id="HRe8TdmA4m9KpP96SJDAFr" class="card reveal">
+      <h3 data-page-node-id="8zeOxT3HNz2tAJkWfDJoR7" style="margin-top:0"><!--pnid:b6PhzDyeLt1ZYh7ukkfXR2-->圆角阶梯</h3>
+      <div data-page-node-id="V3t4Ga5eGB3mMGrhBqwCDZ" style="display:flex; gap:14px; align-items:flex-end; margin:6px 0 14px">
+        <div data-page-node-id="DiKh6MegEuqB2lSXptkmis" style="text-align:center"><div data-page-node-id="kVEMFoCbC2jTTXKcLdrU6V" style="width:64px; height:64px; background:var(--brand-soft); border:1px solid #DDE1FF; border-radius:8px"></div><div data-page-node-id="TObBaN05IwXoyg2OCgQfB5" style="font-size:11px; color:var(--faint); margin-top:6px"><!--pnid:t33YrhPKNoSyAQFBuGGz2m-->8 小元件</div></div>
+        <div data-page-node-id="ZY7k4BhBueLSaftXw62FJ4" style="text-align:center"><div data-page-node-id="PIjeMvON9QjyxZ7maYYg3s" style="width:64px; height:64px; background:var(--brand-soft); border:1px solid #DDE1FF; border-radius:12px"></div><div data-page-node-id="l412zygakbbbNJkMs2OhkS" style="font-size:11px; color:var(--faint); margin-top:6px"><!--pnid:eEqFzvwLvo3crhdHcVabXS-->12 输入框</div></div>
+        <div data-page-node-id="RZ43jNOqoSveAGCWIwWrr1" style="text-align:center"><div data-page-node-id="jVPB1H5gSImarnMkd8Z5RZ" style="width:64px; height:64px; background:var(--brand-soft); border:1px solid #DDE1FF; border-radius:16px"></div><div data-page-node-id="SHJxKdL4gBbA8ViNIkRWlh" style="font-size:11px; color:var(--faint); margin-top:6px"><!--pnid:L3vR9FRJ2iPQoSxrddpKn8-->16 卡片</div></div>
+        <div data-page-node-id="yHagUNolNqARdu2gE8ypJu" style="text-align:center"><div data-page-node-id="lhRa3pGic6Pzgyo4bSxNPa" style="width:64px; height:64px; background:var(--brand-soft); border:1px solid #DDE1FF; border-radius:22px"></div><div data-page-node-id="5jLXCWyEPDF5df1hHSdWtb" style="font-size:11px; color:var(--faint); margin-top:6px"><!--pnid:g3HqlVD1gjKkC3uVV5Ircx-->22 大容器</div></div>
+        <div data-page-node-id="kWfzDl6afGR0AteFjULXZn" style="text-align:center"><div data-page-node-id="iWVK11Dxs2OFl7T5eI0zzM" style="width:64px; height:26px; background:var(--brand-soft); border:1px solid #DDE1FF; border-radius:999px"></div><div data-page-node-id="rvkh9eZNIZ4xkNloVT0f9f" style="font-size:11px; color:var(--faint); margin-top:6px"><!--pnid:yoZy4YQNcdgd42JhGT4UOr-->999 胶囊</div></div>
+      </div>
+      <p data-page-node-id="Rznh67XDRmzOeuAYPDlCLd" style="font-size:13px; color:var(--muted); max-width:none"><!--pnid:lZLBa77DFIqgqVC7npTG05-->超过 22px 的圆角只允许出现在胶囊按钮与标签上。卡片一律 16px——这是"现代但不幼稚"的分界线。</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section data-page-node-id="vplDm5ftbTITp31coFhaid">
+<div data-page-node-id="AponA76RVAsOccDIimRUTs" class="wrap">
+  <div data-page-node-id="4FQ4S7h6WbpiwTmdlm8Gv7" class="reveal">
+    <div data-page-node-id="XfpTf6VTLfwT8wN0EGjg86" class="eyebrow"><!--pnid:7a7eZh43hAwUmZ7tSzykjo-->05 / 组件规范</div>
+    <h2 data-page-node-id="NrCmCjQK3VmYEO0EAoGQWU"><!--pnid:SVdSEuEWiOyoUAMZuAXGwP-->能靠描边解决的，就不要加阴影</h2>
+    <p data-page-node-id="J8BaF663Rk3tAk4MNopGsn"><!--pnid:idcqVyqxYCefClYNxYrLhG-->层次优先顺序：<b data-page-node-id="t3j1FkppKuTckfXRsjZYnn"><!--pnid:rf17r1lEfKwWaTG5ph8Ehv-->留白 &gt; 描边 &gt; 底色差 &gt; 阴影</b><!--pnid:kN545Z8mKm82bwjrUMt366-->。全站阴影只有三档，且只用于悬浮层与重点卡片。</p>
+  </div>
+
+  <h3 data-page-node-id="fQjCvPuejUn754mwZaa2pR"><!--pnid:LdO0JpM2OOJjS5CwwANmNe-->按钮</h3>
+  <div data-page-node-id="FyQSjMCEgEgfF0MiRFXmAW" class="card reveal" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center">
+    <button data-page-node-id="kfCwZFLJlxzn0DqZHGwQnF" class="btn primary"><!--pnid:mmZy37SEskswdxFFaaSMUS-->下达工单</button>
+    <button data-page-node-id="MW8WwrZ1jEmB0MkItuoS2R" class="btn ghost"><!--pnid:ChhRojfdV5kMJlXLOWb3Is-->导出对账单</button>
+    <button data-page-node-id="b7DxpQSTjoZ1QXVaiudNQv" class="btn quiet"><!--pnid:sQJYi6G4BEm9M0N7iTsjS7-->查看差异</button>
+    <button data-page-node-id="oBf5o50KVxxYf7iBBrASC4" class="btn danger"><!--pnid:GyaA1olYkUt9GuFcNNwkP6-->申请调整</button>
+    <button data-page-node-id="rRcYWOga9e89b7pNNuqJGy" class="btn primary" disabled><!--pnid:zqgfz8i3JAKHaoDeQuAy7P-->已锁账</button>
+    <span data-page-node-id="Bgqb2wZYoJaTHrPv5lHxB9" style="font-size:12px; color:var(--faint); margin-left:6px"><!--pnid:eRGlJWH2DRs074uyBrW67Y-->高度 40 · 圆角 10 · 图标与文字间距 7</span>
+  </div>
+
+  <h3 data-page-node-id="DlNGvJbmJ6B17DnNvuuInT"><!--pnid:BzahUqTper678g9Ws2Kxli-->状态标签</h3>
+  <div data-page-node-id="N7PXRZAy0gbyzMS34xDcsr" class="card reveal" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center">
+    <span data-page-node-id="mITjQZJk5hYixAhgS0KVsg" class="pill ok"><!--pnid:9kSuG5nCr22uLtCn8CUjT7-->账实相符</span>
+    <span data-page-node-id="k4Cp1eFl7qOhFCC0Yq76Mv" class="pill warn"><!--pnid:Lcut4tZT9RqL1Q9Mqfsyny-->待申辩</span>
+    <span data-page-node-id="luvBuuI8XO4DwEceBtgS4E" class="pill bad"><!--pnid:zmiBHiHy6Nz0XxEOdvRcGa-->差异超标</span>
+    <span data-page-node-id="WVkVJWZgsuw7wsAU00Ciad" class="pill info"><!--pnid:SqdpyP1FCBFpRuNABJWODN-->在途</span>
+    <span data-page-node-id="5b9tBWmQjwxYIR4tWaeOjm" style="font-size:12px; color:var(--faint); margin-left:6px"><!--pnid:cCbkE6pAa7yotPMEOj7cIp-->状态 = 圆点 + 文字，绝不只用颜色区分（色盲可用）</span>
+  </div>
+
+  <h3 data-page-node-id="M3xQCjZNRRnihy21uoaEBY"><!--pnid:Tr6wSaWfiw3M3YYBc9cL8c-->数据表格</h3>
+  <div data-page-node-id="3pSCynPiQzCzlRPj6SfqWF" class="card reveal" style="padding:8px 20px 12px">
+    <table data-page-node-id="84MFlXrpa1Z2WpmUmSpMOe">
+      <thead data-page-node-id="bCDcvTJcacPo6vTSBdHsVp"><tr data-page-node-id="rfeQYpExFXMECGuK3uTnzg"><th data-page-node-id="S3uQX19KECLaM0Ye3KTrv9"><!--pnid:P1LnBl5gnePrLFviDjwWw9-->料号</th><th data-page-node-id="a5LkxFCVgUAzV3T2pwftAx"><!--pnid:BqjJjnvaokXMiy9y87cc7E-->IDH</th><th data-page-node-id="jWJK2zJr6zexui4Rqhs2en" style="text-align:right"><!--pnid:oJ5b1Xwwv8RkUSmhuWcH3Z-->原厂账</th><th data-page-node-id="qFvtCnFflNQ8VllLcR6h3A" style="text-align:right"><!--pnid:4DrD15bvybb4Ry3Lse8Zx4-->IDH 账</th><th data-page-node-id="wwJvNHGtz1nzw61Yky4oXi" style="text-align:right"><!--pnid:IlBmU6Cc3mR3sz5bnV08y6-->差异率</th><th data-page-node-id="ZvfE33Yn1PiAaYUUkixro1"><!--pnid:8KlO9EPNOnP3efoIl0wgxO-->状态</th></tr></thead>
+      <tbody data-page-node-id="DANuyqWuNmhdPKdZJAsyqe">
+        <tr data-page-node-id="xGwJ851nvpKtxZaZQm58UQ"><td data-page-node-id="BCGMuhorLS4tdMl2tY8Dow"><!--pnid:WbtfZh6QFGJ8dTw85bw31J-->BM1684X-BGA-01</td><td data-page-node-id="Rm5ac9Y3tckJoEWH5L0XaV"><!--pnid:tAYipKT34LznWpdRZg0I98-->华东某方案商</td><td data-page-node-id="nXoicosz1vcH8PGqTypUJv" class="n"><!--pnid:mqFmP7c4VXtfZDMOwRRVh6-->1,800</td><td data-page-node-id="JESsbdZAB8d9R3dUxQ4VfI" class="n"><!--pnid:20Xc6ycOWPP2UPvKWhU9Ok-->1,820</td><td data-page-node-id="wHQvUxiEiqc3h3DgDkajhd" class="n"><!--pnid:7sxzC5jO3EjdOwyKpx0z4j-->0.11%</td><td data-page-node-id="Yb500gL4i7cdjSgTnVisLU"><span data-page-node-id="A3LSVlWMVa5Zz9f9jyAwPH" class="pill ok"><!--pnid:JWKkwuTzx1XOcfgHnQD4IU-->相符</span></td></tr>
+        <tr data-page-node-id="OOFw7A9ppp6NNyN4r7S2ks"><td data-page-node-id="dKoAxlLpAav5VT5eJmS9DL"><!--pnid:Ualiydy0lZEHb8uVbkqjEC-->BM1684X-BGA-01</td><td data-page-node-id="J506kMW5p9H4EoGMqgTBrh"><!--pnid:S89HiHU4c3ML9zqax7yiti-->深圳某方案商</td><td data-page-node-id="XbREcJBWFkToWz933PWxin" class="n"><!--pnid:HGkIH83Tz8Ah2s0KrKmp2D-->6,240</td><td data-page-node-id="yyalc2mc8TvVIodViMKMsm" class="n"><!--pnid:9UDSl7L3hMAqr4YCF13wAY-->6,090</td><td data-page-node-id="gkpX7SUKfBesS6a0QXik1S" class="n" style="color:#B91C1C"><!--pnid:uPaDUd4GYpzkD36BdmHlY3-->2.40%</td><td data-page-node-id="a2fDi0g9A7dfQZc5hHMfou"><span data-page-node-id="jSjmUttcNYCrWRYk5jZul8" class="pill bad"><!--pnid:Bb98ASAcoCzYpAs2fevILM-->超标</span></td></tr>
+        <tr data-page-node-id="g0mVTHnCltvFD7Agg0rEi2"><td data-page-node-id="Wt15s6pZWr0NZZDdv7M0FK"><!--pnid:MVVhZl2AIrMCBhDmm20N4v-->SC5-LGA-02</td><td data-page-node-id="YUxVLnoi4NMMpApo8BeHAM"><!--pnid:a6a27nGqfPsp58vpQ3sIEo-->华东某方案商</td><td data-page-node-id="f3Ca9Mw5Z5VfV7QDjdQpLV" class="n"><!--pnid:wUqdxwawTaPjA72WHye1kQ-->920</td><td data-page-node-id="4Nnm4I0vuYQBSdTl22uXer" class="n"><!--pnid:5DWW0YziZrUEZh8bDWmkiY-->920</td><td data-page-node-id="Ntom4TZx8jTJr1bYhVO2RJ" class="n"><!--pnid:vHV9W18BK9iGeKtDlu1Lca-->0.00%</td><td data-page-node-id="ib1Xyd7MfJ14FKF9Xn9l7Y"><span data-page-node-id="KoiIVGwnKWRrZjw9rsdbnv" class="pill ok"><!--pnid:zApBoMNWiiiXVLJp5fQcJZ-->相符</span></td></tr>
+      </tbody>
+    </table>
+    <p data-page-node-id="X7nfNjjIgcA55xIlWexyw4" style="font-size:12px; color:var(--faint); margin:10px 0 0"><!--pnid:v9vX5vU9jPSSla7frhvewy-->无竖线 · 表头 11px 大写 · 数字右对齐 tabular-nums · 行 hover 浅蓝底</p>
+  </div>
+
+  <h3 data-page-node-id="1JjIgc9P9d7FZn3PGy7Qli"><!--pnid:gAPrZlfdjspD3f9aSk7kXK-->卡片</h3>
+  <div data-page-node-id="JHj1UfJNAwObVXYaM4auyU" class="grid g3" style="margin-top:12px">
+    <div data-page-node-id="j2efiKBWHDiXLP9TKFnTaN" class="card reveal">
+      <div data-page-node-id="bjVZfnUDMZOf1igzeqVxts" style="font-size:11px; letter-spacing:.14em; color:var(--faint); font-weight:700"><!--pnid:ya51wgrwZzA3PukrnqhJIm-->本月账实相符率</div>
+      <div data-page-node-id="BcMxsU3TvCwbqJiRvaDRAW" style="font-size:40px; font-weight:800; letter-spacing:-.03em; color:var(--ink); margin-top:8px; font-variant-numeric:tabular-nums"><!--pnid:7tCwfcJSQMTwslReqX6xBk-->99.6<span data-page-node-id="ziCDlyMV07IARFBkItAqEY" style="font-size:18px; color:var(--faint); margin-left:2px"><!--pnid:VsNMDkvniGrwpSlfjMjx6Y-->%</span></div>
+      <div data-page-node-id="kwa9YpwHpFinCbBWK3BdBr" style="font-size:12.5px; color:#047857; margin-top:2px"><!--pnid:4slyFqcULNY90aC9Vm7p4Z-->▲ 0.4pt　目标 99.5%</div>
+    </div>
+    <div data-page-node-id="Bw6VUoyC5w3UpH0ujdTBGI" class="card reveal">
+      <div data-page-node-id="3tdljhTf5PBBLnSGF1o8u6" style="font-size:11px; letter-spacing:.14em; color:var(--faint); font-weight:700"><!--pnid:gKevOB3oWQ8P1K61AMuKMB-->待处理差异</div>
+      <div data-page-node-id="XkjkM64TxEn8ZDhgJi6W7h" style="font-size:40px; font-weight:800; letter-spacing:-.03em; color:var(--ink); margin-top:8px; font-variant-numeric:tabular-nums"><!--pnid:BQLXlHDaT9uaSytMg0a6YO-->7<span data-page-node-id="wgHPRaynvY3cq7csZ5yQvV" style="font-size:16px; color:var(--faint); margin-left:4px"><!--pnid:obAuGNTK0ujKEpeDlVGAH1-->笔</span></div>
+      <div data-page-node-id="EmvWVkTd63vd0LzyZLw8qD" style="font-size:12.5px; color:#B45309; margin-top:2px"><!--pnid:pa9uLOOcg2uGpLphUpw71T-->其中 2 笔超 48h</div>
+    </div>
+    <div data-page-node-id="AShowNdzQmFBnPUlLThKU7" class="card reveal">
+      <div data-page-node-id="lrvti4uBvORTy7LAqeC18X" style="font-size:11px; letter-spacing:.14em; color:var(--faint); font-weight:700"><!--pnid:uv00oyaXX0d1ty0QMQYS7E-->对账周期</div>
+      <div data-page-node-id="pcVQnbBigXZ6NYBUCuMvwo" style="font-size:40px; font-weight:800; letter-spacing:-.03em; color:var(--ink); margin-top:8px; font-variant-numeric:tabular-nums"><!--pnid:CiVq2qjuUmoMJrcC8bcW7Y-->2.4<span data-page-node-id="Ki4zWlGUFeaw4Pkit4TDEO" style="font-size:16px; color:var(--faint); margin-left:4px"><!--pnid:qBCmiNumpA7NbZxvYJktiA-->天</span></div>
+      <div data-page-node-id="T3w6yGbx9C0JOE3v7o0VPO" style="font-size:12.5px; color:var(--muted); margin-top:2px"><!--pnid:hqIRZetT1acRjfVm57Ga6O-->较上线前 −11 天</div>
+    </div>
+  </div>
+  <p data-page-node-id="vZdEKaC7gLqkyXUwzrNYxQ" style="font-size:13px; color:var(--muted); margin-top:14px"><!--pnid:11aMpd82u9IJUG7ULnjUZ5-->KPI 卡片的规则：<b data-page-node-id="dRzKCiMxMBU8TF5Uu4a4tI"><!--pnid:0kAFayAxdXDoSqunqarzFQ-->标签 11px 灰、数字 40px 800、脚注一行说清对比</b><!--pnid:yaUubhfs4tcrF1eMzwf6ci-->。不要放图标、不要放进度条、不要三种颜色堆在一起。</p>
+</div>
+</section>
+
+<section data-page-node-id="MjgW8y3d3lQRNv43SGm6rs">
+<div data-page-node-id="90ZWVyS4XbKVdvSo7o2DVl" class="wrap">
+  <div data-page-node-id="JGtLUQb7UCnKEONQrVOfcF" class="reveal">
+    <div data-page-node-id="fxgTH4kJbJC7sIIbeFG6ft" class="eyebrow"><!--pnid:0lQX1M37rngfgW6E5W7sNJ-->06 / 动效</div>
+    <h2 data-page-node-id="uI0zqFL7JDmPFmvBBXS0Co"><!--pnid:kk5tcAtxDp0XdehRY8L34B-->只做位移和透明度，别做弹跳</h2>
+    <p data-page-node-id="jDgEuNBRGx2z9pqq21EWJs"><!--pnid:cc9Z4Sx1Oz2t7xFkMtMmmV-->动效的作用是<b data-page-node-id="IgdHhFqiHNMYDmzzr4Ndza"><!--pnid:lQ5p0NSdl7kcQPmBpXv2qS-->交代层级与因果</b><!--pnid:AmfsUrhhut7bSt1tOYaM3o-->，不是炫技。全站只允许 4 档时长，统一曲线 <code data-page-node-id="pUwYcK2l86Ts3M6ajguhjN" data-pnid-children="NWLOHbrsTmZay0X4UEnfwb">cubic-bezier(.2,.7,.2,1)</code><!--pnid:j2n8jIXMB6b4tGoa5Mop0d-->。</p>
+  </div>
+  <div data-page-node-id="3sEsPJoc1gMojUMYja8CTO" class="card reveal" style="margin-top:20px">
+    <table data-page-node-id="vd4rEIdMt7HWPaf6aBMjV5">
+      <thead data-page-node-id="LtZsNcAPsUe196sREUu8wE"><tr data-page-node-id="HBQPcULrjTxO7pxLkwJSVE"><th data-page-node-id="o9qEdY3Mtd4yiFtqfgBIev"><!--pnid:3rqhr5ilJuaWhi5cy7gwbx-->场景</th><th data-page-node-id="sKFY5nmJ52SnZJ1KmfGAgd"><!--pnid:qva9fKSIySzanHHYICzpJ6-->时长</th><th data-page-node-id="HD2WcAIfKk2DlFBPIkXuWq"><!--pnid:Sr4vKf8bRDXrFEwPQ7jbkv-->做法</th></tr></thead>
+      <tbody data-page-node-id="qDocDdnOjT3Gqi2pNDLLA9">
+        <tr data-page-node-id="uw8HHisDMQ85eziwHXPLgU"><td data-page-node-id="YmsogonxvYdnn4RPLllFUv"><!--pnid:RM4gdwZI957BpvMnsixfja-->hover / 焦点</td><td data-page-node-id="bOR004GXKqhOmO4jNPZL1I"><!--pnid:557OL89iN6Z8XPQiQm4UeO-->120–180ms</td><td data-page-node-id="o2gbdQ8aM63Y64Anj4oLtY"><!--pnid:mLTAc9n4RS7Yxmk5V5bBKG-->背景或描边变化，位移 ≤ 2px</td></tr>
+        <tr data-page-node-id="r0y438MzgXX3nsctBOsH3p"><td data-page-node-id="zwK1ZZ8g7PENpfrcPhiRL2"><!--pnid:NN5jrAgPB4o851iqTo2ZrZ-->卡片入场</td><td data-page-node-id="2mN41GfekMWpOV9irKYWEB"><!--pnid:YXMI2Kr9VTGTkBmicaJAl0-->600ms</td><td data-page-node-id="ip4NRmxsZ9U5Ll4yXtYKNY"><!--pnid:vCVf8q8ZR3gQJyVzWZCUXd-->上移 16px + 淡入，列表按 60ms 错峰</td></tr>
+        <tr data-page-node-id="Qgb64DSUPs6Gf19la7DBIP"><td data-page-node-id="9onAGxfh6aO2Nb18jPVGuI"><!--pnid:DV8PO5ftb4hfSmZLfiLztv-->弹窗 / 抽屉</td><td data-page-node-id="mqnHufvYoS51VgfSAWVjNB"><!--pnid:XeTSSNSw8lIKSQBjXkin14-->240ms</td><td data-page-node-id="2DPAt4LcHKBkec6WOzHoUE"><!--pnid:p5VJxxFmSaATeX0AfKq1Em-->透明度 + 位移，不加缩放</td></tr>
+        <tr data-page-node-id="lMxlzAm9SaukKB9LIU8Zr5"><td data-page-node-id="5b9Wn7PbPDPVISV9g71biX"><!--pnid:aulwpjpnfnNv0BUxkGIKaj-->数字变化</td><td data-page-node-id="PmYry28i15Cjs7KaVr05AG"><!--pnid:ApXKw5Cd0ZZtGyHVlVVw9v-->320ms</td><td data-page-node-id="2h4g8yBP3gSiubhoJWyALN"><!--pnid:7MoqG066PRCxGG9C9Vz5VV-->滚动计数，不做弹跳</td></tr>
+      </tbody>
+    </table>
+    <p data-page-node-id="wR44rcPVXTishw9ti0oip7" style="font-size:12.5px; color:var(--muted); margin-top:12px"><!--pnid:Tc9ZGVhIdH8ttfHu50qtux-->必须遵守 <code data-page-node-id="jBqHS5a0EVhWEvhMTWLYIw" data-pnid-children="jfe7TCoVjLNloXD8SC4fka">prefers-reduced-motion</code><!--pnid:2WD2AxzmbMTE6vBlLxxQEI-->：用户开启减弱动效时，所有位移与过渡直接取消，内容立即呈现。</p>
+  </div>
+</div>
+</section>
+
+<section data-page-node-id="65N3zxvMc1S25qT9reYM64">
+<div data-page-node-id="bzWwjrXEMKEVg9Ac67bcn4" class="wrap">
+  <div data-page-node-id="OwzIymmgCLmxzBehnocj6T" class="reveal">
+    <div data-page-node-id="gRDP33KS1XMyCDoxVY3QPn" class="eyebrow"><!--pnid:zchGrLgSGtXSFn7Mc3PS6R-->07 / 图形、图标与页面骨架</div>
+    <h2 data-page-node-id="MF2l5DhcdYuhI1pTaIxWIo"><!--pnid:M14fFzerF0PL7FogFFWNcG-->用数据和几何说话，不用插画</h2>
+  </div>
+
+  <h3 data-page-node-id="wANdB5CuAxuezf5Rie1YfG"><!--pnid:7nIquelSVYD8ie8QFHEcuy-->图形语言</h3>
+  <div data-page-node-id="bmNBeYMAHoc5NaEmyyvSgB" class="grid g3">
+    <div data-page-node-id="aaEc2VTAbH1ruFycAdkQMH" class="card reveal"><b data-page-node-id="ctU1YmSG8U6nEoEHNOAq7X" style="color:var(--ink)"><!--pnid:hWKm2EewICT9p36gpHo7a5-->抽象几何</b><p data-page-node-id="jp1HxBZsfwosoDLjab2ipp" style="font-size:13px; margin:6px 0 0"><!--pnid:PAuS9BBlSP9QwpqAPtcca5-->网格、信号波形、等距方块、批次流向。呼应芯片与测试的物理形态。</p></div>
+    <div data-page-node-id="1wm8UCfxLcu2fIwlCJJkxX" class="card reveal"><b data-page-node-id="l0nFzEow3qFn8v01AjMj1X" style="color:var(--ink)"><!--pnid:GKM7SmhH8al6ap7nFHzq76-->渐变光斑</b><p data-page-node-id="ZJLbfrKsYtj3kSBPfpBGyu" style="font-size:13px; margin:6px 0 0"><!--pnid:X6w8i7Eu552gBViwbvSK5b-->只出现在深色区块（hero / 强调段），低透明度、大半径模糊，制造空间感。</p></div>
+    <div data-page-node-id="luDfi3AjrvyJ5tDr9KdKwT" class="card reveal"><b data-page-node-id="pwzFgROBtlivf4jmA02EDu" style="color:var(--ink)"><!--pnid:4mGCdPTPk3dxZ5XrS3p5Qa-->线性图标</b><p data-page-node-id="ewJG1O7oaGYcIWbCexzC8Y" style="font-size:13px; margin:6px 0 0"><!--pnid:mdBjnOxYqcGwDK6Kbb7led-->24px 网格、1.75px 描边、圆头端点（Lucide 风格）。禁止混用填充与线性两套。</p></div>
+  </div>
+
+  <h3 data-page-node-id="BHdRWNLQXWo9FhNHgYCD8n"><!--pnid:jUXc6nWrxXnx4UIwT7xuUv-->页面骨架</h3>
+  <p data-page-node-id="DMI3bJsz262WchzSThkgZa"><!--pnid:hELzKq3CsFlY9foqdUcFhc-->工作台统一按"<b data-page-node-id="zYBuyYZAQkUjMVyC9Rq2Mo"><!--pnid:Vpjimq9GzzH11zb2cSjqaF-->顶部状态条 → KPI 三卡 → 主图表 → 待办列表</b><!--pnid:ayktOcWXfLicZHHmqYOVe0-->"排列，最多四段，绝不无限堆叠。列表页统一"<b data-page-node-id="nRd5tfNdiWH1Q1RT3JNblm"><!--pnid:K7sYy6LpUmOwMujFUcF2LH-->筛选条 → 表格 → 分页</b><!--pnid:BFIKMCp3TRVqy20MbYqsrW-->"，筛选条固定在顶部，滚动时不跟随。</p>
+
+  <h3 data-page-node-id="xE8cGVyzqHpNMwjgYcNHIh"><!--pnid:mqGEoF5mqzJnr6NDT3kbdp-->深浅色</h3>
+  <p data-page-node-id="fM1GTQRiB9ehEeohV8MRba"><!--pnid:bZyRpf6I8pprJijbqIbyGH-->默认浅色。<b data-page-node-id="VcuNawWsEddjSP1oUmWv4H"><!--pnid:EGn00O6xxxEAlMIukiVIUn-->深色只用于 hero 与强调段</b><!--pnid:NX5sGh1U3a3yTbCzQJD3P8-->，不做全站深色模式，避免长表格在深底下疲劳。深色底用 <code data-page-node-id="qhXpBMiKCCUTzeVyFZiTxs" data-pnid-children="LdsAOcborG7h6OIhsyayvQ">#0A0F1E</code><!--pnid:kM28jv5yU7uQNzqOdHm8n7-->，主色提亮 15%（<code data-page-node-id="r34qKtnlfYOX7hIYVGOZJN" data-pnid-children="UVd861lQCn1rEouYI00wkA">#6366F1</code><!--pnid:4kyn7OvglIautrbKCpl8Q6-->），文字用 <code data-page-node-id="CXfujY2UlW02CmOhp5iE6D" data-pnid-children="uzEkVLIZOphycFDfAiMvWd">#DCE3F0</code><!--pnid:P1ds0b057cT9RKGtpfpZZD--> 而非纯白。</p>
+</div>
+</section>
+
+<section data-page-node-id="2hfpawGqXmYE19AnKe8aYR">
+<div data-page-node-id="e6S6djzYWHXwmhtAistpLG" class="wrap">
+  <div data-page-node-id="CSCnkHmOyoSEmDewtTWPTn" class="reveal">
+    <div data-page-node-id="0gQOB1C2c0CW2l2iiSYxQd" class="eyebrow"><!--pnid:pJCz0StvgruOUHhyT1BmD9-->08 / 移动端 H5</div>
+    <h2 data-page-node-id="NWfIAWj1ZPdsCZ1Q6ajjrl"><!--pnid:54esXjfpGUDaG3ldPJRKj0-->车间场景：一只手、戴手套、光线差</h2>
+    <p data-page-node-id="LJbKIWHYZDMT9AlHDeUYy7"><!--pnid:FMgjmcqM47kkMQTZ34TBTr-->H5 不是把 PC 缩小，而是重新设计：目标只有一个——<b data-page-node-id="h8hargRNTHX9XV2Tjb07mK"><!--pnid:DkL47NK3VEOM4UXHACtQGt-->3 秒内完成一次扫码确认</b><!--pnid:YoZtk9JdVQJVPMd9djRvgC-->。</p>
+  </div>
+  <div data-page-node-id="vYjCBnFaOJ3VmtumWttWKt" class="grid g4" style="margin-top:20px">
+    <div data-page-node-id="td9gu5c8S3KbSya8BqrnNs" class="card reveal"><b data-page-node-id="561ceI1vSh0y7ASUjOGoG6" style="color:var(--ink)"><!--pnid:by5mpU500oz0hxFA0fYzCV-->48px 触控高度</b><p data-page-node-id="ESLcvOC7Qkz7mQZ95NcohX" style="font-size:13px; margin:6px 0 0"><!--pnid:s1dbQQ8OBajexvtmN5PUZD-->主操作按钮最小 48px，间距 ≥ 12px，防误触。</p></div>
+    <div data-page-node-id="nVXHGOP3ul5962AEniDmTh" class="card reveal"><b data-page-node-id="EYnZaaFL6ZfwLbMf1UVv6X" style="color:var(--ink)"><!--pnid:buvBoXRXOfBCvs4wRA1cZJ-->对比度 ≥ 7:1</b><p data-page-node-id="pPs0RtPOEx78NrLm2xmyvN" style="font-size:13px; margin:6px 0 0"><!--pnid:WO8yDoGAbEp0Mt0eX6511U-->车间灯光复杂，正文加深到近黑，不用浅灰字。</p></div>
+    <div data-page-node-id="X51g9YWx7tpydGdlW8eUic" class="card reveal"><b data-page-node-id="ZpKYfd6IpqDDH2ERRwjPmQ" style="color:var(--ink)"><!--pnid:ZvQzpROxt621Ckq6JDlR38-->单手可达区</b><p data-page-node-id="KjCjqF4AKBM0rjfu1m3X0c" style="font-size:13px; margin:6px 0 0"><!--pnid:prjlJWdJqOTgeYUEfRRdZ0-->主操作固定在屏幕下 1/3，顶部只放标题与返回。</p></div>
+    <div data-page-node-id="PmazI7HAVT0717OxeAPLQm" class="card reveal"><b data-page-node-id="PcszlgeMeecGGrlYqZSIB1" style="color:var(--ink)"><!--pnid:rQlDeetEqiRHMO34ZdOyBU-->一屏一确认</b><p data-page-node-id="S0nYc7xCnwwzAbJ3x0G20H" style="font-size:13px; margin:6px 0 0"><!--pnid:kmqfvDzqnjLBnkcFi7Slmz-->扫码结果必须在一屏内看清"料号 / 批次 / 数量"三个字段。</p></div>
+  </div>
+</div>
+</section>
+
+<section data-page-node-id="6522g6f908SYcg6StlZEzw">
+<div data-page-node-id="Byqzg0f3vclrfTBWkUGUI0" class="wrap">
+  <div data-page-node-id="xMAHeOrRUW4mDKm1EDaUvA" class="reveal">
+    <div data-page-node-id="1U9LRppPzyRC9WuBg2TNVL" class="eyebrow"><!--pnid:WxVtKiyNQgmmxt2Nm4DRQw-->09 / 对照表</div>
+    <h2 data-page-node-id="cr8Hn7tXIyOyGOxpJi7pt8"><!--pnid:6fRERmlNQPm9xOlpT1AKIg-->做与不做</h2>
+  </div>
+  <div data-page-node-id="UrPDEaILqyAkd5AWd70m05" class="grid g2" style="margin-top:20px">
+    <div data-page-node-id="O9c7rjsQDswdHHM71Rs0pj" class="dd do reveal"><b data-page-node-id="6bzW4nIpo0cbuBHBMNiB4U"><!--pnid:zenGPTrYegvwS8kZDig8uZ-->DO · 这样做</b><!--pnid:hN7ZEEZyniJA2coKNtdYMg-->大标题用 800 字重 + 负字距，正文 15.5px 放松行高；卡片 16px 圆角 + 1px 描边；一屏只用一个强调色；表格去掉竖线，靠留白分隔；数字右对齐并等宽。</div>
+    <div data-page-node-id="F10E7fYcWjh1UooEwl0RmS" class="dd dont reveal"><b data-page-node-id="tb4Bg65T767Mtzhhr8H2ld"><!--pnid:1evkE3oa4lTWqloqk9iqLZ-->DON'T · 别这样做</b><!--pnid:jaIIxYfOFBQXejGZv7sFJ3-->标题加阴影或描边；卡片套卡片；表格加斑马纹再加边框再加 hover 变色；一个页面出现四五种蓝；图标一半线性一半实心；按钮用三种不同圆角。</div>
+    <div data-page-node-id="XlYppzkRivbRFWD1O0ep3j" class="dd do reveal"><b data-page-node-id="J1zWOOZ71WbTFPLqSv8V6X"><!--pnid:YUfyEmvHOpnVrqDH0b2KJG-->DO · 空状态</b><!--pnid:vSKz65Obd8uxvfjxjj6jyt-->一句话说明为什么空 + 一个明确动作（"还没有工单，去下达第一张"），配一个线性小图。</div>
+    <div data-page-node-id="LSsj7V0DdGUqaHvatNbwQR" class="dd dont reveal"><b data-page-node-id="sDn8DHysSBrqHnRe5F4HOE"><!--pnid:Im5gyfACs5i0g4BzwUZ2yc-->DON'T · 空状态</b><!--pnid:TnrUpEasuiO3B8hJBuSVWA-->"暂无数据"四个字挂在屏幕中央，没有任何引导。</div>
+  </div>
+</div>
+</section>
+
+<section data-page-node-id="ZngT9TmgfY8ppUs7i048GX">
+<div data-page-node-id="7XvKHTWNJLPcrSZ2QVhxVp" class="wrap">
+  <div data-page-node-id="YARwKYL2RAfe5w39MvnS05" class="reveal">
+    <div data-page-node-id="lclqFFO5gMH6vBuF1RtZqp" class="eyebrow"><!--pnid:X6QSpGrdC2RtJC6gEuqnIc-->10 / 交付与验收</div>
+    <h2 data-page-node-id="syBbVgEzoMN6evHqYlBHdk"><!--pnid:CEHNgSUPx6LGJKFQe1zCzK-->怎么判断做完了</h2>
+  </div>
+  <div data-page-node-id="WSmq9V0np5ThojiaRNfjlO" class="card reveal" style="margin-top:20px">
+    <table data-page-node-id="3OpWexl9BZO3QPGt5JSPLO">
+      <thead data-page-node-id="sEfpdDNwxgt10ADPm9DmX0"><tr data-page-node-id="Vo5nkOhGyDRqsJ50sIe9BZ"><th data-page-node-id="Ufh3Ejojeo5yZR6Pa8t4tp" style="width:26%"><!--pnid:UG7mb4tIpJZBAGfdWhvBpc-->维度</th><th data-page-node-id="dVVSIwikJvBFS6FWXLh4Yi"><!--pnid:iPhFHibG8gqSIAc2HbWA6G-->验收标准</th></tr></thead>
+      <tbody data-page-node-id="42MTxDwhIlusQK760bGNNq">
+        <tr data-page-node-id="iPqsLDGU8OFKUDKqMn6XVp"><td data-page-node-id="yPy4ilg0NVL4FhpnEl6Sag"><!--pnid:bdLBMDswQIGy34ptgVzMX6-->色彩</td><td data-page-node-id="ERkar5PGbUgeNt7b3gIgQH"><!--pnid:nw6UyHNEJ3JAUIOmKdELIY-->全站主色仅 1 个，语义色仅 4 个；无纯黑纯灰；正文对比度 ≥ 4.5:1</td></tr>
+        <tr data-page-node-id="NvD1rbVAPXp2K9nPX4pNEP"><td data-page-node-id="WSsAs73HXdYJVC6QoDhowB"><!--pnid:GGrepu8th6UO0pXhVk1io3-->字体</td><td data-page-node-id="Mj0OeIyA2bOHsnoT4qTVFZ"><!--pnid:Bb6iD4dX0MjdnptBoyBs9Q-->字号不超过 6 档；标题字重统一 800；所有数字等宽右对齐</td></tr>
+        <tr data-page-node-id="APFBEl4Fa4aFT4ERbTzEY8"><td data-page-node-id="qNnjY9wO47VzaChBa3bxtl"><!--pnid:veWnOrRDc8V8sco4TMKKC6-->间距</td><td data-page-node-id="iZUfLKxYPduOjMi2SQ0Iih"><!--pnid:Hsr97BeDxeRz5xXwYL0OgB-->随机抽查 10 处间距，全部为 4 的倍数</td></tr>
+        <tr data-page-node-id="eddeNMPHD4zbfzpBBXPIC2"><td data-page-node-id="h1d45nzqmzXk9deS9gZv07"><!--pnid:7TGFLDh63HwiTUJAzToIDA-->圆角</td><td data-page-node-id="N0ujM4kRZy1qSLEfS6PVKB"><!--pnid:DpswbQ5A66KgT9qDC6MqFq-->全站仅出现 8 / 12 / 16 / 22 / 999 五种值</td></tr>
+        <tr data-page-node-id="qy39W3geXV6RhijseaEE2L"><td data-page-node-id="vrwaSSzRr13sXC2dAAHJSC"><!--pnid:SgB9Hc0GbMqDgvSUk5BCYG-->阴影</td><td data-page-node-id="2xFNHWdUsHrlvagAbmFHpx"><!--pnid:UHTRg70i5ZL7jTPbeqSGmK-->仅三档；卡片默认只有 1px 描边 + 极浅阴影</td></tr>
+        <tr data-page-node-id="RA00N040oxNVxOWlnK17JV"><td data-page-node-id="4cY2PSt62A28wUJkTqAZrw"><!--pnid:FwEza2PRaVMSe1sOfksInT-->动效</td><td data-page-node-id="EU67BaHofZn8eBB12KiY3J"><!--pnid:ZjXSVEd3XnbwTI57IhnyTu-->时长取自 120/180/240/320/600；开启减弱动效后无位移</td></tr>
+        <tr data-page-node-id="Lum7JVIUnWkbkKnsExAjqU"><td data-page-node-id="PUibLQtjpKSZuwlx9J3KJb"><!--pnid:4lQnvkNdqRfnUHHHBFwXaM-->响应式</td><td data-page-node-id="52rAeYmCBHOg8fhXUjGIzf"><!--pnid:gG2L007DJvmYlwyIcRdVbD-->1440 / 1200 / 992 / 768 / 480 五个断点无横向滚动、无文字截断</td></tr>
+        <tr data-page-node-id="vVKSJABtF32t04Fq912M8K"><td data-page-node-id="f09aA6XGnW479sZYLabblr"><!--pnid:lhq75MKQISKo8CXXPllvXn-->无障碍</td><td data-page-node-id="VPrV5u8XbdU25Wsmq2wJDX"><!--pnid:IRVa8JWpB9l59NIPwVW1ux-->键盘可完整操作；焦点环可见；状态不单靠颜色传达</td></tr>
+        <tr data-page-node-id="JoIIo0Cl4WWYiGS0zcbUNA"><td data-page-node-id="TukUFQZQl9nQ8togjUhB28"><!--pnid:Qjs0OIRKvaJdQrud1a9JpT-->一致性</td><td data-page-node-id="zRXWyo6cKombsiljS3NdfF"><!--pnid:4zySXXVMgrlyRNMvO8V5kK-->同类组件在不同页面视觉完全一致（对照组件库截图逐项核对）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 data-page-node-id="qCV40lnFqUaJmSz7hUz1As"><!--pnid:Y520aCF652nJhi458mqhLg-->交付物清单</h3>
+  <div data-page-node-id="uxSMbiS5CXzkTTHkh1Vr6d" class="grid g3">
+    <div data-page-node-id="hzCROJ9H058YWwLO3kNOC1" class="card reveal"><b data-page-node-id="mUkzg7bXgY2JlmwbWrZ9FG" style="color:var(--ink)"><!--pnid:HBShYlf4nbxFdBYgPFwJ1z-->设计侧</b><p data-page-node-id="KI2Cau0q3V5ekhzky3FudU" style="font-size:13px; margin:6px 0 0"><!--pnid:bxqePISeHrXGQK21if4V1B-->Figma 组件库（按钮/表格/卡片/表单/图表模板）、页面高保真、标注文件。</p></div>
+    <div data-page-node-id="fXkniFNHzU7j7fT0WKKp4O" class="card reveal"><b data-page-node-id="UAnW6fIsiK4HBYEPk8g0ol" style="color:var(--ink)"><!--pnid:V8I2XepYJZEOqrrzcNJFzF-->开发侧</b><p data-page-node-id="tryTPfgzFyLondpyI8v9JK" style="font-size:13px; margin:6px 0 0"><!--pnid:xdvvDly85ae2xqwv9KDgwN-->CSS 变量表（<code data-page-node-id="MrsT8nBXV06XmTAK2bPHah" data-pnid-children="HEVJVdYkmTB4sPonYeOAoX">--color-*</code><!--pnid:fc4MrYN3O7hUx49ydkANvH--> / <code data-page-node-id="RtZfz3TbPqJo1Aouyg0gDk" data-pnid-children="3vGWCmlG89VOhbdlzmBEB6">--space-*</code><!--pnid:gvqWEvEMn6GRm2dbnQLtNC--> / <code data-page-node-id="FI1KrFaGdRKAlMm3Yyfi3q" data-pnid-children="8NNZ1vzQMRzGXZ0diwQRne">--radius-*</code><!--pnid:bDvAQbM0E8ViMSD5DusESZ-->）、组件库 Storybook、暗色段样式。</p></div>
+    <div data-page-node-id="c5NoWRsdLbKRTDGkOrvFGQ" class="card reveal"><b data-page-node-id="nOUYyTKP98hARsOdWYcbQr" style="color:var(--ink)"><!--pnid:nJgWtir9yy3mwWmc3Oj4Kj-->验收侧</b><p data-page-node-id="7WQ5TKY7hSz9O4jmxCGJ8C" style="font-size:13px; margin:6px 0 0"><!--pnid:ZukHq8vpk1avnFs9YMahce-->本文档第 10 节的 9 条清单逐项打勾，作为上线前置条件。</p></div>
+  </div>
+
+  <div data-page-node-id="9FzwupxCJQIoFLhQyg2CZl" class="note" style="margin-top:26px">
+    <b data-page-node-id="r1bevUjOuOjkRMfE8aq7Nx"><!--pnid:0thNbGBlBzr50NfNVfGyRl-->最后一句：</b><!--pnid:LpJuUGuloDJwl4lLHfvO8Q-->规范的价值不在于写得多全，而在于<b data-page-node-id="iYP4fJuteKUzYeXYrfm5GC"><!--pnid:D3qj9Jwv3n1Aa9Hp5vyNj7-->能不能被违反时立刻看出来</b><!--pnid:JrjhjL9nGkwy4zUcvZWOSS-->。所以每一条都给了具体数值——"要现代一点"没法验收，"圆角只有 8/12/16/22"可以。
+  </div>
+</div>
+</section>
+
+<footer data-page-node-id="0AgMamIY1L04tLeoibQn69">
+  <div data-page-node-id="u9gL6NqhRPuZOsaNX6SILT" class="wrap">
+    <b data-page-node-id="MGPIibqcthPaUuG9XcMf0S"><!--pnid:UxHSR2omoI7Z0yAUQi7Pra-->视觉设计规范 v1.0</b>
+    <p data-page-node-id="HPReInUYw7ICo9FHt8ePFK" style="color:#8B98AE; max-width:70ch"><!--pnid:fVFUU57AXjOaDTVNPhUgCB-->适用于 IDH 协同平台 Web 端与车间 H5。文中所有数值均为可执行规则，改动需同步更新 CSS 变量与组件库，避免设计与实现脱节。</p>
+    <p data-page-node-id="PJ3HuOsKXiJrZ8IGtcLSrj" style="margin-top:14px; color:#5C6B82"><!--pnid:rgorSuaI9isMx4W7Qh1txU-->2026-11 · 配套实现：IDH 协同平台建设方案（现代版）</p>
+  </div>
+</footer>
+
+<script data-page-node-id="3v66kHaWKdMJmfFKziMq1X" data-pnid-children="5x75kUwkxQhKzGhzhlJE4Y">
+(function(){
+  var bar=document.getElementById('bar');
+  function onScroll(){
+    var h=document.documentElement;
+    var p=h.scrollTop/(h.scrollHeight-h.clientHeight||1);
+    bar.style.width=(p*100)+'%';
+  }
+  document.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el,i){
+      el.style.transitionDelay=(Math.min(i%6,5)*55)+'ms';io.observe(el);
+    });
+  }else{
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
+  }
+})();
+</script>
+</body>
+</html>

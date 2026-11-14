@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html data-page-node-id="innATCb1cYtmH41CduxUpF" lang="zh-CN">
+<head data-page-node-id="ajs0ZCGgHrb29iczCyhA0N">
+<script data-page-node-id="1KpjboQxiyDVcUWnNyFpLH" src="/page/page_comm/inject.js"></script>
+<meta data-page-node-id="ZaVWU7Wc0R1fEAyeyD6YEZ" charset="UTF-8">
+<meta data-page-node-id="cCmMON6oaYsVxP8IOaLsbX" content="width=device-width, initial-scale=1.0" name="viewport">
+<title data-page-node-id="oLa3J7QckvgXktoaC9pfIB" data-pnid-children="4MVnHmGyohp6rRMIbevQFX">IDH 协同平台建设方案｜工单 · 库存 · 消耗 三账对齐</title>
+<style data-page-node-id="uwSSJ8C9Kqi1iseDiRLsQc" data-pnid-children="KPOkfXCPzt7XSbMllQRJN0">
+*{box-sizing:border-box}
+:root{
+  --ink:#0f172a;--sub:#475569;--mute:#64748b;--line:#e2e8f0;
+  --blue:#1d4ed8;--blue-bg:#eff6ff;--teal:#0f766e;--amber:#b45309;--red:#b91c1c;
+}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{
+  margin:0;background:#eef2f7;color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC","Noto Sans CJK SC",sans-serif;
+  font-size:15px;line-height:1.85;
+}
+.doc{max-width:1080px;margin:0 auto;background:#fff;padding:60px 72px 80px;box-shadow:0 1px 3px rgba(15,23,42,.08)}
+.eyebrow{font-size:12px;letter-spacing:.18em;color:var(--blue);font-weight:600;text-transform:uppercase;margin-bottom:14px}
+h1{font-size:34px;line-height:1.3;margin:0 0 14px;letter-spacing:-.6px;font-weight:700}
+.lede{font-size:16px;color:var(--sub);margin:0 0 26px;line-height:1.8}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin:0 0 10px}
+.meta div{background:#fbfdff;padding:12px 16px}
+.meta dt{font-size:11.5px;color:var(--mute);letter-spacing:.04em;margin:0 0 3px}
+.meta dd{margin:0;font-size:13.5px;color:var(--ink);font-weight:600}
+
+h2{font-size:23px;line-height:1.45;margin:58px 0 16px;padding-left:14px;border-left:4px solid var(--blue);letter-spacing:-.2px;font-weight:700}
+h3{font-size:17px;margin:30px 0 8px;color:#1e293b;font-weight:650}
+h4{font-size:14.5px;margin:22px 0 6px;color:#334155;font-weight:650}
+p{margin:12px 0;color:#334155}
+ul,ol{padding-left:22px;margin:12px 0}
+li{margin:6px 0;color:#334155}
+strong{color:#0f172a;font-weight:650}
+a{color:var(--blue);text-decoration:none}
+hr{border:0;border-top:1px solid var(--line);margin:44px 0}
+
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:13.5px;line-height:1.68}
+th{background:#f8fafc;text-align:left;font-weight:650;color:#0f172a;padding:9px 12px;border:1px solid var(--line);white-space:nowrap}
+td{padding:9px 12px;border:1px solid var(--line);color:#334155;vertical-align:top}
+tbody tr:nth-child(even) td{background:#fcfdfe}
+td.num{white-space:nowrap;font-variant-numeric:tabular-nums}
+
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f1f5f9;padding:1px 5px;border-radius:4px;font-size:12.5px;color:#0b1220}
+
+.callout{border-radius:8px;padding:14px 18px;margin:20px 0;font-size:14px;line-height:1.8}
+.callout p{margin:4px 0}
+.callout .ct{font-weight:650;font-size:12.5px;letter-spacing:.06em;display:block;margin-bottom:4px}
+.note{background:var(--blue-bg);border-left:3px solid #60a5fa}
+.note .ct{color:var(--blue)}
+.warn{background:#fffbeb;border-left:3px solid #f59e0b}
+.warn .ct{color:var(--amber)}
+.key{background:#0f172a;color:#e2e8f0;border-left:3px solid #38bdf8}
+.key .ct{color:#7dd3fc}
+.key p{color:#e2e8f0}
+.key strong{color:#fff}
+.risk{background:#fef2f2;border-left:3px solid #f87171}
+.risk .ct{color:var(--red)}
+
+.figure{margin:26px 0;padding:20px 20px 12px;background:#fbfdff;border:1px solid #e6edf7;border-radius:10px}
+.figure svg{width:100%;height:auto;display:block}
+.figcap{font-size:12.5px;color:var(--mute);margin-top:10px;text-align:center;line-height:1.6}
+
+.arch{display:flex;flex-direction:column;gap:8px;margin:22px 0}
+.layer{display:flex;align-items:stretch;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}
+.lk{flex:0 0 104px;background:#f8fafc;border-right:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:650;color:#334155;text-align:center;padding:10px 6px;line-height:1.45}
+.lv{flex:1;display:flex;flex-wrap:wrap;gap:6px;padding:10px 12px;align-content:center}
+.lv span{font-size:12.5px;color:#334155;background:#f8fafc;border:1px solid var(--line);border-radius:6px;padding:4px 10px;line-height:1.5}
+.lv span.hl{background:#eff6ff;border-color:#bfdbfe;color:#1e40af;font-weight:600}
+.lv span.ai{background:#f0fdfa;border-color:#99f6e4;color:#0f766e;font-weight:600}
+
+.road{position:relative;margin:26px 0 6px;padding-left:28px}
+.road:before{content:"";position:absolute;left:6px;top:8px;bottom:10px;width:2px;background:linear-gradient(#93c5fd,#5eead4)}
+.phase{position:relative;margin-bottom:24px}
+.phase:before{content:"";position:absolute;left:-27px;top:7px;width:10px;height:10px;border-radius:50%;background:#2563eb;border:2px solid #fff;box-shadow:0 0 0 2px #bfdbfe}
+.phase .ph{font-size:14.5px;font-weight:650;color:#0f172a;margin-bottom:4px}
+.phase .ph em{font-style:normal;font-size:12px;font-weight:500;color:var(--mute);margin-left:8px}
+.phase ul{margin:4px 0 0}
+
+.toc{background:#fbfdff;border:1px solid #e6edf7;border-radius:10px;padding:18px 24px;margin:30px 0 0}
+.toc ol{column-count:2;column-gap:40px;margin:6px 0 0;padding-left:18px;font-size:13.5px}
+.toc li{margin:5px 0}
+.toc .tt{font-size:12px;letter-spacing:.12em;color:var(--mute);font-weight:650}
+
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:16px 0;font-size:13px}
+.flow b{background:#eff6ff;border:1px solid #bfdbfe;color:#1e3a8a;border-radius:6px;padding:4px 10px;font-weight:600}
+.flow i{color:#94a3b8;font-style:normal}
+
+.chk{list-style:none;padding-left:0}
+.chk li{position:relative;padding-left:26px}
+.chk li:before{content:"□";position:absolute;left:4px;color:#94a3b8}
+
+footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--mute);line-height:1.8}
+
+@media print{
+  body{background:#fff;font-size:10.5pt}
+  .doc{box-shadow:none;padding:0;max-width:none}
+  h2{page-break-after:avoid}
+  .figure,table,.callout,.layer,.phase{page-break-inside:avoid}
+  .toc ol{column-count:2}
+}
+@media (max-width:820px){
+  .doc{padding:32px 22px 48px}
+  .meta{grid-template-columns:repeat(2,1fr)}
+  .toc ol{column-count:1}
+  h1{font-size:26px}
+  table{font-size:12px}
+  th,td{padding:7px 8px}
+}
+</style>
+</head>
+<body data-page-node-id="D6PDp3ly0OZ7pphTMO16u7">
+<div data-page-node-id="yCysEWpEo8Auhb8grQf5kF" class="doc">
+
+<div data-page-node-id="McPb6RGzFaB7fQhSj14Fu5" class="eyebrow"><!--pnid:tvWmr1rnIHm7VDwYwTJaAi-->Solution Blueprint · 供应链协同</div>
+<h1 data-page-node-id="Xk3lGTypm4NfFxLfUO3MsL"><!--pnid:gfvYmlvGzEP4ONhrMhPRTY-->IDH 协同平台建设方案</h1>
+<p data-page-node-id="XPM7k1fylkBzQa3oFWAHlp" class="lede"><!--pnid:KVzf4i9SPrYVzARCGWGvO4-->面向芯片原厂与 IDH 的<b data-page-node-id="Fdt24T9XNiweFRqTK9bwPb"><!--pnid:zqQfp4QZ80IyL8V9Ius2Iv-->工单同步、生产追踪、库存与消耗对账</b><!--pnid:Wi1v1wvb2hVTo5bAC60I2v-->一体化平台。核心目标不是"监控 IDH"，而是让双方共用一套对账基准，让差异可定位、进度可承诺、结算可依据。</p>
+
+<dl data-page-node-id="jy4V9XtVYSumWOT9DiD1MR" class="meta">
+  <div data-page-node-id="iYKdpY8gI8FWmUw6dwJT5U"><dt data-page-node-id="f9eHTXgALQenpKOFu1Kvdf"><!--pnid:0WSOFTgw1NeH8dzjGkIIQG-->适用范围</dt><dd data-page-node-id="MRsNlvoPwYGh8tpo9AjWEB"><!--pnid:3dxSi1taNfCat8KTtcXf38-->原厂 + 多 IDH</dd></div>
+  <div data-page-node-id="CmniV87VXgHybcYfdSvkFZ"><dt data-page-node-id="tIuIKjuGewkj7hrws0UYNx"><!--pnid:pGb6GyY77b9JcZPgY2UsIj-->建设重点</dt><dd data-page-node-id="SgJ1bCWS9L3l6MMxhgCbgP"><!--pnid:2pq5YI8Top0uE1StnlvkXe-->三账对齐（本期）</dd></div>
+  <div data-page-node-id="ux3CTT2kePCAvrDJAbwMfk"><dt data-page-node-id="nubAWkqx4h479AEECTQ8xh"><!--pnid:eqGctl4ETEtTh4vj5Rbq8p-->首期周期</dt><dd data-page-node-id="9TcKigxlu1tSGu0w8EJFIh"><!--pnid:XOLmh1Uk3zsWxUH8T1NTos-->12–16 周</dd></div>
+  <div data-page-node-id="3RAPRd2qNi5AYABkgZkB4U"><dt data-page-node-id="MFq1bLl9i6NHpXAdHSJCg2"><!--pnid:jpJqBlOUvTp0RYrTVTyDxL-->文档版本</dt><dd data-page-node-id="0EDde3zumXqeer9eGUMbQH"><!--pnid:42V9M5NNIq1ePj1BSkKYg3-->V1.0 · 2026-11</dd></div>
+</dl>
+
+<div data-page-node-id="91XqDoMVT1df1VMYCw5LTd" class="toc">
+  <div data-page-node-id="z1jHDDoB5QJYDf9gTRxZcG" class="tt"><!--pnid:JS4FbS1iLc45hkjRkXUWck-->CONTENTS</div>
+  <ol data-page-node-id="ngwCkatyHbb38od2ESPXeW">
+    <li data-page-node-id="e99CQbfMHhkY3GmKSuqFQ4"><a data-page-node-id="Ic3FTNNVyfBD6D7skYWtoG" href="#s1"><!--pnid:3LAxPfmJugKxfAyvomaz6G-->问题拆解：断裂在哪三处</a></li>
+    <li data-page-node-id="Ci3YUoi1bWondN6mpLZZLV"><a data-page-node-id="z29FYJXavsdXJ8Ll96o7oM" href="#s2"><!--pnid:0pAKuTEsMHYq3MnAi1LXeq-->五条设计原则</a></li>
+    <li data-page-node-id="GhP6ZALMLNK5X3OVvUWENJ"><a data-page-node-id="LBCZzThKr00bhVU9ZqS9wK" href="#s3"><!--pnid:JKIvUsG9YEuynzya8j6PmY-->业务蓝图：三账模型</a></li>
+    <li data-page-node-id="NDLxrlYD6etP7QsBGefg1g"><a data-page-node-id="YExU9TCCwzKA1jsvCwIBJY" href="#s4"><!--pnid:nw0DiPUfKX1VbtzqMyWNIQ-->平台功能架构</a></li>
+    <li data-page-node-id="ckxjCyUG8HTfYxikJM2Ilp"><a data-page-node-id="fz7PEPjqeQMsv4tPVTifOK" href="#s5"><!--pnid:Aw4Dr7lX5bbEVz7Q82wOuN-->核心数据模型</a></li>
+    <li data-page-node-id="Y182vUJW2T4ADxJCUzzbeG"><a data-page-node-id="JEcERNrQ4PLrxoRKmdGwgS" href="#s6"><!--pnid:vj4CrYaEhPwayMh7nPBCe2-->六个关键机制</a></li>
+    <li data-page-node-id="c_toc01"><a data-page-node-id="c_toc_a01" href="#s6c">协同沟通台（CollabChat）</a></li>
+    <li data-page-node-id="U0DJHSOvplcHMCvGlbpusE"><a data-page-node-id="ZTTIJfdVmNjGU7xXena17q" href="#s7"><!--pnid:zN3rztiGEIjpdLM8Smt4XJ-->技术架构与选型</a></li>
+    <li data-page-node-id="3KKbgDAoAbLoow4Xwc6vin"><a data-page-node-id="7SOKBsjLjbCI3y4bIcSLXf" href="#s8"><!--pnid:G7RVdvBKdQ2eHI7Ivk8kHm-->AI 能力设计</a></li>
+    <li data-page-node-id="8G4z1cJEQuGuuoWEDa3OLy"><a data-page-node-id="X5LeQoW1whqNHHVhLSVN5b" href="#s9"><!--pnid:HOnjtMhbc6zgA6sCAW4zgu-->实施路线与试点</a></li>
+    <li data-page-node-id="tL1TGa3GyR7PvU9rC0j9qH"><a data-page-node-id="kjFRZQR31TZSMTRSm6KrIq" href="#s10"><!--pnid:JS6loaIO1JDjkHCRggrKGQ-->组织与推行机制</a></li>
+    <li data-page-node-id="BSNuc08j2IIo5gdC5KD9Wa"><a data-page-node-id="oFEvb1eBkVGJvuy3A1qdTD" href="#s11"><!--pnid:IhZFqLTGAWGX01HIw3MwTe-->风险与对策</a></li>
+    <li data-page-node-id="tDnDkfFTHBzRuGFdNqwVLC"><a data-page-node-id="nCInjhNr0N48slK84DjSGw" href="#s12"><!--pnid:4j1n6jqiYN8p2PsB6RRDHX-->投入、KPI 与验收</a></li>
+  </ol>
+</div>
+
+<h2 data-page-node-id="YgQQ4oly3JbbM2H0GDOYu6" id="s0" style="margin-top:44px"><!--pnid:3OO7ViuyR4zJje6vyQjMPj-->一页结论</h2>
+
+<div data-page-node-id="lJI8zsquxLuyxEALa9pytb" class="callout key">
+<span data-page-node-id="tJC2GTNpWetE7pWa3kpxOC" class="ct"><!--pnid:HOPRbz9Wus2BEMl98INmQ0-->先看这五条，其余都是展开</span>
+<p data-page-node-id="1suNCAy3maRBVnDN1bEYsP"><strong data-page-node-id="H2uXlpgpELC048bEQPSrBB"><!--pnid:AjXn9ISooVFYqa1hOCv1jM-->1. 这是对账项目，不是监控项目。</strong><!--pnid:aGbD7LXNKwUYv7bTaZwEBb-->把原厂的"发货账"、IDH 的"消耗账"、仓库的"实盘账"用同一套料号、批次和事件标准对齐。三账一旦能自动对上，生产进度和消耗透明度是副产品。</p>
+<p data-page-node-id="lw4ZMeaSOyih2s0zlD2KSe"><strong data-page-node-id="QbH47t4zeQtEgf4yMY1bPc"><!--pnid:KNIIq7x6yFBThjlE7faKTb-->2. 建设顺序不可颠倒：</strong><!--pnid:4YYWcJNEwPzJA3YXxVbw54-->主数据（料号 + 批次编码）→ 事件（收发货、领用、报工）→ 对账（差异分类 + 锁账）→ AI（归因 + 预测）。顺序反了，AI 只是在分析垃圾数据。</p>
+<p data-page-node-id="99AoLyOzVQkgSE9nYgyw10"><strong data-page-node-id="U3zvWmdRlQN1P17GEf3Gh1"><!--pnid:tz9cNHxWzv9hTpMgQ2k8ZC-->3. 上线前必须做一次全量期初盘点定基。</strong><!--pnid:YwYsPoidZRzlF9heeovpPC-->否则历史差异会永久污染三账，系统从第一天起就"不准"，随后失去所有人信任。</p>
+<p data-page-node-id="mtDfI7sWNTNE1ZBluTjP53"><strong data-page-node-id="1uJQeF9XWXmM0s3qpG54x7"><!--pnid:7E3zGYuF5tt3UpfGEe0jcJ-->4. 推行靠合同条款 + IDH 收益，不靠行政命令。</strong><!--pnid:2qhdgTOujKrQPYiiLxqxpf-->把"数据同步义务"写进工单合同，把"平台记录"设为结算唯一依据；同时让 IDH 拿到自动对账、结算加速、VMI 降资金占用。<b data-page-node-id="rDcZd2BA6EY6iyqfZEzud8"><!--pnid:3hRgtV2NqLhDk3Ky6gtgsh-->IDH 配合的动力必须大于隐瞒的收益。</b></p>
+<p data-page-node-id="nkjHpoaFyUUpsXPjvZsHf1"><strong data-page-node-id="e12Zh4jHBNmdk1CGefmajl"><!--pnid:APd48y4ojHvZUTr5cxSwNG-->5. AI 从两件事切入：</strong><!--pnid:JfAFI9TXzXaupv4qTpUjgq-->单据结构化（PDF 工单/送货单自动入系统）与差异归因（差异明细自动给出 Top3 原因和核查清单）。这两个场景低风险、可验证、立刻省人力。</p>
+</div>
+
+<h2 data-page-node-id="0ROqA1VbFaw645PJT4HkWa" id="s1"><!--pnid:l8o5mkXJjQi8WXTr0PxEXu-->01 · 问题拆解：断裂不在"没系统"，而在"没有共同基准"</h2>
+
+<p data-page-node-id="4OgzaYhzRpuTNWdCR3jIy9"><!--pnid:0ahC7NU209jl16lxX4llnj-->你描述的两个症状——原厂不清楚 IDH 生产情况、IDH 不清楚订单消耗情况——本质是同一个问题的两侧：<b data-page-node-id="Tl07VqP6zsV3SkUpGKNOqp"><!--pnid:mzMiFPWoNXqxFVoFM2bSih-->双方各自维护一本账，且两本账没有共同的锚点</b><!--pnid:LGQiH8et61vp2uoGirDcRO-->。再加一本"仓库实盘账"，三本账之间没有任何自动勾稽关系，只能靠月末人工拼表。</p>
+
+<h3 data-page-node-id="QkXfgdWjePOsvJKlZacAVu"><!--pnid:Tuiu3HxsvKqmitAxpHnNg9-->1.1 信息断点分布</h3>
+
+<table data-page-node-id="HF9Pz6bEktloJSYES6qBn3">
+<thead data-page-node-id="DqxkkNRagjrcnCoKq3MIJI"><tr data-page-node-id="YX4gGnpSXGjyaJjLLE3fCz"><th data-page-node-id="XykaLYrROKx7jcckopwQoU" style="width:14%"><!--pnid:xBZI4fXMygOhGzYcX5y8WR-->业务环节</th><th data-page-node-id="fNXpztRdpmQY41Nv9qjYV0" style="width:27%"><!--pnid:0zR5Xy4ziC9P34NTXuIBS5-->原厂能看到的</th><th data-page-node-id="FpECSVpopNv74CgrVnozxx" style="width:27%"><!--pnid:1Ankpwk5AgS8GwWo5nUIWZ-->IDH 能看到的</th><th data-page-node-id="PewogYGMUIr7IMBwV03oE7"><!--pnid:ruVO02ZrDH7JOqd2qiTljP-->双方都看不到的（真正的黑洞）</th></tr></thead>
+<tbody data-page-node-id="A5FSwv7VzymMIE7wsnp0Ug">
+<tr data-page-node-id="nTZ3scy1DRgJCHeS94eJrl"><td data-page-node-id="yAztwY3BdVRTQBqsbnBQHR"><!--pnid:I7aF1ybxk7iYyxRatxAUxi-->需求与配额</td><td data-page-node-id="E6Yyt8UQ8h7p7exslfo6tq"><!--pnid:b5hUhiiPfdeVS7qg0LkOiB-->客户订单、内部预测、给 IDH 的额度</td><td data-page-node-id="w3n5JHntrq7FxT0obg1FD5"><!--pnid:lrNEsq1Dzb5DlkUwZF2M9e-->只有已下达的那张工单</td><td data-page-node-id="k6s5NgkYAh4dJsV5YWd4Se"><!--pnid:jgvqOGCOhNmYFqcGXQh62U-->额度已用 / 剩余、后续 8 周需求趋势</td></tr>
+<tr data-page-node-id="nXchy7xoEwVO78b9wZzrRm"><td data-page-node-id="TWn4bo3lKcnBVwPCvVJBOg"><!--pnid:6W0kPPrVRY7cIBmuMj9Ae6-->发货与在途</td><td data-page-node-id="GxX7Lk3mZ1qvpDqM2ZVmbY"><!--pnid:aBHAgOKZGgibspycBcO71E-->发货单、物流单号、发票</td><td data-page-node-id="eLloQ2UcsDhtU7pi4IOTX1"><!--pnid:w92TRYszM4Z6h1Y88DCCZb-->只看到"货到了"</td><td data-page-node-id="taxcIDw2BQ1hL5Nijxpk3y"><!--pnid:jjGzDkmhu29y0KPpmAUirD-->分批到货计划、在途实时状态、异常滞留</td></tr>
+<tr data-page-node-id="WPZon6aGdlQiLur1AtEIP0"><td data-page-node-id="RQbQetsT62Uy9GlRNeZy4q"><!--pnid:Gwa6zCWGeMMarEktK6p95q-->芯片库存</td><td data-page-node-id="dkUZ9drTLwWc6Xh9k630rW"><!--pnid:6cUIuk7isinhBGQrlIbmAn-->账面已售 / 寄售数量</td><td data-page-node-id="Vyhf6BX2eHeQMaX9Qdf3gN"><!--pnid:Ui1v5nKw4s9OCucTJVNzFl-->自己仓库的实物</td><td data-page-node-id="WTwNReTg03SGlQ46Gph6mf"><!--pnid:CQ5I2oRc37CahBLSppds8H-->两本账的差额、批次账龄、呆滞判定</td></tr>
+<tr data-page-node-id="QiSwb6N24cPPu3cLbqpE9q"><td data-page-node-id="BGUpvXu0NnkhxjcFx6Yjp9"><!--pnid:969m2oyTu4BWaQGNY6zT0H-->投产与在制</td><td data-page-node-id="9nm9CQt5DcLRNXaJXZCAxH"><!--pnid:OT4P0iFNPsaKMaN4UdyTTO-->基本为零（靠问）</td><td data-page-node-id="RILoMgLcYkqAfn1ona6SJO"><!--pnid:IpVJ4fPfKP6ry3dnaTT1oO-->自己产线的实际状况</td><td data-page-node-id="bVFKQrHKfAEDdtFF6MKv0m"><!--pnid:Q4lSERrHWyYSn90E8y0kAr-->工序级进度、良率、报废、返工</td></tr>
+<tr data-page-node-id="1ayX5iF0jnyog08oKzjfVh"><td data-page-node-id="ZD4wGWH1WKQQXcA5qAgOou"><!--pnid:QdpepkQP0VqvL4GoxlyLKq-->成品出货</td><td data-page-node-id="iZbVSRvfI1TUNxdxO1ZXpM"><!--pnid:oyjAZrIKXvaAuR8JGbSY2z-->只看到最终出货结果</td><td data-page-node-id="hQqMBZ53heUF4AHmm3KELa"><!--pnid:qBX6KRGPzEvOqxc2v3Yolf-->自己的出货记录</td><td data-page-node-id="Nkz4owdR93XDrCF2JZdokg"><!--pnid:8yOvden3g7vD7CAWvq9k6N-->出货数量与芯片消耗量的对应关系（单耗）</td></tr>
+<tr data-page-node-id="ug0oazoeddmkB6byv1d61N"><td data-page-node-id="x2T6upYini8gnzdVnzl71Q"><!--pnid:Hn2r2W5i9EZEXA5VJ0aES6-->结算</td><td data-page-node-id="mot3xg1eolpw9x9mWyZWGW"><!--pnid:7L0NINKqtcQGfzGDGnxGQU-->发票金额、付款计划</td><td data-page-node-id="mNOzOgFNHykahNQs0Gn28J"><!--pnid:IAsoBGuVKN25IFvXXgNJzf-->自己的应收</td><td data-page-node-id="o6vgJFwiuowibMVWP0tGRX"><!--pnid:igvLH1lf7RA5stRPDzBlii-->消耗口径、差异责任归属、该扣该补</td></tr>
+</tbody>
+</table>
+
+<div data-page-node-id="PeFWiVlshilgLzAnh5Q5Vy" class="figure">
+<svg data-page-node-id="DynMKpRyU8cUML63aoA41l" aria-label="原厂与 IDH 之间的信息断层示意" role="img" viewBox="0 0 960 372" xmlns="http://www.w3.org/2000/svg">
+  <defs data-page-node-id="pgQFClgNP3tlCmKbJp02Tp">
+    <marker data-page-node-id="Osr91QdNRsMCpOQeJmo05o" id="ar" markerHeight="7" markerWidth="7" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
+      <path data-page-node-id="vVshYOpxE6sgWgDb8dgY3M" d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <!--pnid:dn2pSKTxXnuvTTXKyljvAW--><!-- boxes -->
+  <rect data-page-node-id="cMwokWbF7HnM4iyycHyaGc" fill="#eff6ff" height="84" rx="10" stroke="#bfdbfe" width="286" x="24" y="24"/>
+  <text data-page-node-id="8OgcR29JPUAYb2rlLeHAYU" fill="#1e3a8a" font-family="sans-serif" font-size="15" font-weight="700" text-anchor="middle" x="167" y="58"><!--pnid:YihakGh4jysJCu3mcFzUgl-->芯片原厂</text>
+  <text data-page-node-id="iUpydFOWOVmIukWz2ja2qE" fill="#475569" font-family="sans-serif" font-size="12" text-anchor="middle" x="167" y="82"><!--pnid:QrWtcNT0IH3SgJEDT3ZU97-->订单池 · 发货批次 · 应收</text>
+  <text data-page-node-id="OzpCZ7HpubP1vkoG7cT4Fp" fill="#64748b" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="167" y="99"><!--pnid:bjkvEqgpuABN4UvljOEoth-->（对 IDH 侧在制与库存近乎盲区）</text>
+
+  <rect data-page-node-id="MbW1dd7KA0xszWun7DJFV0" fill="#ecfdf5" height="84" rx="10" stroke="#a7f3d0" width="286" x="650" y="24"/>
+  <text data-page-node-id="EWaJWjMDxPPVckl4IPNWYx" fill="#065f46" font-family="sans-serif" font-size="15" font-weight="700" text-anchor="middle" x="793" y="58"><!--pnid:u9uQPPFmPGkJk1o4exbFyR-->IDH / 方案商</text>
+  <text data-page-node-id="ToCRj8Ym3B7KmB7ExrQsoW" fill="#475569" font-family="sans-serif" font-size="12" text-anchor="middle" x="793" y="82"><!--pnid:xwa5yiBCptkw3crmY5S9dq-->在制 · 芯片库存 · 成品出货</text>
+  <text data-page-node-id="DVAk7UkLEFOxTxIiI7fSQw" fill="#64748b" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="793" y="99"><!--pnid:z8CUAObJtVqaSfex2zejUz-->（对原厂后续需求与配额无感知）</text>
+
+  <!--pnid:jUvmfegg671wWvo1vSRYMO--><!-- arrows -->
+  <line data-page-node-id="WdcMz4O48FO0qxEpQgWaHT" marker-end="url(#ar)" stroke="#94a3b8" stroke-width="1.6" x1="316" x2="644" y1="58" y2="58"/>
+  <text data-page-node-id="014AhmTgx8ctTTFuMDV54c" fill="#64748b" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="480" y="46"><!--pnid:qpnhN3Cztsa9qov7LqApR1-->① 工单 / 发货单</text>
+  <line data-page-node-id="BrNAF7li1ibs0jNWEmATRG" marker-end="url(#ar)" stroke="#94a3b8" stroke-width="1.6" x1="644" x2="316" y1="86" y2="86"/>
+  <text data-page-node-id="beSUDXSUQAWp2uwLlOcBSf" fill="#64748b" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="480" y="106"><!--pnid:BLOZR55COJQiXVEbEqmWLF-->② 进度 / 库存回传</text>
+
+  <!--pnid:rR5ggzlAaSc6rSe2ARgeyd--><!-- gap panel -->
+  <rect data-page-node-id="VVoNZatNAlP32WysL7pPgk" fill="#fffbeb" height="120" rx="10" stroke="#f59e0b" stroke-dasharray="5 4" width="912" x="24" y="130"/>
+  <text data-page-node-id="6RBRl6lSwwAxcNOWnoxEkx" fill="#b45309" font-family="sans-serif" font-size="13.5" font-weight="700" x="44" y="158"><!--pnid:6qHk6CUdptS6QrPOsmvvKf-->信息断层：三本账各记各的，没有任何自动勾稽</text>
+
+  <rect data-page-node-id="HkZ8Jqgkvrq3wnJYxikepU" fill="#fff" height="30" rx="6" stroke="#fde68a" width="428" x="44" y="168"/>
+  <text data-page-node-id="87Gq7LYpE2rwnWfMrEwATz" fill="#78350f" font-family="sans-serif" font-size="11.5" x="58" y="188"><!--pnid:0nWZz1hsyJod2D2Znxt5dB-->① 工单 / 发货：PDF + 邮件，滞后 3–7 天</text>
+  <rect data-page-node-id="WPZWaVwIPCl7oilZ5zHSnW" fill="#fff" height="30" rx="6" stroke="#fde68a" width="428" x="488" y="168"/>
+  <text data-page-node-id="7j3XU4hj1vrKuXVr0gzi9S" fill="#78350f" font-family="sans-serif" font-size="11.5" x="502" y="188"><!--pnid:Bbl86Uw6Mk09MAscRILSpF-->② 进度 / 在制：微信群、电话，口径与时点都不一致</text>
+  <rect data-page-node-id="xmDtfozw94CZZBa0kWNFHq" fill="#fff" height="30" rx="6" stroke="#fde68a" width="428" x="44" y="204"/>
+  <text data-page-node-id="8lLerqREf2Sp0bWKN6RgvL" fill="#78350f" font-family="sans-serif" font-size="11.5" x="58" y="224"><!--pnid:2nJ4zwpTVCXqNPHty4dpOE-->③ 库存：IDH 自有 Excel，原厂看不见，批次不可追溯</text>
+  <rect data-page-node-id="Yztcv6gVH8lQxphZfffkne" fill="#fff" height="30" rx="6" stroke="#fde68a" width="428" x="488" y="204"/>
+  <text data-page-node-id="ZxPZG8IzWO02deyJtmK4Eo" fill="#78350f" font-family="sans-serif" font-size="11.5" x="502" y="224"><!--pnid:s8l99OcjmFmspZI86Qbm6G-->④ 对账：月末人工拼表，差异只能靠"猜"和"扯"</text>
+
+  <!--pnid:LzYwNer7pnHzDKikD3NaAa--><!-- consequence -->
+  <rect data-page-node-id="K37f2wqgMCCuIP85JxUlt7" fill="#fef2f2" height="52" rx="8" stroke="#fecaca" width="912" x="24" y="272"/>
+  <text data-page-node-id="tPngjG8QEYIKWqfczsrRut" fill="#b91c1c" font-family="sans-serif" font-size="13" text-anchor="middle" x="480" y="303"><!--pnid:brmLlUzX5YpwjqIZqQYnCj-->账实不符 → 对账扯皮 → 结算拖延 → 拍脑袋备货 → 停线 / 呆滞 / 超额库存</text>
+</svg>
+<div data-page-node-id="5WkdHSiSxzpPIxpyOZGnDx" class="figcap"><!--pnid:7kiPzGzTUrPOM7Cjd4XJpl-->图 1　断裂点不在两端的系统，而在中间的"人工传导层"</div>
+</div>
+
+<h3 data-page-node-id="gkPJRpneLjGmbQsiyvCgsZ"><!--pnid:EwtSKWPzbgp1kIQTeOywCN-->1.2 为什么"Excel + 微信群"必然失效</h3>
+
+<table data-page-node-id="TGAH3e0GbPLF2KORwuP4xq">
+<thead data-page-node-id="2RjjC4KqBSCf8HPw7a0Rvi"><tr data-page-node-id="J64NGlTXldbnHAfeNQaIUy"><th data-page-node-id="1StTSdB5D07LfGJNqi9b5r" style="width:18%"><!--pnid:uG97dyq5nvxirrEaOnYCN7-->失效原因</th><th data-page-node-id="Coo5zdIfJSOG0eaLoVNIbo"><!--pnid:NIOFisj4bs6CKXGHxGX3bq-->具体表现</th></tr></thead>
+<tbody data-page-node-id="wV7JsoeLbqPdykzbJEr5JW">
+<tr data-page-node-id="JHlzNOiGj7FfMkVdKbEog6"><td data-page-node-id="OOhkkCtuBSvxcXXeAOGmCr"><b data-page-node-id="qKvX8yYqZ1GrSi8bT2MkRy"><!--pnid:yQCoArylhyWqj7yTUfvvam-->时点不一致</b></td><td data-page-node-id="1C0LfYtR6DOH11xBiM3DFr"><!--pnid:BBdOsrYeHSeFJLPei4u5tv-->微信里的进度是"昨天下午"的状态，发货单是"上周"的，库存表是"前天"导出的。三个时间轴拼不出一个可用于决策的数。</td></tr>
+<tr data-page-node-id="PhE04arqpsU08jlV9NvRCz"><td data-page-node-id="DwJ9JtcpygUl46WnnMhmtv"><b data-page-node-id="3PqirDHj9aZGllzOfpcF2q"><!--pnid:q8b29FOO4WhFxWnQsPnpj3-->口径不一致</b></td><td data-page-node-id="AsFNXIL6JLqlYJ03u4SFBZ"><!--pnid:XP2mBzsOJILDuWTW58pubT-->"已投产 5000"——是领料 5000、贴片 5000、还是测试完成 5000？同一个词在两边指不同的事，对账时必然打架。</td></tr>
+<tr data-page-node-id="2JQblvZ837tp4FaMHXl6BN"><td data-page-node-id="mvbqY5A9zyTtY0JZwYvMRK"><b data-page-node-id="ugwYHpul5zRIhDj0iDVpaA"><!--pnid:Sm2XFnBFBnEfWoZbfhXyTK-->缺批次锚点</b></td><td data-page-node-id="QfpGUa6OZfd6O1LxD0ztTX"><!--pnid:mf8TFHLC1nYeKbhbdYqVqR-->只记数量不记批次。一旦出现批量性失效，无法从成品 SN 反查到晶圆批，质量责任无法界定，只能整批扣款。</td></tr>
+<tr data-page-node-id="5adP32FxgYgDOUSGuUP6CM"><td data-page-node-id="BAxIcjTC50V0i6BZLoQnfc"><b data-page-node-id="hKdTLr4PystkTMbGxggbY2"><!--pnid:L9JzT1HOM6Oxbth8MTHGF0-->不可审计</b></td><td data-page-node-id="6cA0Ur3DC8TMDQ3QrXd3hJ"><!--pnid:UGaVwSJblP77B8oipQYe2X-->聊天记录和邮件不能作为结算依据。争议一旦发生，回到"各说各话"，最终由强势方拍板，弱势方下次更不愿报实数。</td></tr>
+</tbody>
+</table>
+
+<div data-page-node-id="b9X0ETxxvxxSHPcEm8DScE" class="callout warn">
+<span data-page-node-id="34lLgvbim8gLADBlI11SL3" class="ct"><!--pnid:Wqf2ThLdghogCD4XAQOwy4-->自检：命中 3 项以上，说明必须上平台了</span>
+<ul data-page-node-id="GVBzeEaavUzx5Btn8eBVOf" class="chk" style="margin:6px 0 2px">
+<li data-page-node-id="D63y6SxFD2D6NjVEsIFHKL"><!--pnid:Ff1E77YyNFU5gO4EadjQbx-->月度对账耗时超过 5 个工作日</li>
+<li data-page-node-id="yFGt8aq7mjvYXMicF5oT71"><!--pnid:UeahELRfWugarrcCYXU7Uo-->账实差异率长期高于 0.5%，且说不清原因</li>
+<li data-page-node-id="9pBsR1dxnD1lwY596JhdXr"><!--pnid:dx1UpQuy6U3BsGAwbof08V-->需要专人每周向 IDH 催进度、催库存表</li>
+<li data-page-node-id="l6LePnceQ7EiED2VeU3xav"><!--pnid:I6bvyfsTYagGyidQLJVfWb-->同一个批次的良率，两边报出两个版本</li>
+<li data-page-node-id="Up95WaGlEGALemTikHsaHc"><!--pnid:bfnwx1dMZcDWdtMGujK53g-->呆滞料责任无法界定，最终原厂兜底</li>
+<li data-page-node-id="7uSpet3Zzyy85RcATFcecc"><!--pnid:pWC6iXnGqh5PQYViGX7nnt-->客户急单时，无法在 1 小时内回答"IDH 手上还有多少可动用、几天能出货"</li>
+</ul>
+</div>
+
+<h2 data-page-node-id="N6Cj8IedYgC7X9Y7LYhj4S" id="s2"><!--pnid:TIV8vgU2VRY6UL2Cg0asRH-->02 · 五条设计原则</h2>
+
+<table data-page-node-id="SLuVAmL7QtYQwMYyBVtFA7">
+<thead data-page-node-id="qGHspbsjfsS84CEfnX02xx"><tr data-page-node-id="O8pSUyIrkO9TWBSWkSBHp1"><th data-page-node-id="eSQeYBEz1rHcKh2uRNhTDd" style="width:22%"><!--pnid:xvNtwG6GSN9yZvr26PKuZC-->原则</th><th data-page-node-id="APumjARgT6xmuVpSSDPNTO" style="width:40%"><!--pnid:nzkjXUC1LYpG0FdnCOccHs-->含义</th><th data-page-node-id="NVEfxV7TllIPiFuI9P8hRm"><!--pnid:EUt0EtMhtfELRzEneK6CcA-->不遵守的后果</th></tr></thead>
+<tbody data-page-node-id="tvq3U6lyKyLtA7D3tBnZDR">
+<tr data-page-node-id="K5c84xz4Gas3BqmtbwXosf"><td data-page-node-id="vPti7n8EANtV4CQGiQrpVB"><b data-page-node-id="BpryGu7CsuIcEJY4XXuFyh"><!--pnid:pmJmq7rczctrycwMxrAdJJ-->一个料号、一个批次、一个基准单位</b></td><td data-page-node-id="k1SPAeN4b5Q0guqzBnFnzs"><!--pnid:YrsfMi7UcegkoSsEm0HaAC-->全平台料号唯一；批次贯穿晶圆批→封装批→成品 SN；计量统一以"颗"为基准，盘/箱只做容器换算。</td><td data-page-node-id="8bVoq5ZjDeaWaIB11zibDG"><!--pnid:9mne7XbA8AqJzFCXy5Tol7-->编码不统一，三账永远对不上，且差异无法归因。这是<b data-page-node-id="692CbZyIHePHUg7s5wNpgT"><!--pnid:W8FeaIcNkekr8IvfHz6sNI-->最容易低估、代价最高</b><!--pnid:4EYR1M90V8A0bQBug8BOoD-->的一项。</td></tr>
+<tr data-page-node-id="NjEJeT4HiZZxBxBeQuKndD"><td data-page-node-id="E4313q6J3a8BPM37Zpy3KT"><b data-page-node-id="y8xvX4z9rOe4wQ3q6O4OW5"><!--pnid:P9AqFgSe99IIGTgvvuwjyg-->事件驱动、只追加、不可篡改</b></td><td data-page-node-id="LhIRI0hZjYj97kxSTTBZqI"><!--pnid:xau1nIwXW3cuC6wGA9cyq4-->每一次收发货、领用、报工都生成一条带时间戳与操作人的事件；账是由事件累加算出来的，不是人工改出来的。</td><td data-page-node-id="jtEPe0UMyFr1kRAOJIJEpO"><!--pnid:8r9yhMsqMaMNOQ4LFNEF4O-->账可以被改，就等于没有账。审计时无法自证。</td></tr>
+<tr data-page-node-id="UH3kuSsos5Tt1Wkq4gXzDn"><td data-page-node-id="Y7TT92TSSLSHzNgGV51ue6"><b data-page-node-id="af9ZWbEByNn9zBQp0nLqBl"><!--pnid:2Gyf5tXFcvfDDaHP5DamDc-->双向透明，不是单向监控</b></td><td data-page-node-id="fGGViTf8u7ou3lCfYsLxxK"><!--pnid:5z382vkpNaU1nZALHqo4IR-->原厂看得见 IDH 的在制与库存；IDH 同样看得见原厂的订单池、配额余额、在途批次、结算进度。</td><td data-page-node-id="H08ipbdvdAgFApkd5ZDpOg"><!--pnid:w0C0gp83hVnXFBHxJUUcUd-->做成监控工具，IDH 一定用"填假数"来对抗，平台数据半年内失去价值。</td></tr>
+<tr data-page-node-id="K6ye7tmxpD6hD2ywQhqbmQ"><td data-page-node-id="hVjtp2XPXyIgRyGublXZye"><b data-page-node-id="BkcE3Tok5Cdy5ikTj8rsRi"><!--pnid:hF2yt5i2BIwXrMXstBHVCf-->最小采集</b></td><td data-page-node-id="bfcNUCufAS9H4Xo5BlxAhr"><!--pnid:1L50iDbAul2nwSO09O625q-->只采对账和交期承诺必需的节点（收货、领用、关键工序完工、入库、出货），不追求全工序 MES 级覆盖。</td><td data-page-node-id="gHD4VJrqyU4qb1f7ttgo4D"><!--pnid:4AOooUGHYYlpGrCuHq2yvR-->IDH 双录负担过重 → 抵触 → 数据延迟或造假。第一期死在"要求太多"。</td></tr>
+<tr data-page-node-id="lVwmJGjVDDMttDpKf9gzU3"><td data-page-node-id="r2gkWMO1L0dPNAp0fxdkiT"><b data-page-node-id="jtS06mEwUCvfH2rgAzvunp"><!--pnid:ZcWTU4mNjEGyAVHV9lfX6P-->AI 只做辅助，结论必须可溯源</b></td><td data-page-node-id="GGbhYZ6E8giOwEOOLD9ptf"><!--pnid:4fMNtRIZqGInKoaQe2yHZb-->任何 AI 输出的结论都要能点回原始单据或事件；不做自动扣款、自动判定责任。</td><td data-page-node-id="H3WqfaNDHZinJjVPdyUx93"><!--pnid:Sn6jqLBhSlovGoEOCaWvCn-->一次错误的自动判定，会让双方都不再信任系统。</td></tr>
+</tbody>
+</table>
+
+<h2 data-page-node-id="QmekfuAbGzDMZO0FDvsWQw" id="s3"><!--pnid:xczox0bXSfybil0ckBnfrA-->03 · 业务蓝图：三账模型是整套系统的地基</h2>
+
+<p data-page-node-id="dxAfiY6TIl31n32Xq4N4Ao"><!--pnid:IuHUN9BZuTVcqiko064XNg-->把"信息同步"翻译成可计算的结构，就是三本账。所有功能模块最终都服务于让这三本账自动勾稽、差异可归因。</p>
+
+<div data-page-node-id="2pt4C1RgXFbtch7ih9MO5O" class="figure">
+<svg data-page-node-id="VKlrNoKz83Dyj1c1FzAHTV" aria-label="三账对齐模型" role="img" viewBox="0 0 960 366" xmlns="http://www.w3.org/2000/svg">
+  <!--pnid:butb4lIARDv8pVASCFyrSo--><!-- A -->
+  <rect data-page-node-id="s2z8Rs7W99l6bUXbGV8hMN" fill="#fbfdff" height="176" rx="10" stroke="#cbd5e1" width="286" x="24" y="24"/>
+  <rect data-page-node-id="P5HfSQesqeLwsnSNvxQ1V9" fill="#dbeafe" height="34" rx="10" width="286" x="24" y="24"/>
+  <rect data-page-node-id="lma38c3XIJYQP02zFNlBQ5" fill="#dbeafe" height="14" width="286" x="24" y="44"/>
+  <text data-page-node-id="D5jhkj1fjr79nVVlXMLxe2" fill="#1e40af" font-family="sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" x="167" y="46"><!--pnid:WbX7I6eDus6WZ71qVgqMHG-->A · 原厂账（发货视角）</text>
+  <text data-page-node-id="RixQC7wnfUAQCFEWchrgUk" fill="#334155" font-family="sans-serif" font-size="12" x="48" y="84"><!--pnid:4KiscDUNRUuU42bXOCAQSN-->期初在 IDH 库存</text>
+  <text data-page-node-id="rMpVPyUxOuRM3fRu2gU0Wi" fill="#0f172a" font-family="monospace" font-size="12" text-anchor="end" x="286" y="84"><!--pnid:KeJh3f0i85HNzv9d0iWwZU-->1,000</text>
+  <text data-page-node-id="ERieIJqAOeWsdk4uDai0Lb" fill="#334155" font-family="sans-serif" font-size="12" x="48" y="110"><!--pnid:JoJW2JFXtuC0QydSxYQO65-->+ 本期发货（DN 生效）</text>
+  <text data-page-node-id="3vzDR3y04nQWHBy9hwmAI8" fill="#15803d" font-family="monospace" font-size="12" text-anchor="end" x="286" y="110"><!--pnid:IzKpHKUhkXgVFwqRTNWTqD-->+5,000</text>
+  <text data-page-node-id="yQiuyBejmR0WAmEfxxSvND" fill="#334155" font-family="sans-serif" font-size="12" x="48" y="136"><!--pnid:gNUvXyUDh662sN4FxVWMto-->− 本期退货 / 转售</text>
+  <text data-page-node-id="TEaZ0GZ7jtx68IIw9dpKtu" fill="#b91c1c" font-family="monospace" font-size="12" text-anchor="end" x="286" y="136"><!--pnid:DZVGJLQsjbr3fNEfRXAUdM-->−0</text>
+  <text data-page-node-id="J29EhyukdT0ejsQj7gjuvK" fill="#334155" font-family="sans-serif" font-size="12" x="48" y="162"><!--pnid:Et0U7p4jpEpnSdqOHq6DDM-->− 已确认消耗</text>
+  <text data-page-node-id="w6gsQRy3g4WgfxLYf2CQ2P" fill="#b91c1c" font-family="monospace" font-size="12" text-anchor="end" x="286" y="162"><!--pnid:9EcKYuCx0hVtxKmBHT3WiS-->−4,200</text>
+  <line data-page-node-id="UFTv34noFVG9ZOyfhCdDCe" stroke="#e2e8f0" x1="44" x2="290" y1="172" y2="172"/>
+  <text data-page-node-id="oNWVclDG8gBvRkP4PcYNVY" fill="#1e40af" font-family="sans-serif" font-size="12.5" font-weight="700" x="48" y="192"><!--pnid:bf4YqAIbNMPNZMG6XcAfdC-->应在 IDH</text>
+  <text data-page-node-id="rhe4Kx3UZANR4RtHOoNI22" fill="#1e40af" font-family="monospace" font-size="12.5" font-weight="700" text-anchor="end" x="286" y="192"><!--pnid:JfqKrBCM9TeqaPPzXMuy6J-->1,800</text>
+
+  <!--pnid:adnaAxCzFzppELAcmp37yi--><!-- B -->
+  <rect data-page-node-id="iA4ELAGtI4gl5Kb1BnleQD" fill="#fbfdff" height="176" rx="10" stroke="#cbd5e1" width="286" x="337" y="24"/>
+  <rect data-page-node-id="RWC4dxgyQHQ8LqPl0aRxaV" fill="#d1fae5" height="34" rx="10" width="286" x="337" y="24"/>
+  <rect data-page-node-id="RDYWDFVtU6n1mBurCti3Yx" fill="#d1fae5" height="14" width="286" x="337" y="44"/>
+  <text data-page-node-id="RAQI4DgYntHQVfWGixVpcF" fill="#065f46" font-family="sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" x="480" y="46"><!--pnid:R4v5hEiyjhBP5x948LOr5D-->B · IDH 账（消耗视角）</text>
+  <text data-page-node-id="vGW4fXxjYSx2N7FnVemNQp" fill="#334155" font-family="sans-serif" font-size="12" x="361" y="84"><!--pnid:X2izt19cEevZ6gQXNTHkfp-->期初库存</text>
+  <text data-page-node-id="u0Wkykk5ieRlfU6N5uamp2" fill="#0f172a" font-family="monospace" font-size="12" text-anchor="end" x="599" y="84"><!--pnid:KWEC244JmfAhjYQ8lT7CZI-->1,000</text>
+  <text data-page-node-id="EIN8JZ9FBRurXAHl4viZEm" fill="#334155" font-family="sans-serif" font-size="12" x="361" y="110"><!--pnid:uSE0tf3OUwxg2tpbeiR8Pz-->+ 本期收货（GR 确认）</text>
+  <text data-page-node-id="2nZwMnwM6po1ntSWhzbFqT" fill="#15803d" font-family="monospace" font-size="12" text-anchor="end" x="599" y="110"><!--pnid:PDmmHES6wZfZQ4U5WMkJuR-->+5,000</text>
+  <text data-page-node-id="hMWATxtaFLnmi612TYeWCN" fill="#334155" font-family="sans-serif" font-size="12" x="361" y="136"><!--pnid:H6LFdC6T72WXtmtejV2s0d-->− 本期领用 / 报废</text>
+  <text data-page-node-id="EIhpHhdcCZvlk6J4atvlMD" fill="#b91c1c" font-family="monospace" font-size="12" text-anchor="end" x="599" y="136"><!--pnid:u1huCT84EAT2ZmZhJDJJb6-->−4,180</text>
+  <text data-page-node-id="pFYQhSN9r6Ncj0Mam5nYMp" fill="#334155" font-family="sans-serif" font-size="12" x="361" y="162"><!--pnid:CziPhY2D3fpTgC9VPtZIOO-->+ 退料 / 借料退回</text>
+  <text data-page-node-id="bXXE9csGMSVSsioOXmQj0X" fill="#15803d" font-family="monospace" font-size="12" text-anchor="end" x="599" y="162"><!--pnid:x0leQkZMkBZSMKPem12Zwi-->+0</text>
+  <line data-page-node-id="YvgaPDAoojaVWWygW5i7gX" stroke="#e2e8f0" x1="357" x2="603" y1="172" y2="172"/>
+  <text data-page-node-id="FAN5BpbBpVulNMzhHEccK6" fill="#065f46" font-family="sans-serif" font-size="12.5" font-weight="700" x="361" y="192"><!--pnid:aHONWaYnUItetgXoDacUr4-->账上应存</text>
+  <text data-page-node-id="Aq1Ut5BhxHEDawCfdfo8vI" fill="#065f46" font-family="monospace" font-size="12.5" font-weight="700" text-anchor="end" x="599" y="192"><!--pnid:Kwkre0bF7moXH8D6kSfacK-->1,820</text>
+
+  <!--pnid:Lqh8ohNenVgxVAG2vIjavq--><!-- C -->
+  <rect data-page-node-id="Bez6g6yFjvYQLqfYo1tH5o" fill="#fbfdff" height="176" rx="10" stroke="#cbd5e1" width="286" x="650" y="24"/>
+  <rect data-page-node-id="FZjN0NRTs1yfY4BdgrW8F6" fill="#fef3c7" height="34" rx="10" width="286" x="650" y="24"/>
+  <rect data-page-node-id="baqtrf9lKRO71ShXrtfYsq" fill="#fef3c7" height="14" width="286" x="650" y="44"/>
+  <text data-page-node-id="S5sCQ6vtXVcLReHhBmyyvy" fill="#92400e" font-family="sans-serif" font-size="13.5" font-weight="700" text-anchor="middle" x="793" y="46"><!--pnid:4PVcmzLrSiCVo5M7A4UX58-->C · 实盘（物理视角）</text>
+  <text data-page-node-id="deMcqwQQvjMcM6sexxEuZk" fill="#334155" font-family="sans-serif" font-size="12" x="674" y="84"><!--pnid:OvMKGicHeE4CP3fZEZBsCo-->盘点实盘数</text>
+  <text data-page-node-id="P2SjvXi7DpocftREDvVaAg" fill="#92400e" font-family="monospace" font-size="12" font-weight="700" text-anchor="end" x="912" y="84"><!--pnid:8q97zbgCmgkvw639Z52Ect-->1,790</text>
+  <text data-page-node-id="PzW688Dtf4ZisKJ5TYgVxy" fill="#334155" font-family="sans-serif" font-size="12" x="674" y="110"><!--pnid:Po0VsVrXl0a4j5uLAjqeAJ-->盘点时点</text>
+  <text data-page-node-id="FPfjj2hVer9Mwqwql5E06K" fill="#475569" font-family="sans-serif" font-size="12" text-anchor="end" x="912" y="110"><!--pnid:M6lGe3bH3S79O4UOJZggjH-->D+3</text>
+  <text data-page-node-id="xrSNSXXLVSPwKXLe5dQ0wl" fill="#334155" font-family="sans-serif" font-size="12" x="674" y="136"><!--pnid:ktx8Jf1eOrjOdGbU4NrwIw-->盘点方式</text>
+  <text data-page-node-id="EVIdjVCjUrg06PyrFTNIH5" fill="#475569" font-family="sans-serif" font-size="12" text-anchor="end" x="912" y="136"><!--pnid:RWXMfJbLtCDfbEqcfdhhrk-->扫码 + 双人复核</text>
+  <text data-page-node-id="0oHoRhrE8VjPP5rAEh3tpO" fill="#334155" font-family="sans-serif" font-size="12" x="674" y="162"><!--pnid:nY086CyuvbVaTIf0wkCFM7-->影像留证</text>
+  <text data-page-node-id="2dhkVl8rcM530EFjuvz6Xv" fill="#475569" font-family="sans-serif" font-size="12" text-anchor="end" x="912" y="162"><!--pnid:HC8JHsbRr0mI2K9MWQ2sap-->箱/盘/批次三级</text>
+  <line data-page-node-id="pMWHFCVpRvAp9V1wjukjwE" stroke="#e2e8f0" x1="670" x2="916" y1="172" y2="172"/>
+  <text data-page-node-id="Oc6PWXoDpOOMB6MZMl495v" fill="#92400e" font-family="sans-serif" font-size="12.5" font-weight="700" x="674" y="192"><!--pnid:vMPzoSBL8bplY4AR5vYsdd-->账面 − 实盘</text>
+  <text data-page-node-id="wlD42qYF2dOnZlWoyqVcCa" fill="#92400e" font-family="monospace" font-size="12.5" font-weight="700" text-anchor="end" x="912" y="192"><!--pnid:EFgynNGWDPfddPVQBaXBWb-->+30</text>
+
+  <!--pnid:qO34G8NCpCfIjkLP2DOnKr--><!-- diff band -->
+  <rect data-page-node-id="RIjBwQ1OeIcU7XErDt5o6h" fill="#fff7ed" height="44" rx="8" stroke="#fed7aa" width="912" x="24" y="212"/>
+  <text data-page-node-id="NpeWKZJkHqIW4zszpCdyt4" fill="#b45309" font-family="sans-serif" font-size="12.5" text-anchor="middle" x="480" y="239"><!--pnid:1mC45Cdx5ejy7JFYRj8hnY-->系统差异 = A 1,800 − B 1,820 = −20（单据不同步）　　实物差异 = B 1,820 − C 1,790 = +30（损耗 / 串用 / 漏记）</text>
+
+  <!--pnid:7EIakzEZUwl0qdJ4Eh4V3J--><!-- decomposition -->
+  <text data-page-node-id="JbA1De2PznZRO7GupTx1KG" fill="#0f172a" font-family="sans-serif" font-size="13" font-weight="700" x="24" y="284"><!--pnid:ZjAcgp3Wt30UkYfrrgdJ5L-->差异必须落到可归因的类别，否则永远对不上，也永远吵不完</text>
+  <rect data-page-node-id="UmIwLjUNfVs5y5ESCIM5LH" fill="#f1f5f9" height="28" rx="6" stroke="#e2e8f0" width="296" x="24" y="294"/>
+  <text data-page-node-id="paMzuyq6E38nPPPbIA0q5Z" fill="#334155" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="172" y="313"><!--pnid:8xEYpqjYVBfNXttoOo15Hm-->D01 在途未达（发货未收货）</text>
+  <rect data-page-node-id="94TczWWcgbV6TChrZlo49g" fill="#f1f5f9" height="28" rx="6" stroke="#e2e8f0" width="296" x="332" y="294"/>
+  <text data-page-node-id="i68VRAQu3CnAca7Bw2fjIz" fill="#334155" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="480" y="313"><!--pnid:EYgsMey4P9bnOJPX8A5RNg-->D02 收货未确认（GR 未回传）</text>
+  <rect data-page-node-id="KszzoqRrX0MvFoD8sv9jBO" fill="#f1f5f9" height="28" rx="6" stroke="#e2e8f0" width="296" x="640" y="294"/>
+  <text data-page-node-id="rOfdqzOzLimwenRTeREFFF" fill="#334155" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="788" y="313"><!--pnid:C5duoq5ffgnVdbrfAcnIBq-->D03 领用未报工（已投未记账）</text>
+  <rect data-page-node-id="hPcCbJk3okfTZsNzNqAoF0" fill="#f1f5f9" height="28" rx="6" stroke="#e2e8f0" width="296" x="24" y="330"/>
+  <text data-page-node-id="4h8lQlqnb0BwBgbL4ypFHM" fill="#334155" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="172" y="349"><!--pnid:3JjBtI2RrpFcfkVPIsA3Lk-->D04 报废未申报（损耗 / 掉料）</text>
+  <rect data-page-node-id="SOe0m61SQbx12gTIROEuDF" fill="#f1f5f9" height="28" rx="6" stroke="#e2e8f0" width="296" x="332" y="330"/>
+  <text data-page-node-id="N67GRoTlnhKq7bTy5itsHO" fill="#334155" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="480" y="349"><!--pnid:ntHW59plmuDglBMVOSZvEN-->D05 批次串用（挪用 / 置换）</text>
+  <rect data-page-node-id="qEpPTHX4xyrxelMIKUkIO8" fill="#f1f5f9" height="28" rx="6" stroke="#e2e8f0" width="296" x="640" y="330"/>
+  <text data-page-node-id="YD0WUWzKpCxLDudxu1F4SL" fill="#334155" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="788" y="349"><!--pnid:vZE4CyeTKAC1NpwSUHnfmF-->D06 单位换算（颗 / 盘 / 箱）</text>
+</svg>
+<div data-page-node-id="wyQHgddZr1hBL8VATu2xMf" class="figcap"><!--pnid:ZP3lM4VOirugp4r3HKTT5q-->图 2　三账勾稽关系与差异分解（数字为示例）</div>
+</div>
+
+<h3 data-page-node-id="dQQ2l7No5aCQw75Uj0qsxF"><!--pnid:pSGILe2SQYjESxRNKave5r-->3.1 三本账的更新时点</h3>
+
+<table data-page-node-id="4BmvaCTehybSigzNC0wl4p">
+<thead data-page-node-id="z27DkHUkWO35SQv51KwMNr"><tr data-page-node-id="I69a5vQducn0fhIYqv79Is"><th data-page-node-id="KaXs1Fzahm37aJa214JdFQ" style="width:16%"><!--pnid:BI8pJa2L5loZYXhdcCPwg9-->账本</th><th data-page-node-id="YuzvZUKhUSmZ9K2EKK0XjN" style="width:44%"><!--pnid:4oaQWL7ktbO8AMj0qly2Wt-->公式</th><th data-page-node-id="Pw2e1hfSM0X6la2wKqWzHB"><!--pnid:Y0YXorRtZdPtvRMZdPvn3Y-->更新时点 / 由谁驱动</th></tr></thead>
+<tbody data-page-node-id="8OMfVlbzoFZv5sTu7M0YEM">
+<tr data-page-node-id="I9E9fiGg9NPS7rULzDn97o"><td data-page-node-id="30EmfwtuVhNJYLV5jNu3Jy"><b data-page-node-id="XMQH50S1GD5e8UPBv45lKS"><!--pnid:LaHr3VRhdeP5Yh6DLp1qcm-->A 原厂账</b><br data-page-node-id="BjIJOpIyCIXAhLxuLHdsHQ"><span data-page-node-id="jafo4WYTwV1K0lzrdEgdeo" style="color:#64748b; font-size:12px"><!--pnid:5y8OKUQKslA9iJOaVIIXD9-->发货视角</span></td><td data-page-node-id="M8Ipgu30GV29UxlzOUXlCa"><code data-page-node-id="qaE3Ij7YvG9AjaoxaYYx6g" data-pnid-children="KvnaAhKu3UalHU3ek9btb0">A = 期初 + 发货 − 退货 − 转售 − 已确认消耗</code></td><td data-page-node-id="ZFeLGXZgH7CO1Op7uRLwId"><!--pnid:JDjrB2HRMMboTU4QJJfGP6-->发货单生效、退货入库、对账确认时更新。由原厂 ERP + 平台共同驱动。</td></tr>
+<tr data-page-node-id="UkXtRj3kIfhtt7JEMZNVVG"><td data-page-node-id="3pPAoi2DogzzDjPDn2jCeg"><b data-page-node-id="e5BhuOzk4QsbPlphMDEvtB"><!--pnid:iueac1L9uUADRBLDSa8Pko-->B IDH 账</b><br data-page-node-id="zEAps2DSB6CMON26jINigj"><span data-page-node-id="cwWXQRiteARcaMl5qC8XUH" style="color:#64748b; font-size:12px"><!--pnid:rJecEzX1bB82GD6oigrZOm-->消耗视角</span></td><td data-page-node-id="srS8geGxPbsCW9bTAXcAtR"><code data-page-node-id="BEddQ0ghK3Y04Kq7faYvBI" data-pnid-children="IBMEsjxn1RII9peFbwZ8hZ">B = 期初 + 收货 − 领用 − 报废 + 退料</code></td><td data-page-node-id="tY7dPNt0UDtpUUHN1Wia13"><!--pnid:pGKGjKvAxgWZ6FYI0C2OJa-->每次扫码动作实时更新。由 IDH 现场作业（PDA / H5）驱动。</td></tr>
+<tr data-page-node-id="PPHcaMibaZ4hwoQbtXzQSr"><td data-page-node-id="M9wzBeKG4CDFI6l8OCpVYK"><b data-page-node-id="xL4vaW1roHnf60WsYktc8U"><!--pnid:QlJpOtBxzf1OBC7D7dfY3h-->C 实盘</b><br data-page-node-id="U9QrDku6SeOcPLrr6GOIRy"><span data-page-node-id="hKszsqh9XcA8J8pAhihfK7" style="color:#64748b; font-size:12px"><!--pnid:XoM8AoilXIxH7vVWGuCAnQ-->物理视角</span></td><td data-page-node-id="HVmtBe3AmMYqrAA6X2qnGD"><code data-page-node-id="JwBdwUmAaGUdmbAGpZBIii" data-pnid-children="nlb310aWNJsAVinXGbif7w">C = 盘点实盘数</code></td><td data-page-node-id="ZRGQ0GZF5oAdslSsVi1MRz"><!--pnid:LW96OyR7her6NynptrA8Ar-->月度全盘 + 周度循环盘点（按高价值/高流动料号轮盘）。</td></tr>
+</tbody>
+</table>
+
+<div data-page-node-id="CT3FhNgQmrqH8pI2HTJMbT" class="callout note">
+<span data-page-node-id="FbayE8AypnZmc1Qd1i2Wfv" class="ct"><!--pnid:DXL3dl44EUhVslMN7mcoW4-->关键设计：A 与 B 的"消耗"必须是同一个数</span>
+<p data-page-node-id="52jaK6rRK03ID0OTfUUIQT"><!--pnid:ElNi2h0emMOz2fy01pWzBs-->最常见的设计错误，是让原厂账按"发票"扣减、让 IDH 账按"领料"扣减。两者永远差一个时间差，差异率恒大于零。正确做法是：<b data-page-node-id="67JRblrEGh1QpTY3Fuclj1"><!--pnid:nWdEYaiqBFu4ll0IMx8nZe-->统一以"领用事件"作为消耗确认口径</b><!--pnid:eOlFccbNoyst4KoWg4yuMP-->，发票只做金额结算，不参与数量勾稽。数量账与金额账必须分开建模。</p>
+</div>
+
+<h3 data-page-node-id="mjKLK9SOOMsWRGzXj1q1cg"><!--pnid:hBtMEjQu7Ghz68gHkr4bpV-->3.2 五条主线流程</h3>
+
+<div data-page-node-id="KWnzdfdmjIBTAVkJ7mIu2Q" class="figure">
+<svg data-page-node-id="40zgpbiUMTwHS9yoQ7V8R8" aria-label="主流程与事件流" role="img" viewBox="0 0 960 408" xmlns="http://www.w3.org/2000/svg">
+  <defs data-page-node-id="BhNhduqrMwbwUHxpFYtSMT">
+    <marker data-page-node-id="33Q6iCJ9YG9vNwhBfGoHpJ" id="ar2" markerHeight="6.5" markerWidth="6.5" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
+      <path data-page-node-id="QsZR4iwnODu0tPWjGwTbUr" d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!--pnid:2KaYKXgOqSwCn7iFYw094x--><!-- lanes -->
+  <rect data-page-node-id="Y2Sy6sK9MHaGfpnAmWaTnH" fill="#eff6ff" height="78" rx="8" width="944" x="8" y="24"/>
+  <text data-page-node-id="aCXaL7K04ekzWRjzR8jmAw" fill="#1e40af" font-family="sans-serif" font-size="12.5" font-weight="700" x="22" y="68"><!--pnid:IDAxoknebnAEVW8lw8G0Lt-->原厂</text>
+  <rect data-page-node-id="o9EGdbuQhUNeECm3YyQ1Ec" fill="#f8fafc" height="78" rx="8" width="944" x="8" y="112"/>
+  <text data-page-node-id="rO19POCG3OKhhPj16ofVU0" fill="#334155" font-family="sans-serif" font-size="12.5" font-weight="700" x="22" y="156"><!--pnid:p6m9FFQd0Nz6Hg5baGw9x4-->平台</text>
+  <rect data-page-node-id="GAVMWtd97i9QQIQen7KSCx" fill="#ecfdf5" height="78" rx="8" width="944" x="8" y="200"/>
+  <text data-page-node-id="nPHd0JdywSsaXV6paf9PD9" fill="#065f46" font-family="sans-serif" font-size="12.5" font-weight="700" x="22" y="244"><!--pnid:ZYcW2imeTq8cnlk9jHMmKF-->IDH</text>
+
+  <!--pnid:q5ZSIUlfPIQpwVejIcCKtW--><!-- 原厂 boxes -->
+  <rect data-page-node-id="FOtw9gKbq3VsMxVO3jNB24" fill="#fff" height="44" rx="7" stroke="#93c5fd" width="120" x="95" y="41"/>
+  <text data-page-node-id="xcBrt3QpyLP9DzuYdtinS7" fill="#1e3a8a" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="155" y="68"><!--pnid:3XqfaeZRMAmdmwurXtKMIi-->工单合同 WO</text>
+  <rect data-page-node-id="DGxp2GWq71Vte8uHJihUe3" fill="#fff" height="44" rx="7" stroke="#93c5fd" width="120" x="237" y="41"/>
+  <text data-page-node-id="WFPOJwfVUt5iCliRZCG3b8" fill="#1e3a8a" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="297" y="68"><!--pnid:c5ZAZiKlKgFjwzU9rNIdBX-->发货单 DN</text>
+  <rect data-page-node-id="sgQvscZj7dLbO9HH8bfi1t" fill="#fff" height="44" rx="7" stroke="#93c5fd" width="120" x="805" y="41"/>
+  <text data-page-node-id="OyygX06oxaIBNQhwPnKEjN" fill="#1e3a8a" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="865" y="61"><!--pnid:mTKF157LDD3QwOevycPMCJ-->对账确认</text>
+  <text data-page-node-id="HM4CxEsO7d5WDDlOyUk6wM" fill="#1e3a8a" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="865" y="77"><!--pnid:fSRrhB3G3AjX4SRwOSlXZZ-->+ 结算</text>
+
+  <!--pnid:XJ0ilAAXZj5MXEO4AWFMLx--><!-- platform bar -->
+  <rect data-page-node-id="k7md5TEKhksnnv2rreYl4Y" fill="#fff" height="44" rx="7" stroke="#cbd5e1" width="830" x="95" y="129"/>
+  <text data-page-node-id="1gpdg6UVttni3IdyP9LYyp" fill="#0f172a" font-family="sans-serif" font-size="11.5" font-weight="700" text-anchor="middle" x="510" y="148"><!--pnid:Fpx4YOtCqlkxGqkwd1jJFB-->事件总线（只追加）→ 三账实时重算 → 差异分类引擎 → 预警 / 周对账 / 月锁账</text>
+  <text data-page-node-id="FUXlvvWu9PRQsboRYIOSdc" fill="#64748b" font-family="sans-serif" font-size="11" text-anchor="middle" x="510" y="165"><!--pnid:BnGLzym42booREtPDqW0CU-->没有事件就没有账；没有账就不结算</text>
+
+  <!--pnid:QJqRJD3F269zziU7Rh5ThB--><!-- IDH boxes -->
+  <rect data-page-node-id="GvVQ0eeAC302JfkkBZ5yk5" fill="#fff" height="44" rx="7" stroke="#6ee7b7" width="120" x="237" y="217"/>
+  <text data-page-node-id="3wy5Ve4sEsry9dbcnaS7u2" fill="#065f46" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="297" y="244"><!--pnid:JOczT9U3CrsE7pgQxvHtvp-->收货 GR</text>
+  <rect data-page-node-id="fluf7OCzLX5ndm8WNmBXfB" fill="#fff" height="44" rx="7" stroke="#6ee7b7" width="120" x="379" y="217"/>
+  <text data-page-node-id="BpgrxIvAzjGnD4p7kw6UHZ" fill="#065f46" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="439" y="238"><!--pnid:ewZz4jLYyBVQH27nN4nMMr-->领料投料</text>
+  <text data-page-node-id="w5fACmuGkZn9l2CdzIRZMn" fill="#64748b" font-family="sans-serif" font-size="10.5" text-anchor="middle" x="439" y="253"><!--pnid:9qawtheOCSI43DugP9qV3Q-->Issue</text>
+  <rect data-page-node-id="1RS58SpE8wpBqOiSb2H8eZ" fill="#fff" height="44" rx="7" stroke="#6ee7b7" width="120" x="521" y="217"/>
+  <text data-page-node-id="8HAG38lGPGzwCK0jUg1Fd7" fill="#065f46" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="581" y="238"><!--pnid:Q95S6bbBVntWTCQxHjqTHW-->工序报工</text>
+  <text data-page-node-id="Wsxk2FREHmPmgpJSsTKViY" fill="#64748b" font-family="sans-serif" font-size="10.5" text-anchor="middle" x="581" y="253"><!--pnid:OomyQ3rxg5HzGsHst8DaNc-->WIP</text>
+  <rect data-page-node-id="PSIOBXzexFjlZb95BLOgTd" fill="#fff" height="44" rx="7" stroke="#6ee7b7" width="120" x="663" y="217"/>
+  <text data-page-node-id="GXC5h00jRzny9RYyV8XryW" fill="#065f46" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="723" y="244"><!--pnid:KVB4FCteiLbciCebMCJTEU-->成品入库 FG</text>
+  <rect data-page-node-id="09jXJFfZx2LuSbtEXemKvq" fill="#fff" height="44" rx="7" stroke="#6ee7b7" width="120" x="805" y="217"/>
+  <text data-page-node-id="IxJBhPn2Fg1xAb2CdH5hiR" fill="#065f46" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="865" y="244"><!--pnid:sqdgn49FStzcLDfOYEz8u4-->出货 SO</text>
+
+  <!--pnid:RM52Njn5HPkUhqIvSu10g9--><!-- connectors -->
+  <line data-page-node-id="FU2X9utJiqa3Jl8phi9poy" marker-end="url(#ar2)" stroke="#cbd5e1" stroke-dasharray="4 3" stroke-width="1.3" x1="155" x2="155" y1="85" y2="127"/>
+  <line data-page-node-id="Zz0AOzKHQr2372RBNr5YJJ" marker-end="url(#ar2)" stroke="#cbd5e1" stroke-dasharray="4 3" stroke-width="1.3" x1="297" x2="297" y1="85" y2="208"/>
+  <line data-page-node-id="n071AMqGjSuO8x7wCx0J6y" marker-end="url(#ar2)" stroke="#cbd5e1" stroke-dasharray="4 3" stroke-width="1.3" x1="439" x2="439" y1="217" y2="175"/>
+  <line data-page-node-id="B0Tf0VS55839OKpT0GIAic" marker-end="url(#ar2)" stroke="#cbd5e1" stroke-dasharray="4 3" stroke-width="1.3" x1="581" x2="581" y1="217" y2="175"/>
+  <line data-page-node-id="Hf8yCH8FwFTmKPXrTBdEzc" marker-end="url(#ar2)" stroke="#cbd5e1" stroke-dasharray="4 3" stroke-width="1.3" x1="723" x2="723" y1="217" y2="175"/>
+  <line data-page-node-id="dkFlIqn4DmiGrUY6MHTuL6" marker-end="url(#ar2)" stroke="#cbd5e1" stroke-dasharray="4 3" stroke-width="1.3" x1="865" x2="865" y1="217" y2="175"/>
+  <line data-page-node-id="YxXJMcVnZ4SdDmLJCijxDO" marker-end="url(#ar2)" stroke="#cbd5e1" stroke-dasharray="4 3" stroke-width="1.3" x1="865" x2="865" y1="127" y2="87"/>
+
+  <!--pnid:HfhFYXEbyprI63KYJzYrCI--><!-- bottom notes -->
+  <text data-page-node-id="Wec82ffIDuJLcCZFmEuYHG" fill="#0f172a" font-family="sans-serif" font-size="11.5" font-weight="700" x="95" y="306"><!--pnid:awXZ2uFF5xPwMLbs2tbejh-->事件编码（示例）</text>
+  <text data-page-node-id="9gEzWow7eiwqpLfVMb0zrV" fill="#475569" font-family="monospace" font-size="11" x="95" y="330"><!--pnid:zKazTCyKfvBShCF10FRbb4-->WO.ISSUED → DN.SHIPPED → GR.CONFIRMED → ISSUE.POSTED →</text>
+  <text data-page-node-id="ZC1JVN0pQlAerwWZRqP6e5" fill="#475569" font-family="monospace" font-size="11" x="95" y="350"><!--pnid:1sO8bem9ppim3vyJHvO5LS-->WIP.REPORTED → FG.RECEIVED → SO.SHIPPED → RECON.LOCKED</text>
+
+  <rect data-page-node-id="FpobTNc4R3W8Ie6lMBKyrK" fill="#f8fafc" height="34" rx="6" stroke="#e2e8f0" width="830" x="95" y="364"/>
+  <text data-page-node-id="f79EBJEyo5vnxzbKIadzip" fill="#334155" font-family="sans-serif" font-size="11.5" text-anchor="middle" x="510" y="386"><!--pnid:Tq8GPnAJHbtMjryE4ChU6A-->每个动作 = 一条不可篡改事件；三账由事件累加得出，禁止人工直接改数（调整必须走调整单并双签）</text>
+</svg>
+<div data-page-node-id="WNxrIgbA9v8jeNi0HT7pTA" class="figcap"><!--pnid:1HADawJtxIaamHURvHhFfj-->图 3　主流程泳道与事件流：所有账目变化都源于一条事件</div>
+</div>
+
+<h2 data-page-node-id="sKPw4DRvBLw3rQCHh6WmIH" id="s4"><!--pnid:U6lRNdHJxS3qXsTaKKB7wT-->04 · 平台功能架构</h2>
+
+<div data-page-node-id="PrvuaLsMHdi38E6TqdAwoR" class="arch">
+  <div data-page-node-id="rcltS3w82kTz5NwvgyKbRW" class="layer" style="border-left:3px solid #93c5fd">
+    <div data-page-node-id="f5PCQE2qvedU79qXYTYS1d" class="lk"><!--pnid:iQZcUQy6szLFnha681WaIa-->渠道与接入</div>
+    <div data-page-node-id="mrKRSQdR7ugYDC80JyzblI" class="lv"><span data-page-node-id="qH2QP6qXLdke7MKF0s7D2T"><!--pnid:Mk30h7CDgNjDfyO6TTYF5F-->原厂 PC 端</span><span data-page-node-id="K7WvnMk9x1aqOgyiwCu44o"><!--pnid:Uu1LLw839u9Yl6sd7TY0FI-->IDH PC 端</span><span data-page-node-id="ma3hb1JT2yAq01OG7bPOJm"><!--pnid:tW4ccjZLVnuySAx3rlpTi4-->移动 H5（报工/扫码）</span><span data-page-node-id="rluXqtvRslHs2yl1l7EYsP"><!--pnid:aPTu1ATv9dgGryN9k9hdx8-->PDA / 扫码枪</span><span data-page-node-id="MCix5Vga3GkCXfU6JOzn7K"><!--pnid:zPPCZAKF1Ft0mvNPBPaorK-->Excel 批量导入</span><span data-page-node-id="BNUzdfAfWrNp3vjKOaqYP5"><!--pnid:e4HL9ihwlfOap3FgP25MTb-->OpenAPI / EDI</span></div>
+  </div>
+  <div data-page-node-id="zbWqCix84RM2hvtIuP033m" class="layer" style="border-left:3px solid #60a5fa">
+    <div data-page-node-id="SYMkGh7WGiCkOvBr4tEXaS" class="lk"><!--pnid:rHGWwJVBvqSE1dcqq043HX-->协同应用</div>
+    <div data-page-node-id="D75AMgkVeogMiyTTf7B5hK" class="lv"><span data-page-node-id="cPMHySxK1wXJ5kImr8qDvp" class="hl"><!--pnid:w62CSC6NYOhhpA7CpXCg9E-->工单协同台</span><span data-page-node-id="ulOlOpPgnWZbn0CC8sKNlf" class="hl"><!--pnid:WjdFBn8mQqqDPSGeeEwZzZ-->库存看板</span><span data-page-node-id="j5maCjqbeiKPL74UCPPYNn" class="hl"><!--pnid:6LUeyaO0Blh0v6TiS5Gusl-->消耗追踪</span><span data-page-node-id="4W7nKzsZUTZJcZiEw5aMvP" class="hl"><!--pnid:2Dgt4IuQ1iwPgpMuvPwc8u-->对账中心</span><span data-page-node-id="SklPYFKfrAtXZKvxF6mTTS"><!--pnid:dv7ZL6XyGUKc4urgCbyPtw-->交期承诺看板</span><span data-page-node-id="7x5QdQxNQZz18JcOUr2tGU"><!--pnid:1mLplzzeUhNpTj0Cc6xwkE-->异常预警台</span><span data-page-node-id="SpWdtrw6KNjOlXcDpqrnJv" class="ai"><!--pnid:vBehjBeASyZnYSWDK0YfG3-->AI 助手</span><span data-page-node-id="c_arch01" class="hl">协同沟通台</span></div>
+  </div>
+  <div data-page-node-id="i0PrSJGKpXHZ7ajCy5R7SR" class="layer" style="border-left:3px solid #3b82f6">
+    <div data-page-node-id="1Yb9JCfakrKXK75ETg8dOQ" class="lk"><!--pnid:ux9TJQqZUYZuBxUJCabmiP-->核心业务域</div>
+    <div data-page-node-id="M0BDPDPhWGoiEqlwjVlrta" class="lv"><span data-page-node-id="xdLptS805buMVcGfpqrN0C"><!--pnid:XKpWfrHKQwJEd9IlRuql2r-->主数据（料号/批次/供应商）</span><span data-page-node-id="wFjGk6M14yBuYaZDXsvyIV"><!--pnid:zZTCOAfSGN49NhcLScreLZ-->合同与工单</span><span data-page-node-id="ei7GKf41zOMnD23S0BorFJ"><!--pnid:vUwyoJNZ0GwGrK2Rldy0yH-->发运与收货</span><span data-page-node-id="7dNf6hkpzmU1TaVT4QLgtp"><!--pnid:o23NoqeEudK2oafCVl6z9s-->库存与批次账</span><span data-page-node-id="fBHeqvQYSYlQr2CpWNz1xi"><!--pnid:iNSm71pAk63X0Sk9z9BzeB-->生产与报工</span><span data-page-node-id="0k9KkgVpJg25ojpNKbAvJO"><!--pnid:xDCIrmFwbW2X02IFCRmWOJ-->成品与出货</span><span data-page-node-id="bCmv6TWr8uk5ixg2ZQGcjm"><!--pnid:l1gSmqBq8gyV0xOOzfzkLP-->对账与调整单</span><span data-page-node-id="Qu7WeQFCd4ctPqdPlRTrxY"><!--pnid:zXPtAt7cZdJ9KCfTLuVNSP-->结算联动</span></div>
+  </div>
+  <div data-page-node-id="aT8405Prd5HRCu8eSwN2E6" class="layer" style="border-left:3px solid #0d9488">
+    <div data-page-node-id="tCA4nwO2gHUdwX3vxVw4Go" class="lk"><!--pnid:dWrYH60jmwdgjRD3Q7XOvg-->数据与规则</div>
+    <div data-page-node-id="Pxk6qTpk8uHhPOGWWyPCQO" class="lv"><span data-page-node-id="nmdNXnHr2IZQocLEAKN45T"><!--pnid:pgenzjIXH0cCwGNHMX7MD9-->事件总线</span><span data-page-node-id="3h1KrM4yj6L96w5gR4iXa2"><!--pnid:8P30t7CdPkAkZz0Tuo9wU2-->三账计算引擎</span><span data-page-node-id="XcgD3mORzyBSt7dXO839Xt"><!--pnid:k4AGWVXhqXHB5WpcOVFWFC-->差异分类规则库</span><span data-page-node-id="ayICIIMyA71HuCF5c5Fr5h"><!--pnid:YB5SXZzVeOfgINgMyIx1iV-->指标语义层</span><span data-page-node-id="iT9bX3pKxJ34YX8dGf9Igq"><!--pnid:PK7kIxlBBVdiLm44hzlvrf-->数据质量校验</span><span data-page-node-id="b9vuYJlaUInE2foWk8QXYk"><!--pnid:OaIMdr6OKRrq6ZrSvMKDh8-->批次追溯图</span><span data-page-node-id="KjRhqH0tF31wQRBg7Qq3Y8"><!--pnid:FI7XEni2asDvLOeK32DzoU-->数仓 / OLAP</span></div>
+  </div>
+  <div data-page-node-id="aqlePNG0hNYCdfsTyXIrwk" class="layer" style="border-left:3px solid #f59e0b">
+    <div data-page-node-id="ascLnQjNXrbR7L8oGBFF5y" class="lk"><!--pnid:NHox4qUEp7KYieosWJ2Lov-->集成层</div>
+    <div data-page-node-id="OpuKlzD6f8wZYqRVhJ21SP" class="lv"><span data-page-node-id="wdHWfUdOWeXoyvZtiCEMJQ"><!--pnid:WKMZTf257l7l5U3I4MSB7W-->原厂 ERP / CRM</span><span data-page-node-id="fbh8FD1QeNLDYSrCLketdu"><!--pnid:WmIbbe9bvJO12nL0xj80cA-->IDH ERP（金蝶/用友/SAP B1）</span><span data-page-node-id="rvSHYPbbJjDVoJfm77OqZD"><!--pnid:2c3vfo07bok7j5r2fE3Rlt-->WMS</span><span data-page-node-id="JfdKuInxa2pY4y16dBIHwj"><!--pnid:qCIKlV7QTwxZhd0u310LMY-->物流 / 关务</span><span data-page-node-id="SVNfUSUnmR7MUXe2bFck4s"><!--pnid:ZeDMzzv7fucrN9xkuZ7nVf-->财务（发票/付款）</span><span data-page-node-id="RMcrQJjlaTj3892MimuSKm"><!--pnid:hkRYlbDhGOjBXHCrmau2Hf-->OCR 单据识别</span></div>
+  </div>
+  <div data-page-node-id="Jjvv7vsWvrvl3rUgHYoFOh" class="layer" style="border-left:3px solid #94a3b8">
+    <div data-page-node-id="OYTXTd9aGgzMf283OY98XP" class="lk"><!--pnid:Gm77eJwrBoXL1dgFP3sgZD-->基础支撑</div>
+    <div data-page-node-id="1u1Lb8YQe7YgWHugCrs8UV" class="lv"><span data-page-node-id="urkawHoaGARYDqkRie1zR9"><!--pnid:TD8bB8s7LTCLUwZkgiTrfP-->多租户与数据隔离</span><span data-page-node-id="48FgJj3zK7mJH1SvIAj1n8"><!--pnid:Hwqa6GyVP8QRA0WDnuzwCd-->RBAC 权限</span><span data-page-node-id="7QU83HUsRggcqIjDMNBLIR"><!--pnid:ZXOUJbX1u9UJq8rSbygy8R-->字段级脱敏（价格）</span><span data-page-node-id="czDuI52BCVT4C6Jy1SVWMC"><!--pnid:AeJkdvGLjbk19YCkj4JSEF-->审计日志</span><span data-page-node-id="JJCBtTwdOTN1I8rbzyTdSh"><!--pnid:U05TL3ZapiDwYLQSrW90Mh-->消息 / 邮件 / 企微</span><span data-page-node-id="7ztzrVt1jMNx2edGMjxDdc"><!--pnid:p0kqYbGYaONbCohSdNHxOm-->私有化部署</span></div>
+  </div>
+</div>
+<div data-page-node-id="pAZCmbasrKkpaqz3seXwl3" class="figcap" style="margin-top:-4px"><!--pnid:06BIKocGBX925GDYVsrXOc-->图 4　六层功能架构：蓝色为原厂侧高频，绿色为 IDH 侧高频，青色为可插拔能力</div>
+
+<h3 data-page-node-id="uZxVeTtyGSNuwv8joAaU53"><!--pnid:xPPyeKFBceACtpbHVBWSL2-->4.1 十个核心模块的职责边界</h3>
+
+<table data-page-node-id="RDrEyn66ibmWQwM8NmpXlR">
+<thead data-page-node-id="uoF2opnkbIG2GfrIBYTDkn"><tr data-page-node-id="PTtFUXwwOR3YSjFZ6Cu6AF"><th data-page-node-id="wIO8NOOmnPwbLuzQYnOo9l" style="width:18%"><!--pnid:UuZvgxVmsxLO62MApkhOOZ-->模块</th><th data-page-node-id="c6h5U8oqwmQhjnJhO6mUiu" style="width:40%"><!--pnid:bERMeQRSJmbUJ2q9HGA4pr-->做什么</th><th data-page-node-id="zti1bEDh0aJTn7m8zw6C5t"><!--pnid:UqAWu4xZ4bTxu83Gw5uvTc-->关键设计点</th></tr></thead>
+<tbody data-page-node-id="GXP1VSeyKi3zxeIPuUxRdS">
+<tr data-page-node-id="OOmQCEe4YRKL9KFT8oz8SM"><td data-page-node-id="t4V1DwyfGEwmiqwGUc2ZvX"><b data-page-node-id="52X8iaUVPLQpA4A9sMWEPq"><!--pnid:YtjIYoFiDzklGdUItMv56N-->主数据</b></td><td data-page-node-id="2M6e4yiu8W7xq9qRSA7TZK"><!--pnid:DubGvLxw5AtrGKZjsybxoW-->料号、封装、批次规则、供应商（IDH）、仓库、单位换算、标准损耗率</td><td data-page-node-id="EWCNd6Ia25YPrbFJNDhtsq"><!--pnid:MVMwWxHQ8WCC9hcqNFFvwe-->与 ERP 单向同步为源，平台只读；编码规则变更需审批留痕</td></tr>
+<tr data-page-node-id="6kMcn4OhuFVRAYQIbja6nr"><td data-page-node-id="O0La2UsyRGnsx4x7Q6tVyv"><b data-page-node-id="CbqO93RXQOH6zvStMDyWhV"><!--pnid:V3n6jwi3owFAqyJHg7BXaw-->合同与工单</b></td><td data-page-node-id="eLMuHl6pIesake81ynE1pm"><!--pnid:ihaCEE6iWqTRRZyQ3AS3UQ-->原厂下工单（数量/料号/交期/工艺版本/结算方式），IDH 接单、交期回复、变更（ECO）</td><td data-page-node-id="11LnuesVAgg5l6H1nxI6Fk"><!--pnid:kDNXGKrdEgD3XOMjW2L9Fu-->工单是"数量承诺 + 时间承诺"的载体，必须支持分批交付与变更版本</td></tr>
+<tr data-page-node-id="rEZzCVvvox2kblWSVVWMWL"><td data-page-node-id="YmcvO58K1I79lZImgbO0CP"><b data-page-node-id="Wc88haJ1Tg8IRTxVV4Gm4L"><!--pnid:Bzhvt6KA5F0egmngQEN4AW-->发运与收货</b></td><td data-page-node-id="n6AYZoNlii61AuGfpx6Y3e"><!--pnid:QXZFxZs8kBeqT5WJP4WCT6-->装箱单、批次明细、物流单号、到货签收、差异（短装/破损）登记</td><td data-page-node-id="l0ODdKftiEVyP9WBKWGGGW"><!--pnid:wWjDUmrg1AeCRk3481S9Mp-->按"箱/盘/批次"三级扫码，收货即绑定批次</td></tr>
+<tr data-page-node-id="SrusjFmeIsnSCJRy2rOvtQ"><td data-page-node-id="vPyXhRv8Hq1G0dT188AqFW"><b data-page-node-id="OwjiwAM3WEoVkcOzmyDava"><!--pnid:Xd5nYoBYlYXzElsY4mbvto-->库存与批次账</b></td><td data-page-node-id="L7Lp0yErTPZw8k94x5aEd2"><!--pnid:NVROicamaiyeUFsr53hf8n-->料件库存、寄售库存（原厂所有）、在途、冻结、呆滞账龄</td><td data-page-node-id="jeS8uASo6HmRogauKExBko"><!--pnid:Zi64mbeSbZHApZS3jk8AIx-->库存不是"一个数"，是"按批次 + 状态 + 归属方"的多维台账</td></tr>
+<tr data-page-node-id="RhclgZgZB11fnTou1z30l0"><td data-page-node-id="QksqKwSSpS1qHSdJXOZwbq"><b data-page-node-id="K08nZFfoQMMY6kUQJjltnf"><!--pnid:APztI0vEmxpReCy2PZv68m-->生产与报工</b></td><td data-page-node-id="LIQQkKcqLKXZojWDClTlAZ"><!--pnid:hVjdeYqBk4KdKbOuqXWxKW-->工单投产、关键工序报工（贴片/测试/老化/包装）、良率、报废、返工</td><td data-page-node-id="bNfVCVbvpf1T8kj5ZxJnWW"><!--pnid:OPg9brEuO3GZoXPOGgkoGS-->只采 4–5 个关键节点，不做全工序管控</td></tr>
+<tr data-page-node-id="uomipaibE16S4AJl5Ji7zy"><td data-page-node-id="8UajnZ0FWEkJt2ivu778El"><b data-page-node-id="TD10kwcSkew6O1eK725GpG"><!--pnid:o7hiZFe3yaK3SzwKyk0HQ4-->成品与出货</b></td><td data-page-node-id="CbZoVy3tYedJZo13eoOfFW"><!--pnid:Zbq4Y0f0Hhd4Ai4zZXJjqz-->成品入库、SN 绑定、出货单、与芯片消耗的单耗核对</td><td data-page-node-id="pLWRHXB5Gcq4oiz73EBVti"><b data-page-node-id="afCcij6HLlSJuLi7XE8x1C"><!--pnid:qsO5u9sKwOEsEvwZJFH8be-->单耗（每台成品消耗几颗芯片）</b><!--pnid:KQZTa7j5r4Sb0H8FtEBtwL-->是识别异常的黄金指标</td></tr>
+<tr data-page-node-id="hC7tiwBn6Q9bNsdcJjQWZB"><td data-page-node-id="LCstTK7b378J0HFpE2o5Nf"><b data-page-node-id="rLFoifAIoTGThN8O8G4eLG"><!--pnid:pQnhiUNbGX6eSlYOLUOcr5-->对账中心</b></td><td data-page-node-id="nX3aZ7UEsRtKMVzsBbMrFh"><!--pnid:xDW4AWPu37hTp60jvkd7CP-->自动生成对账单、差异明细、IDH 申辩、差异分类、调整单、锁账</td><td data-page-node-id="7lnb6Q3WTnFR0NUyLkYyoT"><!--pnid:sWilb1KKjUqVNB1CDa0mQM-->差异必须挂"原因码 + 责任方 + 处理动作"，不允许自由文本了事</td></tr>
+<tr data-page-node-id="TsewHVWeAbmb32HroaXfwe"><td data-page-node-id="YHj4O6rPvLSEdc3EVEnMfq"><b data-page-node-id="Ky55GbpQCSmrT29YSbrQRl"><!--pnid:O7dl9QLVO9pxRsLW9MKNov-->预警</b></td><td data-page-node-id="U2GohluVfOqQZRicIz8Kyh"><!--pnid:gW5V1ONJtD3vg4LDVj36BM-->库存低于安全线、消耗速率异常、批次账龄超期、交期延误、差异超容差</td><td data-page-node-id="vETCEyObKJ9hczTVN25Fo0"><!--pnid:ta8vBovJbZTFO9mI7aLrhI-->分级推送（企微/邮件），并强制"谁处理、几时关闭"</td></tr>
+<tr data-page-node-id="YCMvizTiSqy7jCfP2JPrTj"><td data-page-node-id="aUZ3WpGq7RaNilcrN7edUq"><b data-page-node-id="qZOZXfQlMsvuAlblGZzmoQ"><!--pnid:T8SSLjshL41KAwSQrqb5p8-->看板</b></td><td data-page-node-id="InjG5VyCeS9wFvwqTwbKny"><!--pnid:Ns911D5GUBNCwuMmHp55gi-->原厂视角：全局库存与在制；IDH 视角：自己的订单、库存、待办</td><td data-page-node-id="4rfqH3nlIwVZH2qlhug2I1"><!--pnid:vbpoTl5YhaGrWgTUvPQ8k1-->同一套指标，两个视角，避免两套口径</td></tr>
+<tr data-page-node-id="syMdfw9IMG6t9e12pO7wdr"><td data-page-node-id="KlTA44h4doaHTfvcWfwqmD"><b data-page-node-id="ghKWqfo0ctK43ydfckTZAm"><!--pnid:45pyxiL4AOy0nsfvF280O3-->AI 助手</b></td><td data-page-node-id="dD514wc3YGMVNZ4m2Q3qWY"><!--pnid:N7hQjln79r9wUA9ioIBBsB-->单据结构化、差异归因、自然语言问数、合同条款抽取、需求预测</td><td data-page-node-id="PyS1iWBUNeH1RWlbhwkHLE"><!--pnid:NAC0ON8l42kgVD13G42ncs-->输出必须可溯源到单据/事件；不参与自动判责</td></tr>
+<tr data-page-node-id="c_mod01"><td data-page-node-id="c_mod02"><b data-page-node-id="c_mod03">协同沟通台</b></td><td data-page-node-id="c_mod04">工单级群聊、差异申辩对话、预警处理线程；消息结构化存储并自动标记（承诺/数量/问题/决议），与事件流联动可审计</td><td data-page-node-id="c_mod05">消息不可篡改，绑定工单/差异/预警上下文；AI 自动打标签；聊天记录作为结算证据链的一部分</td></tr>
+</tbody>
+</table>
+
+<h2 data-page-node-id="k168fFLkSkYO4VtcbAVw9m" id="s5"><!--pnid:m6wob68cxvKvM6koggQToP-->05 · 核心数据模型</h2>
+
+<p data-page-node-id="mqh06IUCUxVPKinkisuLQx"><!--pnid:TjJiqIwo6PBxVWMajNiOGT-->数据模型的成败取决于五个"唯一性约束"。这五条不立起来，后面所有功能都是沙上建塔。</p>
+
+<table data-page-node-id="abikleR6xi7qQ8RlnQyNaq">
+<thead data-page-node-id="oxtNWpliHkQRemhIalMUkH"><tr data-page-node-id="D1wSV3EXCmD8rnwjll75ST"><th data-page-node-id="gQigp7HTlKcit0k5kJpv83" style="width:24%"><!--pnid:kDhQo8IhmLXLpreATbJx3W-->约束</th><th data-page-node-id="NjEUWRhIoav4FQv9TIHNzP" style="width:34%"><!--pnid:vfuo4WoxU9aeCArNGtoSgg-->规则</th><th data-page-node-id="yOqZQQ7sv8PDkq3h5dpCAt"><!--pnid:H6pUtEosvimmfelWxWsUN0-->为什么必须</th></tr></thead>
+<tbody data-page-node-id="bc01NLDHaf6uAX4cUS8laA">
+<tr data-page-node-id="b1lPVu8TtRdLphbZ72CXKb"><td data-page-node-id="fNc9LDjxe8NAv3DeQPQaDE"><code data-page-node-id="qAyWpLiBUj8dBxliaNv9zo" data-pnid-children="RoMKACRG7ft8mhfpVuns1W">material_code</code><!--pnid:siiIToQmlEtdzMLNflwItY--> 全局唯一</td><td data-page-node-id="K0orVfz6UBZI5cpzxT11fK"><!--pnid:gBe0lJQCAi6K7fh6UK0Peg-->原厂物料码为唯一主键，IDH 自有料号作为别名映射</td><td data-page-node-id="uWF6xqB89v5WNAACkc49WW"><!--pnid:Djc4XSBxRiJCRBxDTBJC8w-->否则同一颗芯片在两个系统里是两个东西</td></tr>
+<tr data-page-node-id="FAGSHL7nbOendtLXKpawKT"><td data-page-node-id="KWNItMR43bf3sKF4SZORez"><code data-page-node-id="zEcYoCRq0I5L5zU7cLgIre" data-pnid-children="EWYsrAN2lbMHMzgaoNQ3Iy">lot_no</code><!--pnid:gDXJ3waKkUkJ8nEctCOggc--> 全局唯一</td><td data-page-node-id="YpXNBRB9UwbBHFDsY88jPc"><!--pnid:H2pWZXOuwiIumhvMyklChc-->晶圆批 + 封装批 + DateCode 组合，不允许 IDH 自行编号</td><td data-page-node-id="eDQyx7FWXCkCM7vQvn0z7Y"><!--pnid:mMmmFw0GcRmfSldDQMbgTN-->批次是质量追溯与责任界定的唯一锚点</td></tr>
+<tr data-page-node-id="S6LAhv2bgtycYN599KAUt0"><td data-page-node-id="40OTdHajZiG68J4FntPTJr"><code data-page-node-id="ttmNJcMEXpn88w7an0MXiK" data-pnid-children="1D8mIT1kU2k0sf89JHCVzf">container_id</code><!--pnid:I8XCo90QSUf5NcXRtjJMpT--> 唯一</td><td data-page-node-id="rnU6HtBmLZofWOLfbnnjvP"><!--pnid:Juh8w0SsLMVMxSZ8Ta1ATH-->箱 / 盘 / 袋三级容器码，父子关系固定，拆并不改历史</td><td data-page-node-id="vM0dnT0lXe1D1UVysajCv2"><!--pnid:hzPlqDcAwvKWbseVd3a1DS-->数量差异 90% 来自"盘→颗"换算与拆包未登记</td></tr>
+<tr data-page-node-id="Zaeyafa8KBAtMGzZAI3ubh"><td data-page-node-id="bQ6Bu5eCXyHWs0J5WIIgyo"><code data-page-node-id="zEY1OyycCVxe3sbnm4ZmmZ" data-pnid-children="4VkTlBVrs6PgHBCr0yhM5L">event_id</code><!--pnid:0z8rB65T4v1RhEIyv2E10B--> 唯一且只追加</td><td data-page-node-id="hJlcxd02vIVmcaYbUU0E6Z"><!--pnid:mV7wOuDs53RYcH5ZlnjEYR-->每条业务事件不可修改，更正靠反向事件冲销</td><td data-page-node-id="XWZM2U5G3sflxUPkIeTSxK"><!--pnid:5tFtRCq8XjSXM37EUOcTOs-->保证账可审计、可回溯到人</td></tr>
+<tr data-page-node-id="PQKrVoyKpsSEK7ZAwPtRjS"><td data-page-node-id="bk49VlmKx8tgSS7cqhpsab"><code data-page-node-id="N6UtrqslmqvTXAfbQf3pr1" data-pnid-children="5JFEjyfJQZWxv8JHdiknTq">(wo_id, line_no)</code><!--pnid:0qDSfYwvJAsIYG7V9ZrUe8--> 唯一</td><td data-page-node-id="Z1AJfOzhnZzGA5JNySUrfV"><!--pnid:DcjrkneaUMRme2spGQS8vo-->工单行项目粒度，支持分批交付与部分收货</td><td data-page-node-id="2yNeqAmmM2gLXN1I0JdVUH"><!--pnid:PnA6m58YuwePza5ilRefzO-->一张工单 5 批发货是常态，不能按整单记账</td></tr>
+</tbody>
+</table>
+
+<h3 data-page-node-id="SV02G7oecgwRMg2T1YxH1I"><!--pnid:IhZGDrq4vLNt4MWAByHIns-->5.1 核心表结构（简化）</h3>
+
+<table data-page-node-id="f8PkyG36svw57JqtqrMJ6e">
+<thead data-page-node-id="RzU9iLGFfIXIKfSSXAdqXt"><tr data-page-node-id="UT0xQu6yGNj9ZgHhnCIY0Y"><th data-page-node-id="P2n2f97OlQBm4tyXCiouL5" style="width:16%"><!--pnid:XNTFI5qOtzdS71bwII3Xlg-->表</th><th data-page-node-id="tKaMtTFrR9NPJ0wvAwsrgS" style="width:44%"><!--pnid:MPuADfOyuIh8bGLlO0Q0NU-->关键字段</th><th data-page-node-id="hCIMyYOfpoMo57tu5oedD5"><!--pnid:So3IFQC7SEVELwWx4tyWZJ-->说明</th></tr></thead>
+<tbody data-page-node-id="pu0maR0KqdlL7cUrmkyr3R">
+<tr data-page-node-id="7NaNTagbObcN1JlizQmsoi"><td data-page-node-id="hfG05kTyUu3wlHoUsT3l8j"><code data-page-node-id="Nu35JNEUHXmIOg95Alu4GX" data-pnid-children="cfV60giTZJh6IQyLzqP8tk">material</code></td><td data-page-node-id="9rGJa68LDiIrNuMvsqFnHC"><!--pnid:vGDMiFdk8Nrrhe1Oem12Cm-->material_code, spec, package, unit, std_loss_rate, owner_type</td><td data-page-node-id="59mfKpPlzJ5hurADY2HlSM"><!--pnid:C7S7G2KsigGFX1OzigqJkh-->标准损耗率用于判断报废是否超容差</td></tr>
+<tr data-page-node-id="iffqNDf0u1UOJut4u6YMU4"><td data-page-node-id="K1iS6IizrAAoRqVK3zuf8w"><code data-page-node-id="juu1f2hKtZ07smr2DxU1yU" data-pnid-children="aSm7nFIjdEZyH96YBptk6L">lot</code></td><td data-page-node-id="9bLeMi2HqH71YXdDPiVV0G"><!--pnid:PVYX3RHWlGwNsHcJNd4RCY-->lot_no, material_code, wafer_lot, assembly_lot, date_code, qty_in</td><td data-page-node-id="tKeOHDFkk04zjTL4lxr5MH"><!--pnid:yAjQ8y2yZHKZVIfWGvxvTv-->批次台账，一次封装批对应一条</td></tr>
+<tr data-page-node-id="JHhwPKO5RLAUa9ejXnhRlq"><td data-page-node-id="OTGcEABvzN2dbQ3Ku4v4Y8"><code data-page-node-id="hWyXf96FxF8qosnw2CZGHQ" data-pnid-children="cTnz2nXIJQriR8KqYHRoRm">work_order</code></td><td data-page-node-id="KkEURwxlPA5YhBT8PmSgQq"><!--pnid:qsiRyWCE8PPkovoHQBT05C-->wo_no, idh_id, material_code, qty, due_date, bom_ver, settle_mode, status</td><td data-page-node-id="PXn2J1UFmBsoJQCqUgRgNM"><!--pnid:g9VoknYvo9HC4Vb4BGGTU0-->原厂下达的工单主表</td></tr>
+<tr data-page-node-id="V8zDdDWpVquVixBVnJujyu"><td data-page-node-id="vob0HfIjl84jTJX5SOJVIl"><code data-page-node-id="FevhhJ65w3PEylxHNYaO3p" data-pnid-children="huUhmREfsnJwLquKBYTW0z">wo_line</code></td><td data-page-node-id="8CyUoCsWQZZErof6TINuFu"><!--pnid:uio4IWr2NkKiIReoSTZO1B-->wo_no, line_no, material_code, qty_ordered, qty_shipped, qty_received, qty_consumed</td><td data-page-node-id="21MLyVu0zQLSnnYsPQg4bf"><!--pnid:mKz5lUvcZk34o8JgKjhgka-->行项目累计量，三账的"钩子"</td></tr>
+<tr data-page-node-id="oCH6eNL5c99Qcg10tuf8Ri"><td data-page-node-id="xyafSsFoQbt0FQqZDnm8c0"><code data-page-node-id="tyNKph9JVaxNB5LZ31oP9B" data-pnid-children="r4ZxBIykeQGRmLTAF2I8T3">shipment</code><!--pnid:gscTsCVly2QKdruqyDqMdB--> / <code data-page-node-id="wV8ZEQl8eODcoKfYftS9vU" data-pnid-children="8uHLZv1TCp1JabP3zwGWd6">shipment_line</code></td><td data-page-node-id="2HBZkY4izsxPamff5clcwp"><!--pnid:d2swRpHIokZ3cTLkiMW7TI-->dn_no, lot_no, container_id, qty, eta, status</td><td data-page-node-id="zfW5bc5iGAjXFRDwZHstGu"><!--pnid:6ESWnPEcUahI5MDDg67yTm-->发货单与装箱明细</td></tr>
+<tr data-page-node-id="efjjEq3cC5HdYHCu9GBETn"><td data-page-node-id="op2C7N5oICly0aawOftXm2"><code data-page-node-id="NubBKfe4caEhtscKkvZRfx" data-pnid-children="fKWueQTs8PaOSOEpVn2XEk">goods_receipt</code></td><td data-page-node-id="KslmoItAC6v4ua3tcobqU2"><!--pnid:8Sr8CdD4uHXziyevSmlUpK-->gr_no, dn_no, lot_no, qty_received, qty_diff, received_at</td><td data-page-node-id="F75LjGR86pICvsfF4ryj2Y"><!--pnid:1VIK95Gl5xmo6snOgJHkrk-->IDH 收货确认，短装在此登记</td></tr>
+<tr data-page-node-id="anGuyydqZ81zFz2acAKSLn"><td data-page-node-id="R7otFHFXxSty2vd5JoJWq6"><code data-page-node-id="tWH25G5vV4VOHt2rzhIRsx" data-pnid-children="BxfVH4m89eq9YBpPQ0hLx3">issue</code></td><td data-page-node-id="onV58f5hGqe88Z0AfdhMqn"><!--pnid:n6GUAeG9vS9Lh7IQn9reBU-->issue_no, wo_no, lot_no, qty, issued_at, operator</td><td data-page-node-id="kuiouez73ojbeny1cNgmvN"><!--pnid:VeqvGt0LZBSfMEhzAJihe6-->领料，即"消耗"的唯一口径来源</td></tr>
+<tr data-page-node-id="m6MWzlqUmnNHTd5u8tp0Rk"><td data-page-node-id="KnjQODOq3yg1ohcCY34Pyi"><code data-page-node-id="v48Sad7Ugehi20sLHwkjrm" data-pnid-children="gZEF1lILhysNudwyk7S8q0">wip_report</code></td><td data-page-node-id="6cqLtvV9MEaOVM1dH5pj8R"><!--pnid:SZPzGvCNpEJGvstGndnyxZ-->wo_no, process_code, qty_in, qty_out, qty_scrap, reported_at</td><td data-page-node-id="5B6ZOuwm516FD9lqFAegfg"><!--pnid:VFGEaHJPvc3DfHCVP1HnOQ-->工序报工，良率由此得出</td></tr>
+<tr data-page-node-id="eQNiwa12A5N08512DCuUYX"><td data-page-node-id="HJc6jv7UEeya7NlZtImxfK"><code data-page-node-id="ovO81ZZBGolhVBxn0iujtl" data-pnid-children="JQBCLo9lk0WLrMMf7qo1Bl">fg_receipt</code></td><td data-page-node-id="2cioQZEf0yojMncbBVyyIz"><!--pnid:szSkroGNnJMw2KhGjFVhRo-->wo_no, sn, qty, lot_no, received_at</td><td data-page-node-id="xFdKkNbwG83chxebji0r0B"><!--pnid:SLEyAITdFFwV8VqkhTXHVa-->成品入库，SN 与批次绑定</td></tr>
+<tr data-page-node-id="xdwLdxiPJXjpcUUJJXI1IK"><td data-page-node-id="RIS4zJ1PhCc6foaVbIhQr4"><code data-page-node-id="hnxv3J1ioDJbimceDRuKmB" data-pnid-children="KpxULTcYOu9qqHCuG497yP">stock_ledger</code></td><td data-page-node-id="fe7LpBA6iBIxZI9xgvydiQ"><!--pnid:ox89MibMensUmLY6jAmuPP-->lot_no, container_id, owner, status, qty, as_of</td><td data-page-node-id="mwUzxSAS3td7VO57SDX1Yt"><!--pnid:Y2V7ynY4Cb7oXaqMGkx6cY-->库存台账，按批次+归属方+状态多维</td></tr>
+<tr data-page-node-id="Naf3siJW677iPFfPulYs5H"><td data-page-node-id="405tcL14QTCRL252gpB4bI"><code data-page-node-id="IWlvd4KtNquN97m67Tw8xP" data-pnid-children="r6jO7GrJjC5TzFx8YVzrTl">recon_period</code><!--pnid:PC1MqZ8FXgUsEPM5fZb4Lt--> / <code data-page-node-id="dhBx5rGWFNXQWEEavghyHg" data-pnid-children="QJ3HlhFnhV9ICMmN2WKeYt">recon_item</code></td><td data-page-node-id="9jaMNPNJmKIYeOiXHbHTZU"><!--pnid:F8j6jCMUCpI4Q8VvGDzbgp-->period, idh_id, material_code, qty_a, qty_b, qty_c, diff_code, owner, action</td><td data-page-node-id="Htj2zpkqv311EK6fPIdgFz"><!--pnid:vWOq8aGualevhnxz8vZF28-->对账期间与差异明细</td></tr>
+<tr data-page-node-id="HRmwqJyxnNjFr9CutCRyIa"><td data-page-node-id="UUVtqgqIfJrxk89xz9imcN"><code data-page-node-id="GhV1vezfg7AzFijI3qRZlx" data-pnid-children="Sjg1bJSad5b8dvcy01yL95">event_log</code></td><td data-page-node-id="oonbs69GWU7I2bMLtIagIP"><!--pnid:HWSHiW95q3kOhZApPnacrC-->event_id, type, payload, actor, ts, trace_id</td><td data-page-node-id="CP8wQra2yf3PXREkE8P8MX"><!--pnid:fhblcdLXuhSaeOJgqIJoj5-->只追加事件表，所有账的源头</td></tr>
+<tr data-page-node-id="c_dm01"><td data-page-node-id="c_dm02"><code data-page-node-id="c_dm03">conversation</code></td><td data-page-node-id="c_dm04">conv_id, conv_type(wo/recon/alert/free), ref_id, title, created_at</td><td data-page-node-id="c_dm05">对话会话，锚定到工单/差异/预警</td></tr>
+<tr data-page-node-id="c_dm06"><td data-page-node-id="c_dm07"><code data-page-node-id="c_dm08">message</code></td><td data-page-node-id="c_dm09">msg_id, conv_id, sender_id, msg_type, content, parent_msg_id, created_at</td><td data-page-node-id="c_dm10">消息不可篡改，仅追加；更正靠追加修正消息</td></tr>
+<tr data-page-node-id="c_dm11"><td data-page-node-id="c_dm12"><code data-page-node-id="c_dm13">msg_tag</code></td><td data-page-node-id="c_dm14">msg_id, tag_type(commitment/number/issue/reason/decision), tag_value, tagged_by(AI/人工)</td><td data-page-node-id="c_dm15">结构化标签，使聊天内容可被 AI 检索和对照事件流</td></tr>
+</tbody>
+</table>
+
+<div data-page-node-id="WFjnakfB9tmmwLioUBnAuN" class="callout note">
+<span data-page-node-id="sds6wrBgFooO0UC19nZCTO" class="ct"><!--pnid:rCsQ7kG8s3DnbTdT5ZzXey-->建模技巧：把"数量"拆成四个字段，而不是一个</span>
+<p data-page-node-id="DinwnObzRW1yCxgRL2u5Kh"><code data-page-node-id="5SaEHvx6QvJCvC23U7PHTv" data-pnid-children="0edH9Ugh36Pq8T31vl53p8">qty_ordered / qty_shipped / qty_received / qty_consumed</code><!--pnid:d2ZHcqKCCZ0MucPuVMqM5T-->。很多系统只存一个"已完成数量"，导致无法区分"发了没收""收了没投""投了没报"，差异出现时只能靠猜。四个字段分开存，差异自动落到具体环节。</p>
+</div>
+
+<h2 data-page-node-id="SEL7Z63PZxsWc0RfTXbbZF" id="s6"><!--pnid:rioKOUZ5cXV3JabhqBbiKD-->06 · 六个关键机制</h2>
+
+<h3 data-page-node-id="lBF5U3qD2LjluXj7MGOExf"><!--pnid:6nTHjqzXMqEsmSscEWFJuj-->6.1 编码规则：整个项目最容易翻车的地方</h3>
+
+<p data-page-node-id="VrRFJB9foRh0tFnzQkqDe1"><!--pnid:kKwE2crApUQbM3ew8THa5M-->绝大多数"三账对不上"的项目，根因不是软件功能不够，而是<b data-page-node-id="FIU5abxRxBOL1hOgrmmkwI"><!--pnid:nyUq4U9gaGxoautqeYZpe3-->编码没统一就开始上系统</b><!--pnid:xIOp8XbUeTe4JaQSL3m9bd-->。建议在开发启动前，先花两周把编码规则定死并公告，写进合同附件。</p>
+
+<table data-page-node-id="2qWZPOdcFct4jkO2iZbyhX">
+<thead data-page-node-id="mMbExMdgkowrjtWGSMeP2Q"><tr data-page-node-id="41BHCS4BJCjlR6usWTY6yg"><th data-page-node-id="tlzUQTckVkN6n9KhPyo1V3" style="width:16%"><!--pnid:iDwkU5r7ZMxXZK7PDGHXiK-->对象</th><th data-page-node-id="eTY7HI3XCUXK5lPs0xXACF" style="width:34%"><!--pnid:acXoZ6Zm0owxu2J5yeNnqI-->规则</th><th data-page-node-id="lCCoWx6t8iNvKftQGQ2X2Z"><!--pnid:19y14pUKywRYIebW0XaMjK-->示例</th></tr></thead>
+<tbody data-page-node-id="PBOPjxYFRHxTxjCXxkC6Tm">
+<tr data-page-node-id="1i6SXZdO9UC2LMsAKAzZOd"><td data-page-node-id="AeagxQlxYWAZcPKalYx73W"><!--pnid:kYCiUnHWfpZMFclj3bvRIF-->料号</td><td data-page-node-id="0LbvldhkF97YAuZyCPB38Y"><code data-page-node-id="pta8vvXRvnYSWsqhN6Rkcv" data-pnid-children="iaemiNUVbiqws9IzUFA9xP">厂商(3)-品类(3)-型号-封装-版本(2)</code></td><td data-page-node-id="qWU1NtbeB2mMmhoGPIVuQ1"><code data-page-node-id="IP3BUOZ0LICb15EwxXugB5" data-pnid-children="PHA7F4O07v9QCRG684pai1">BMX-SOC-BM1684X-BGA-01</code></td></tr>
+<tr data-page-node-id="s8jQwzPbEWhnWl7FJO3WcE"><td data-page-node-id="t8Th7kkZRkyS7hEtxTUCEK"><!--pnid:KelV0G2B9X8TmTfZFw0kSD-->批次号</td><td data-page-node-id="0vuYmdM0M3qwdW39ibcQHY"><code data-page-node-id="KJGzouSqUfAgx8kRYyI57R" data-pnid-children="7lFdIbggECUqVMjx4XKuaq">晶圆批-封装批-DateCode</code><!--pnid:JOAtphKTlbuNdFBw8v1hQ6-->，由原厂统一发放，IDH 不得自编</td><td data-page-node-id="FDw6guQU5Q0bmFNpgB7IuP"><code data-page-node-id="BfGwGtxpFWUcv5GXISe0Ll" data-pnid-children="RcAXuCboMr380A0i4QM6yN">L2604-A17-2603</code></td></tr>
+<tr data-page-node-id="VtJd5eMci8imBQ0KOZw4eN"><td data-page-node-id="9PPKQiO24rvvA0DfZWxBxL"><!--pnid:M5vBzHeXDcjGaEWQVdstUd-->容器码</td><td data-page-node-id="byOTTNWGoejT5uet5jB1kx"><code data-page-node-id="8dwBiYgxF7WrztyKztGvXx" data-pnid-children="6RRAeKzMbI54w5DNamY5xc">CT-单号-序号</code><!--pnid:SAl3JrG0mUQVvRGsBh2fYG-->，托盘 &gt; 箱 &gt; 盘 三级父子关系，拆并留痕</td><td data-page-node-id="0vy8zgvYMMXd7zNfxYcXcx"><code data-page-node-id="gndlQDVEAn2g8NT9RA64z3" data-pnid-children="dEH21JmOkfHnnsJAJtNOYk">CT-DN20261103-007</code></td></tr>
+<tr data-page-node-id="WL6yxABlWBeJsXQ8v9caD1"><td data-page-node-id="q74wmmfj92xzI6CQdxImU8"><!--pnid:h2CqQk8c6hkC8T6QvIog6f-->成品 SN</td><td data-page-node-id="jX9QZLzj1kq9S83rHnJDtM"><code data-page-node-id="3sQTMU8sK3jdDt9kfFDST2" data-pnid-children="IhX2GUIOl31KCnpAVSSUtk">型号-DateCode-流水</code><!--pnid:yL3QVT60qBXiSSMRFxuAsW-->，与所用芯片批次绑定</td><td data-page-node-id="2Uwu14ysw0bSyXMQXSoMBr"><code data-page-node-id="PeuwWpoLvPZ9BgNj63p4in" data-pnid-children="E5jLxOwUh1BHSeG0RoiEJb">BM1684X-2603-000123</code></td></tr>
+<tr data-page-node-id="H753KyM9vwtwzzlRpH9Fgv"><td data-page-node-id="ClrXkffUE5iqebwkI4yZfU"><!--pnid:pXeSN7rXXehSgO7bxKTtB8-->基准单位</td><td data-page-node-id="SzRMoN5Ujc3lEM4yFH5bkX"><!--pnid:oWDBiuvsDzHRmYR3FxdKpt-->数量一律以"颗"存储；盘/箱仅作容器换算，换算率写入主数据</td><td data-page-node-id="YUJmOn6rsUQVgqINwRbV7X"><!--pnid:8tdjkWFTc3U2ou8g2K2HB6-->1 盘 = 250 颗（示例）</td></tr>
+</tbody>
+</table>
+
+<div data-page-node-id="26fA8TUWNIt0goFlvm2ULA" class="callout risk">
+<span data-page-node-id="xdFZUslPgkgTbvWR33zTY9" class="ct"><!--pnid:tbo4YDXXgUcbWBMNfqNVuv-->必须坚持的一条</span>
+<p data-page-node-id="iLzZThKaRy32K8FgdzFXEQ"><!--pnid:VUDWDuesGOhlIpMLAp4SCe-->批次号<b data-page-node-id="Up7nRMbu87GXBzTiL3LxQi"><!--pnid:iTquXSiXToGnfgbeVUqtIy-->只能由原厂发放</b><!--pnid:eZsq8zGnCDBRUzeMixY2vH-->，IDH 侧不允许新建批次。一旦允许 IDH 自编批次，同一批货会出现两个批号，追溯链当场断裂，质量索赔时双方各拿一套证据。</p>
+</div>
+
+<h3 data-page-node-id="C3BXSnKLZhq7UOFxCxnEIE"><!--pnid:xlh46syuGFlutdV7SRzD3q-->6.2 工单状态机</h3>
+
+<p data-page-node-id="3WAljhxGAIITXLWI2uqjJB"><!--pnid:4zvk2nhFXBJKhVQfW7453T-->工单是"数量承诺 + 时间承诺"的载体。状态机的作用是让"生产到哪一步"变成结构化字段，而不是靠人描述。</p>
+
+<table data-page-node-id="1CA5UfXisws0dxM1gYF9It">
+<thead data-page-node-id="pUyu2Yv5rx84AoGXuAVqyk"><tr data-page-node-id="sqnhtBygODpAFdD8Mzu4az"><th data-page-node-id="znYcACSnwLMbnQJ6LztAM8" style="width:15%"><!--pnid:yTQdDtIaBm0DVlkKYfmGV2-->状态</th><th data-page-node-id="S9AVdzKdSear9kDZIrf0Lg" style="width:22%"><!--pnid:2RBTUjpYqNddMZo4zI4pmP-->进入条件</th><th data-page-node-id="7cKUWwrrfHJNju5oLfG4xR" style="width:12%"><!--pnid:t6GYZ7WZGd9Umx01JgrgKs-->责任方</th><th data-page-node-id="BpzRoM6qh3GLaM9xuftvht" style="width:28%"><!--pnid:6MUU1E107Pfvjw50HE2hit-->对三账的影响</th><th data-page-node-id="MAAQpmqZOv4aqaZaD2RETo"><!--pnid:nYTBvTSeK6S1mkDT2RzTYK-->超时规则</th></tr></thead>
+<tbody data-page-node-id="YmAdAoDR7F6WOENZr0CNLR">
+<tr data-page-node-id="ClddgdIaYhsNkPfbBnflOC"><td data-page-node-id="uCbiCBvROYfBoQ7MhxrBzP"><code data-page-node-id="YfmWyW0QLZcpuWA9pw3AnP" data-pnid-children="153HhwAcnL2jH3MUjzRDBs">草稿</code></td><td data-page-node-id="JOXglxE5R16uCpO6q6ifHA"><!--pnid:gDa4rvQXL9hTMr4MkJjYgD-->原厂创建，未下达</td><td data-page-node-id="ixg43h7scX6GlghW6mtCj0"><!--pnid:sjeL0iioZbqXWTaO8KQ4rv-->原厂</td><td data-page-node-id="eCcQ8OnE4YdkaxwtcVuIDe"><!--pnid:EvPRAwTQwgKLRFzAQMnCsr-->无</td><td data-page-node-id="2D30wlJaC90x3nm3gfbiHF"><!--pnid:eP1JVY0wcr2HbjmSf49jSg-->7 天未下达自动归档</td></tr>
+<tr data-page-node-id="g5j2FzvALdDvYbWvQa7Rfh"><td data-page-node-id="NudCrwZ3k2M6K3Qal9GJiz"><code data-page-node-id="y8Hx0XFyXJIFQzutb4iJHT" data-pnid-children="QIF0MysLNYmHUUeyxzCIHw">已下达</code></td><td data-page-node-id="PrvfhQO4EXJgn4BjkkOiEo"><!--pnid:VwtQSUAOuz8c7LM4buAxeE-->原厂确认下达并生成合同</td><td data-page-node-id="6yaVeJluzZAZfUYlaqDPlY"><!--pnid:lKWI9dsPUFNORUiVbgZnIu-->原厂</td><td data-page-node-id="qQ4AYiWlElNw77hVbTBv4P"><!--pnid:qC5GjduoR28Cr2V2YPNHSO-->无（仅承诺）</td><td data-page-node-id="Qpxwh7gvCSCMQPktKza6xV"><!--pnid:cXe60DhPkvLjgBbPvihalR-->IDH 48h 未接单提醒</td></tr>
+<tr data-page-node-id="rJvEPavoCP54b1oPXR5pb0"><td data-page-node-id="2Kl6nSVbAMBcOat33scxxj"><code data-page-node-id="V52b0hBhxvHzAE3nN24HYQ" data-pnid-children="5ARmQU1KRVfdZ8f1OvB8ru">已接单</code></td><td data-page-node-id="S7d06pi3XReg4COp8ljdEQ"><!--pnid:Woge0eTTHy1lA9fQXJ1Zuq-->IDH 确认数量与交期（可提反建议）</td><td data-page-node-id="G8VBJeedRPjQ1xsHPPuBz2"><!--pnid:sg37ma6lBrzC0f3uX0EqoQ-->IDH</td><td data-page-node-id="l8Cf3TsZlfeD0nFL2m4PRn"><!--pnid:RdbHcFefiUaA45hJe8Gu0t-->无</td><td data-page-node-id="c5IABdaje1oc7A663z8ZAq"><!--pnid:5WZIofq6YimHcKFq5DadsO-->—</td></tr>
+<tr data-page-node-id="EAybkKUaBFpABUp1ja8Z5E"><td data-page-node-id="kcQ2g7QoXBOFNmUiZIDbmi"><code data-page-node-id="BpxNrc8w2syBKTz5M5Wj8v" data-pnid-children="lLl00bpJVIKoPD9Up0ec5t">备料完成</code></td><td data-page-node-id="SJfvNSjLL9ywkHs5jdRZPo"><!--pnid:uXA5QPpCfuwhdMppYCSQuj-->所需批次已锁定 / 已到货</td><td data-page-node-id="0OsmAAlKXhw1SXQGRFhh4Y"><!--pnid:TP7EgfW9fXee6AP8Sot5I3-->IDH</td><td data-page-node-id="VRh4V2gTtejqLvuXwPrZ1s"><!--pnid:3Kyy1owI9NfVZKf3HTXswu-->库存转"已分配"</td><td data-page-node-id="KxDkfm9ztGFZYEelK63pYe"><!--pnid:pMTTO5KHSoG539kNAbPBIP-->距交期 7 天未备齐预警</td></tr>
+<tr data-page-node-id="7HV014CcVilWjpxlC6rD5t"><td data-page-node-id="kKdcsI7y725QqbWjW3rxNt"><code data-page-node-id="xGYAvf4lE0GBGjQ5BsQJ2y" data-pnid-children="mcPh9Ed4nHFlCE9njlQ3EX">投产</code></td><td data-page-node-id="TuDViZwLGaBL5yWJDExHHS"><!--pnid:bhs3j14SQPdaImIgIGH9Xb-->首次领料</td><td data-page-node-id="c8fYwzXoZDVm4Awyqidnug"><!--pnid:GsEORwzS8OXEEuzJEx2QPH-->IDH</td><td data-page-node-id="N5yKiVBHcSUSJ1s9HNeDIi"><b data-page-node-id="sG3YEW2insrsTpQRAT1Bkc"><!--pnid:jmz2gvoUo0v8wLrDzoSo9i-->B 账扣减（消耗确认）</b></td><td data-page-node-id="4qqOZrFjjBBWAeQfHmAukQ"><!--pnid:OC72CCDgoDr3DwzGb5hM2i-->领料后 3 天无报工预警</td></tr>
+<tr data-page-node-id="SwoygnlHycYOWChElsDv1G"><td data-page-node-id="KJScnal3DOny7TLxVjPzJu"><code data-page-node-id="Bfsux4RHl9w9l4Slld3x8r" data-pnid-children="DZL1Pfjx2VJB3IM7hEGYiF">部分完工</code></td><td data-page-node-id="SX1WUeZbEWnV8YTpsKsSM3"><!--pnid:A7XjZkRcdLilfR9efmq6Lj-->首批成品入库</td><td data-page-node-id="ZBSQcuN8wI21IpSnR6Ker7"><!--pnid:AYtULO8drUpFZnMrEW9HjD-->IDH</td><td data-page-node-id="i8CLsGIXPqX8P8SSFUnhs2"><!--pnid:YplWXenqSzAMJpzKPHsl2L-->成品库存增加</td><td data-page-node-id="YmtoPG9g5KIibeNXpwI4c2"><!--pnid:BSmRMCPM75GiEZDBjvJNBx-->—</td></tr>
+<tr data-page-node-id="vj9GlQH0kXOaaKi4UPg02J"><td data-page-node-id="ky5teoOJmlexBCWMw4DRSU"><code data-page-node-id="XLtEevNsLrdTe8ms1AKUoV" data-pnid-children="94Mo8JoS7InaD3xeTyqxnt">全部完工</code></td><td data-page-node-id="dw07nAzoJjjAEvaUTaJC2j"><!--pnid:O4HzLxwk9IXt1TFs3QwgM4-->累计入库 = 工单数量</td><td data-page-node-id="pAUhZQ0gbK60CQZafw5syV"><!--pnid:95g7r6T8n1jmj43xgkEi4i-->IDH</td><td data-page-node-id="LreuxuCFBAvty26uiShCVT"><!--pnid:DkXIagejY0SpeBxPzwH0U8-->单耗核算触发</td><td data-page-node-id="mAQRcrLaNiLUw17WvL3OhY"><!--pnid:wCu0S7dcReIe0CWdcoGf75-->单耗偏差 &gt; 3% 触发核查</td></tr>
+<tr data-page-node-id="km1u7hNQxiE2TtT1F8Rghu"><td data-page-node-id="xf7Mcp7tI8GCGjHlZxtHmI"><code data-page-node-id="CRXKnaGe0e1POgyJ9bWlvE" data-pnid-children="Be7In9Etqd52rNFejHzXjk">已出货</code></td><td data-page-node-id="khCrIsDbLHlt6oAkib7zQg"><!--pnid:7R8ZdTQ3WV9ZkN35LivQ8k-->出货单确认</td><td data-page-node-id="N84uUfqC9AKQWLkQavwx85"><!--pnid:MsS94pVEtgzVS9RCiyPlXt-->IDH</td><td data-page-node-id="tKhsEzox95rqDbRdWS9VbQ"><!--pnid:RPT5CZ5iTBxP62k9JYnEhr-->成品库存减少</td><td data-page-node-id="gVAzdGEUt0uDyAoStOFYDX"><!--pnid:u6n5jP3JOjlmTQoNhdFCIa-->—</td></tr>
+<tr data-page-node-id="9pkYmjpNnl6x0HBfYpwkUb"><td data-page-node-id="1JpFyA40EPIMwYTlDCyhkv"><code data-page-node-id="vwdzYAnxE7FDCLaDb0JRE0" data-pnid-children="paYkUOTscx8Ndpx9SRQUR8">已对账</code></td><td data-page-node-id="dw51HzAFvnIqEDDZjZfDOj"><!--pnid:J8CbK0QzQwJokw3CfJhuAg-->期间对账确认</td><td data-page-node-id="tL7yoAEeRcqQ7tObMDcASN"><!--pnid:UC6xm31FZlETd75Ggsvaqq-->双方</td><td data-page-node-id="8qwSxgaawshKatQ2H6TD9w"><!--pnid:Np3tHvvx5zJxXpqArdlezg-->A 账"已确认消耗"更新</td><td data-page-node-id="VAzmC0F2PXv6WZU5T1FNsr"><!--pnid:L2GXHBPchoLrCa5ElMjHY5-->—</td></tr>
+<tr data-page-node-id="ZC1y9qjOxSv3W8VYK3K5Sw"><td data-page-node-id="XOcJdkLkKzmD13NGfCnx1P"><code data-page-node-id="wO0jnzOQumku2cRXLbmEbK" data-pnid-children="jcyPD1epGKLwbQnBYOmUk7">已关闭</code></td><td data-page-node-id="nhgAaA6wmtGziIF2AL9maH"><!--pnid:SW1lH4hAZdGLV8ofokvLRC-->差异清零或已开调整单</td><td data-page-node-id="TaTrkbQiu5xfGFsbtghKDo"><!--pnid:rMLYxbnvhJsXqXFcqPJA7q-->双方</td><td data-page-node-id="kJ7XpTBif14W5jEfaYkuAg"><!--pnid:ABrvCiOTWm0wBQG5eiyf7P-->锁定，不再变动</td><td data-page-node-id="jwshjl1EWfkmb5vRpyaZ0s"><!--pnid:TDUnEtlPvrm7g3LrL8MXbq-->—</td></tr>
+<tr data-page-node-id="zuJmCGTmoYPqgBvORnhVgm"><td data-page-node-id="sGEyYsImoCydwHxj5G7x33" style="color:#b45309"><code data-page-node-id="h140uZaE358ySJrEq1LqON" data-pnid-children="OZMZxecKpazif2GOgFOb6g">暂停 / 变更 / 取消</code></td><td data-page-node-id="7wbKzepHsXLUNiFzc8H9VB"><!--pnid:pdEBtMKAbbmCRQxUV5DNox-->旁支状态，需附原因码与审批</td><td data-page-node-id="58RJpiBPoGeTfA9PdXCgMt"><!--pnid:ZmvdEQUoSCOF4CCU3s9S7X-->发起方</td><td data-page-node-id="a0L0d9Vn4XFnwsE0sN5V8e"><!--pnid:ttZ2TFH5YfuDSsmYWamv1h-->释放已分配库存</td><td data-page-node-id="dZzKF7PWtZF8ZIsrnw4PSN"><!--pnid:jaJCiei33V6VxA64SJYubX-->变更需生成新版本号</td></tr>
+</tbody>
+</table>
+
+<h3 data-page-node-id="KIJ3aJ3LhvJ77k3oqVuiFD"><!--pnid:RVOIhBI3Oh412GIsqO0sb5-->6.3 三账重算与差异自动归因</h3>
+
+<p data-page-node-id="vHVWMFZm7WoOopjl6AWre6"><!--pnid:uQN0SmmN9byL73C7GqVAeb-->采用<b data-page-node-id="IQw51U8IPPMSRDMxHsFtf9"><!--pnid:RVSTRVppyLaOn4LVvC7AMq-->双轨计算</b><!--pnid:y8KsXGIY6sA7RyD5ND8XuT-->：事件到达时增量更新（秒级，供看板用），每日凌晨全量重算（供对账用）。两者结果不一致即报警，防止增量逻辑漏算。</p>
+
+<p data-page-node-id="KWxKLfRlnWWxcgjru7ZiOc"><!--pnid:IIuiwCow04HL9PnAZVyp4p-->差异不直接抛给人，先用规则引擎做一轮自动归因，命中率通常在 70%–85%：</p>
+
+<table data-page-node-id="5D1i4lXeVF742WJgiIGl3k">
+<thead data-page-node-id="g0uVcIY3SY2ISUH4abOQ1U"><tr data-page-node-id="JCgZ3LW4qpqRAqf30veOQk"><th data-page-node-id="YGOfGvOdIQWPBMyA3K1pc4" style="width:34%"><!--pnid:VCjA6RL8d3J8zYFIdipmI0-->判定条件</th><th data-page-node-id="U89aOSVuSNh9Fiiqx9pEvU" style="width:14%"><!--pnid:Zax9H1esP0jmjgQjkgTUon-->归因</th><th data-page-node-id="MoWmoRQ4pkmgfaj375w6Yv"><!--pnid:pFLVy5dWmmL9bdkFWDrXdu-->建议动作</th></tr></thead>
+<tbody data-page-node-id="xg4tuELdPeGEW1I3vLFFaU">
+<tr data-page-node-id="OpQ6AAKqrENxuXT9H6FEJ8"><td data-page-node-id="uZgz1OpKdxeZsmg1GEAh7N"><code data-page-node-id="WNaaZbh1D3aY7lpi3ggK4c" data-pnid-children="7Q8bkllosmUNYsP4JIzhvw">A − B</code><!--pnid:Rlfmjr3MNTJ95nDrqthYt4--> 为负，且存在已发货未收货的 DN</td><td data-page-node-id="J127XqUi5NoKNtiSvRqVes"><!--pnid:3hHXt3hiO3EM1mDGlj2XX7-->D01 在途未达</td><td data-page-node-id="jB7cwbhHQNCMgORICg68Ms"><!--pnid:jvx7lReXJmDIZxPV4BW62u-->查物流；超过 ETA 3 天自动升级</td></tr>
+<tr data-page-node-id="o2M6upnBDvNzggqzKamlWG"><td data-page-node-id="TDCT3sXL16FmSQJJsccA73"><code data-page-node-id="ou3KcTRtrYliOLZEjZC3M0" data-pnid-children="rRMgZHi7ZCvA3zVVRu4n3G">A − B</code><!--pnid:7vj6gsGCWhxf9tUhmvkP2H--> 恰好等于在途量</td><td data-page-node-id="SCr1xdYWvT4iYTZq18aFgC"><!--pnid:6J4sJKQNGmpNWfKzElp08P-->D01 在途未达</td><td data-page-node-id="AOxh1AwHuyCoRtxWH1CZtq"><!--pnid:qg4aVg02qUB9YTthUgzfCx-->同上，属正常时点差</td></tr>
+<tr data-page-node-id="nVHRIfpcDtlZL93wHwxCHy"><td data-page-node-id="ydsejxOHxzLBU6lQKeaJI3"><code data-page-node-id="uxrKIU3spicBhZqtVXCRZU" data-pnid-children="UGrIHCrajiisq30V2NYHfx">B</code><!--pnid:vGCxGieIzYnRlaxIMhwy5G--> 有收货记录但 <code data-page-node-id="Fp3idcvx4RfEvM6XvXhQ94" data-pnid-children="NOHHcoKKxPP897MWWQHaXC">A</code><!--pnid:dcLGj6wdO8358DAAwzdC2B--> 无对应 DN</td><td data-page-node-id="9OzcytOXbTfddUKRgmJty3"><!--pnid:W3ZNhupH5nAUbSoJHKuDW1-->数据错录 / 重复收货</td><td data-page-node-id="UnajzDIfP4yySEFW71aOKP"><!--pnid:wnkCIQRVl07e2hhGECPjDF-->核对单据号，做反向事件冲销</td></tr>
+<tr data-page-node-id="Z5o03lIlxvJrNNN4u4I5gg"><td data-page-node-id="m5FxDk1ABCaxbeCY6gcpZf"><code data-page-node-id="FC5bBw0dnnls3ua9kFvc1P" data-pnid-children="LyonaUUqDnaM3FfcF1zeRw">B</code><!--pnid:654drX2ArQXRo3vJxXIOcd--> 的领用量 &gt; <code data-page-node-id="jz7HrmisOSqEx5jWaBuzmu" data-pnid-children="vzSmztvadbTwPHXQMRCmkN">A</code><!--pnid:Um3OZNGoCwS077xKEwKiB6--> 的已确认消耗量</td><td data-page-node-id="vu9YxKkVs2baKbbRBXbPbL"><!--pnid:RsI4TdKTKusXtQnMFeA49F-->D03 领用未报工</td><td data-page-node-id="9kQLoQJKscTaJYMHItYKKz"><!--pnid:LaVeV3Ica4toMC1D3lxOfS-->催 IDH 补报工，锁定工单</td></tr>
+<tr data-page-node-id="ZJwwtgyM2SVveO95TnATFN"><td data-page-node-id="Hn5wMGVw7tvSvdDse3N93E"><code data-page-node-id="VSq1H9u0zPJyjCUxbmlu6r" data-pnid-children="NQLsRQBptXts9eCaC8STHX">C &lt; B</code><!--pnid:GAsNJW1mTY7WUWLZwemoIf--> 且差额接近该料号标准损耗</td><td data-page-node-id="ftBvBbY0YK61F0BYfayjkU"><!--pnid:4N3A5LFja7dlOB39t689o3-->D04 报废未申报</td><td data-page-node-id="YTZdHZO4yrOLV9KdVHsvTG"><!--pnid:mvW2cCZvmds4O7n7v0b5t2-->要求补报废单，超容差部分扣款</td></tr>
+<tr data-page-node-id="gVgtME6zcds37b6j3ggoIR"><td data-page-node-id="YxtzWBhw0yw2wgu0LBJB1z"><!--pnid:4uyCYpD4iygZHuJAXqDysp-->差异为盘/箱装数的整数倍</td><td data-page-node-id="6u6yxS7XYQoi5Cuiw1Uj7G"><!--pnid:m4hMz0bl5rL60vakJNGj4C-->D06 单位换算</td><td data-page-node-id="RlI0T1ClLKJ6RhY7omaXLG"><!--pnid:7HL3ZPutaaldh02OWX1O5b-->核对容器码与换算率</td></tr>
+<tr data-page-node-id="6abhxgqXB30NQhVEpt68R8"><td data-page-node-id="mQEHhRY0HyIPEQP68Zd3p0"><!--pnid:gtoqo2atqXd7ZZ3eo3nioY-->同一批次出现在两个工单的领料记录</td><td data-page-node-id="njl8YWsj81z1KHfK5IHO23"><!--pnid:kgsdHue7ry4ib23RCT5RDo-->D05 批次串用</td><td data-page-node-id="posBOOLNeaPypcgEPhQ3LJ"><!--pnid:nHZn4Jz4X94W6pC4ftjPZY-->追查实物，登记串批调整</td></tr>
+</tbody>
+</table>
+
+<h3 data-page-node-id="k1WcuLOzdYzgj5WKEflWQE"><!--pnid:Ye4DRnEA9TQBP44dw2Cno2-->6.4 对账节奏：日核对、周清理、月锁账</h3>
+
+<div data-page-node-id="QD8AbjAVhPFwgMHaXEST5a" class="flow">
+<b data-page-node-id="9AStAHX0vIV7dH94no2rUq"><!--pnid:ryfjepvWqiEhtAwV0AXnSe-->T+1 自动核对</b><i data-page-node-id="4A9YmPrwZdWwGn1N2p0Nsd"><!--pnid:SiHGeLAFSHWMxtGPjfoAJK-->→</i><b data-page-node-id="gvVHsvsDNkt4gTQ9m1G8w1"><!--pnid:wqHWx1z2QEBxlfKyvnuDZD-->差异清单推送</b><i data-page-node-id="VO5ZetBNKy7BYBhF4VXGBZ"><!--pnid:mMA5M0TeK8W09xCkM98bCO-->→</i><b data-page-node-id="LswqNFUjC6miJHsLKGalWu"><!--pnid:vF6z50nnQrX30dH3Bf2xXl-->IDH 48h 内申辩</b><i data-page-node-id="JkvUEUaZZY6JTmda0hsxHo"><!--pnid:m9pqXsvZEHcBnqA0HluhG7-->→</i><b data-page-node-id="n3H4NUVeqKERNqYvEs6nrY"><!--pnid:WGpu50WfDdEQK82lVBh9my-->周会定责</b><i data-page-node-id="NlyflQxQ27VdnvK4fsDwKq"><!--pnid:vkxERJmqoi4KHisnYROyvm-->→</i><b data-page-node-id="Sj6VHPQrjqonrzS2QbQnKb"><!--pnid:UwkppEWOmt0nwWdn62XLhi-->调整单双签</b><i data-page-node-id="xWY3CS1ypAyIuv3H1AB2qV"><!--pnid:69eB0OpITAopGyRoSCUxnk-->→</i><b data-page-node-id="Ex6CXFrSvxw8Yl7cPRVeVU"><!--pnid:ulGCQA0NQGSDe8BqlNvwK7-->月结 T+3 锁账</b><i data-page-node-id="hlZeDaqZ14eJsoqr39NX7m"><!--pnid:WjkjqXn5FJtp4IpdLGx7h6-->→</i><b data-page-node-id="5hdhuEOB4CDN312OuOA3IJ"><!--pnid:iNZOzV3AFft0hsGOPh910Y-->开票 / 付款</b>
+</div>
+
+<table data-page-node-id="JgXmc4dxB1hm0RAakthvRb">
+<thead data-page-node-id="XlEIPYEpbxYw0PjtdykQ9s"><tr data-page-node-id="nhbDeZ5HjIIR8mxweyQT21"><th data-page-node-id="oGvO5zcYTNIeU3NIJrDq85" style="width:14%"><!--pnid:BLBhRf7fxTL5R7RRq3FI3f-->环节</th><th data-page-node-id="tC5Ijr5ptiNrkemoULiMAt" style="width:16%"><!--pnid:rp8D8AZWc8RgE5xn6vLVJ2-->频率</th><th data-page-node-id="K8AqXVXIM2SvQSQhGrcHD2" style="width:26%"><!--pnid:ZPPHmu9I5HiAc4h9xM6ZPq-->输出</th><th data-page-node-id="X90OMTHq7jv2M5KZ9bezHC"><!--pnid:lji2fSOB1Gmym77HbYtEqG-->硬规则</th></tr></thead>
+<tbody data-page-node-id="ni7RB6HPN1uwTHSxSNkunN">
+<tr data-page-node-id="aWTKMOENznk4GdXSxaLjzx"><td data-page-node-id="J1NYwaTsY68ZEjAm1d4Xio"><!--pnid:DPhXUayKuQCO6fZx858axW-->自动核对</td><td data-page-node-id="VbPEs9oGPUoXuXSHSr3N44"><!--pnid:iDxM3d34W4O6dre9wPcetA-->每日 02:00</td><td data-page-node-id="XGJauM7RlIjbYcinfMc6kE"><!--pnid:vfqgKOjbs5gzjz4BQfvpdp-->差异明细（按料号/批次/原因码）</td><td data-page-node-id="NdOOJbUkg63N39YcSzHKN1"><!--pnid:OkM8m5HINF7wVrJYAXANrC-->差异率 &gt; 0.3% 当日推送双方负责人</td></tr>
+<tr data-page-node-id="zPM0c9fNBVRFY8I0z0KIsu"><td data-page-node-id="I5WDC6Kc9KHMIn9iimRsL6"><!--pnid:KvdX79Ii7LZrrJ5nEY6O3O-->申辩</td><td data-page-node-id="Mx0GXLm7KTQBDA06hRT5YP"><!--pnid:rkqbduzSBCknoQI0u74Vd8-->收到后 48 小时内</td><td data-page-node-id="MZjv56a90NUD0D9jdT3Dqy"><!--pnid:4odKsa3kmsnWkB51NENQto-->申辩理由 + 附件（照片/单据）</td><td data-page-node-id="HOZkfaDSZtgBMinI6pz29x"><!--pnid:TstOYHYPz8osxcdAtrHkFQ-->逾期未申辩视为认可</td></tr>
+<tr data-page-node-id="P2U3bAgKChDDbB7rItn8XR"><td data-page-node-id="MWgepqHOpFcTBcgfoUidjr"><!--pnid:8rgXGvj8EhAEB0wXMjMMfL-->定责会</td><td data-page-node-id="H0kdVtSpdTUQCVZsusga5k"><!--pnid:lwaKi01ai7DtKlzSzYRgBS-->每周一次，30 分钟</td><td data-page-node-id="s708i3CVN88tT4j44Kgv25"><!--pnid:mQW5IsAiIxul1AFyyAIF69-->差异责任方 + 处理动作</td><td data-page-node-id="Xiv197c7uvOKllGPJD1DCX"><!--pnid:d9p5QFKe5plnQ1gzWbezgo-->只处理 Top 20 差异，长尾走规则自动核销</td></tr>
+<tr data-page-node-id="v7xDWJGlB9TjhSvzTZ8jdm"><td data-page-node-id="70hiZlVt3Sj8tfufyQsjz4"><!--pnid:Uz1VkU7hZ9K72yO0RIwqES-->调整单</td><td data-page-node-id="XksVHKZRtNF22sseJxgKUv"><!--pnid:DE56aUgJGdyTishIBDT1ks-->随时</td><td data-page-node-id="LJPRHDQ46HDeWT0CmsiTu3"><!--pnid:m6efxPhuXf4RZEdTgjhkjx-->调整前后数量、原因码、双签记录</td><td data-page-node-id="I7M8s3PiVX36lmnZgaVaZZ"><b data-page-node-id="1N2LjwZxAJRogQp5zG2d7q"><!--pnid:bo3YxP4aBlKIrw0EIuPkqn-->禁止直接改数</b><!--pnid:B7rL6B05b16YXLuLk6hpyZ-->，只能开调整单</td></tr>
+<tr data-page-node-id="OVtDbNXc76DgYSUkVCbCjO"><td data-page-node-id="KDSBDYPy8E5ZZnhbkXI8Ri"><!--pnid:Wg1AefEdI3wBPeLVSXCmwN-->锁账</td><td data-page-node-id="D3NGLXTfUZNJAV4Qm7MOIa"><!--pnid:BDslNMTJRnFIoklcEXmh66-->每月 T+3</td><td data-page-node-id="XeGcVHyFAc53ZOc4zbKNy6"><!--pnid:Nhsh2C6EU8Asdrtel1BWix-->锁账对账单（PDF，双方电子签）</td><td data-page-node-id="Eb8cHsjW0Qm06mgKkVn1Wa"><!--pnid:DEUGBh08u0jYCAQ0cv5BJY-->锁账后调整进入下期，不改历史</td></tr>
+<tr data-page-node-id="RzLu0Dt783uPqZgMfxsfrl"><td data-page-node-id="Taqht4TtZlgg6L2vwpaKIv"><!--pnid:n6w58tajNQ0h4Xsr8gmhm1-->盘点</td><td data-page-node-id="7MRAseSQXeRTWSRcxtOXvL"><!--pnid:gv9lUcqYOxQB8qbtmbCm4T-->月末全盘 + 周度循环盘</td><td data-page-node-id="3Nyn2QSRoHDrJkjdvMTg7Q"><!--pnid:bGdHsczFHQSxL4uxP0OY1O-->盘点报告 + 差异分析</td><td data-page-node-id="tDEA5VY9RTbk3NDtNuDh1b"><!--pnid:Rq9PJ8TkS45UUveYu35yuN-->高价值/高流动料号每周轮盘</td></tr>
+</tbody>
+</table>
+
+<h3 data-page-node-id="q2pY6b7c4y2Wh0wQxoHHV9"><!--pnid:9bdNl7VHlkEJRVMqZNDegO-->6.5 多租户与数据可见性矩阵</h3>
+
+<p data-page-node-id="5nR4yVXN69ONFK8p6RgMws"><!--pnid:nRzxuvjJueMxfBRRbG3c7x-->这是让 IDH 愿意上平台的前提：<b data-page-node-id="0eRI9RNizYU1G187hkvXUV"><!--pnid:OVjeF3nSFWczX4mDzCMchX-->它必须确信自己的数据不会被竞争对手看到，同时能看到原厂对自己的承诺。</b></p>
+
+<table data-page-node-id="MfVlZn1gi9bHcbVWO2IwzC">
+<thead data-page-node-id="C4IF6jJuKs4waWNHvbsNmT"><tr data-page-node-id="47Xhq0MpOfpSvmPcEcRs1J"><th data-page-node-id="SQeqHNPUyeb85RUcKhikty" style="width:26%"><!--pnid:whETiClXLckL4pJ1qsfSIA-->数据对象</th><th data-page-node-id="RB1zEAFeX8bsvAnsVeC4SC" style="width:24%"><!--pnid:aCQD7VFb4iiUCzPP91kqdi-->原厂</th><th data-page-node-id="lEm0xKGlq1Le238vRhkPs5" style="width:24%"><!--pnid:CB8ZRqL99hDX9d1itSba1T-->该 IDH</th><th data-page-node-id="EigtzsC5uZ9adZCbl2ZGXm"><!--pnid:YwwuSwOCZB8QILsDTNrqd4-->其他 IDH</th></tr></thead>
+<tbody data-page-node-id="VB844Ykcn2ute3QUC5l5d6">
+<tr data-page-node-id="wn1yphHHlv11i2lNNk2K4U"><td data-page-node-id="a3IhVWSYuZ7Dp8vt3DsvJr"><!--pnid:CfiX9zkjPflesqmNYjMYC7-->工单与交期</td><td data-page-node-id="9OWyoIdT6horKXC4XMW2Mk"><!--pnid:IR9UKwa3o2dBKauEZIuxQA-->全量</td><td data-page-node-id="wLeXX4M2lbxPxHpD92SEu7"><!--pnid:c6a774f9ekjtiTkiwpGPlf-->全量</td><td data-page-node-id="JB4DaqUqd792fPpskxxkkp"><!--pnid:zXuuKc0wojzh0wb8rlLB7T-->不可见</td></tr>
+<tr data-page-node-id="LitoqegD3HQG04OyyB4Y58"><td data-page-node-id="Z4rG4l2oXa5ifHBmfyPV6d"><!--pnid:ukz0FHtJmjFaBTUPAV8EYd-->库存（含批次、账龄）</td><td data-page-node-id="nofJsFxu6VF4TtkEg6hKTv"><!--pnid:DXGT8aFgzQKSw9dOVbj1R7-->全量</td><td data-page-node-id="2rMBhls9s4iuHITBuobHXI"><!--pnid:HrfwhoTN0pgZ9aGevXqjBG-->全量</td><td data-page-node-id="yJ15bQdOOZwH7oTqggE4bL"><!--pnid:f29JS04IyMCVX1Hhmtylxo-->不可见</td></tr>
+<tr data-page-node-id="ih7HXjWsSNDk7qZAAr4SgD"><td data-page-node-id="fNW1Gz0OvWjIzrgorKizm1"><!--pnid:JGuViDUtSmdhYxLH5t9gDH-->在制与良率</td><td data-page-node-id="0YSiG8DpqlXv03s7J2auxM"><!--pnid:bNYXIo6wdhQMx3a27OYD1p-->全量</td><td data-page-node-id="36JItPUsPNoXzyeqaleLXf"><!--pnid:rbT1O4RjWhbFpGrbFfZlit-->全量</td><td data-page-node-id="KqhxLMrOXsYJ1HYVNSQmDq"><!--pnid:qgFR9ESv8uTDICklmLnBQO-->仅匿名行业基准</td></tr>
+<tr data-page-node-id="T1OLOGKtsv1FlJC5ganT2F"><td data-page-node-id="Urqc46c2umk5FEpELsg4O4"><!--pnid:ZXSPq91b6zxwARLRkxktzB-->价格与结算条款</td><td data-page-node-id="JgtKDE1oevaoFY3A3h08v2"><!--pnid:vpskMrtc4ao3UVR3j9TOCQ-->全量</td><td data-page-node-id="DWFQv0NXNofWQzidlFqpL1"><!--pnid:LSrQyzVfud3u9j8RxnGh3C-->仅本家条款</td><td data-page-node-id="Dp1ZgjIhllpDaLRuDbiLS7"><!--pnid:0zErOJBwRxfZaynj7f2X8l-->不可见</td></tr>
+<tr data-page-node-id="L5WkVvBtjjVHGffOdLQ6Xy"><td data-page-node-id="Mgy7DlSX037tXH949rwo7R"><!--pnid:rVhiwQ5qCOh5zQiRjJI8JI-->终端客户信息</td><td data-page-node-id="yB8xCdvXHBswj4Oi78VzYv"><!--pnid:sx11Y77yGymM42Pog2cdxF-->全量</td><td data-page-node-id="mSlPnRC16L9D9Y5TO6faOI"><!--pnid:ejo1kWfBCQoaewPgedNGLJ-->脱敏（仅型号与数量）</td><td data-page-node-id="m6nAfW5uytWDvshtDiS2GD"><!--pnid:F7xV64B6qFatVL95Cs0UQF-->不可见</td></tr>
+<tr data-page-node-id="rwnxXuC0iaGZ9a2w2tkZuq"><td data-page-node-id="vdU4ugUXyHBQMgieoWdvAf"><!--pnid:6hIaO1cIQEtAxJttwh6mZB-->原厂订单池 / 配额余额</td><td data-page-node-id="ZyJ5hsvT7AWc9pWsqQYJJF"><!--pnid:SAraNHatY8tqbskrkX5sbY-->全量</td><td data-page-node-id="tPA2dRzU76eN3IiPs0T1Yd"><!--pnid:yKnEzqdGTWd06ofpn5d8GK-->仅本家配额与后续预测</td><td data-page-node-id="QGuFhfuw3gY57It4DcTZAM"><!--pnid:GD7toQazhvJ6jnfImZUeWK-->不可见</td></tr>
+<tr data-page-node-id="XWSomDvyikvCF1uzghe10T"><td data-page-node-id="uCO1gxNwitL26kFwfTfksm"><!--pnid:6Co0fjLEW01dBMRrJSkrAZ-->产能占用（全局）</td><td data-page-node-id="f3onFge8k2IF0tZZNze5oE"><!--pnid:mUHNFIhEkevY7LNvSba04o-->全量</td><td data-page-node-id="1yxZykh8rwR1rCYIpEurdJ"><!--pnid:g93HfKLAsdc5WN7dDPDyKd-->仅本家</td><td data-page-node-id="Av2jBJ90xTVX8Z0i9NzO7J"><!--pnid:jp19DeBRpR0jScBtVUjERr-->不可见</td></tr>
+</tbody>
+</table>
+
+<p data-page-node-id="gt5p03hNTA0DFawpqDcLsi"><!--pnid:VFbkM5nZby2hEoHMrOcmuJ-->技术上用 PostgreSQL 行级安全（RLS）+ 租户 ID 强制过滤，而不是在应用层写 <code data-page-node-id="7op3sb1KttpeljVJm3bVRV" data-pnid-children="4fv6FJBXlRM7WQa9v9FIC0">where idh_id=?</code><!--pnid:gfP7hBMR0M8Cw2VN1hfO6i-->——应用层过滤漏一处就是数据泄露。</p>
+
+<h3 data-page-node-id="3QENaQOSFa9UAweJzgWoug"><!--pnid:VRLwXV8HoezRiKyqXpTkvZ-->6.6 数据质量校验规则（部分示例）</h3>
+
+<ol data-page-node-id="9T71Dc7jzweKpZKiucllkB">
+<li data-page-node-id="uGfmW4cycfG5Zq9Qr7nJzp"><!--pnid:zblIZoFhadQMiTcCvcXgxG-->收货数量 ≤ 该 DN 的发货数量，超出拦截并生成差异单。</li>
+<li data-page-node-id="bpMVucKD7tSA4OSvYXYz2y"><!--pnid:ioOxoUQPnSH5xayRJiCBfd-->领用数量 ≤ 该批次当前可用库存，超出禁止过账。</li>
+<li data-page-node-id="YfshkYXpmRnvR0TSVJFlt4"><!--pnid:QV9q54KJ0pfin0xQ0fyV8k-->累计领用 ≤ 工单数量 ×（1 + 标准损耗率），超出需审批。</li>
+<li data-page-node-id="rq8E5hEZRgHZXbgF4tVe8R"><!--pnid:fXc1e0S0M48QqwMdNZ0PCm-->成品入库数 × 单耗 与 领用数偏差 &gt; 3% 触发核查（识别虚报或掉料）。</li>
+<li data-page-node-id="W4vqzYsGH1APbIzjAf7H48"><!--pnid:YCSOMsI9ZqjWJj5AQWpauD-->同一 DN 重复收货拦截（幂等键 = DN + 箱码）。</li>
+<li data-page-node-id="dTzkRJNY8t1oGgNwC1JW6w"><!--pnid:ua4hMOoeaMzu2juAmhUb4o-->时间序校验：收货 ≥ 发货，报工 ≥ 收货，出货 ≥ 入库。</li>
+<li data-page-node-id="30e0bd3bQ4yjFWcEN1MVD7"><!--pnid:cKK9P4llyXoMnrkN8KhUva-->批次账龄 &gt; 180 天自动标记呆滞，进入责任判定流程。</li>
+<li data-page-node-id="NVbvYsQAKFf4tk6HFtyJ18"><!--pnid:IKtAhYn0FP7i8qEdm1IUIf-->单位换算必须整除校验，非整除需人工确认并留痕。</li>
+</ol>
+
+<h2 data-page-node-id="c_s6c_h2" id="s6c">6.7 · 协同沟通台（CollabChat）：结构化群聊，替代微信群</h2>
+
+<div class="callout key">
+<span class="ct">为什么必须做——微信群是当前最大的信息黑洞</span>
+<p>文档 <strong>1.2</strong> 已将"微信+Excel"列为三账断裂的核心原因。聊天记录散落、口径不一致、不可审计、无法作为结算证据——这些问题不解决，即使系统建好了，运营层面的信息断裂依然存在。CollabChat 将沟通从"群聊"升级为"可审计的业务记录"，嵌入每一个业务上下文。</p>
+</div>
+
+<h3>6.7.1 三种对话模式</h3>
+
+<p>不是建一个"大群"，而是在每个业务场景中按需启动上下文对话：</p>
+
+<table>
+<thead><tr><th style="width:18%">模式</th><th style="width:16%">触发条件</th><th style="width:26%">参与者</th><th>上下文与规则</th></tr></thead>
+<tbody>
+<tr><td><b>A · 工单对话</b></td><td>工单状态变更时自动激活</td><td>原厂计划员 + IDH 生产负责人</td><td>工单号、状态、四数量字段实时可见；系统事件（状态变更、报工）自动推入为系统消息；支持文件/图片上传</td></tr>
+<tr><td><b>B · 差异申辩</b></td><td>日核对生成差异明细时自动创建</td><td>原厂对账 + IDH 仓库/财务</td><td>差异卡片（料号、差额、原因码、建议动作）上下文绑定；48h 申辩窗口倒计时；逾期未申辩视为认可</td></tr>
+<tr><td><b>C · 预警处理线程</b></td><td>预警被触发时创建</td><td>平台自动推关联人</td><td>预警卡片 + 关联工单/库存数据上下文；关闭预警必须附处理摘要（文本即归档为消息）；形成完整处理闭环</td></tr>
+</tbody>
+</table>
+
+<h3>6.7.2 消息结构化存储与标签体系</h3>
+
+<p>聊天不只是一段文字。每条消息存储时就带上下文锚点，AI 在后台自动打标签——人也可以在发送时手动标记：</p>
+
+<table>
+<thead><tr><th style="width:16%">标签类型</th><th style="width:14%">含义</th><th style="width:30%">示例</th><th>后续动作</th></tr></thead>
+<tbody>
+<tr><td><code>commitment</code></td><td>交期承诺</td><td>"下周二能出 3000"</td><td>与工单交期字段对比，追踪承诺兑现率</td></tr>
+<tr><td><code>number</code></td><td>数量提报</td><td>"目前库存还有 5000 颗"</td><td>与系统库存数/N 账对照，偏差触发核查</td></tr>
+<tr><td><code>issue</code></td><td>问题上报</td><td>"有一批料好像有问题，良率偏低"</td><td>关联批次，触发质量追溯建议</td></tr>
+<tr><td><code>reason</code></td><td>原因说明</td><td>"因为设备故障停了半天"</td><td>与报工缺口时间窗口对照，纳入差异归因上下文</td></tr>
+<tr><td><code>decision</code></td><td>决议记录</td><td>"同意这批先走，后面补单"</td><td>自动关联调整单，作为审批附件</td></tr>
+<tr><td><code>mention</code></td><td>提及</td><td>@某人</td><td>生成待办推送，追踪响应时延</td></tr>
+</tbody>
+</table>
+
+<div class="callout note">
+<span class="ct">关键设计：消息不可篡改，与事件流同等对待</span>
+<p>消息表和 <code>event_log</code> 共享同样的"只追加、不可改"原则。发送后不可编辑删除，更正只能追加修正消息。这意味着聊天记录可以作为审计证据链——结合事件流（领料、报工、出货），形成完整的"谁说了什么 + 系统记录了什么"对照时间线。</p>
+</div>
+
+<h3>6.7.3 消息与系统事件的对照关系</h3>
+
+<p>聊天里的承诺和数字，必须能和系统事件互相校验。这是 CollabChat 区别于普通 IM 的核心设计：</p>
+
+<table>
+<thead><tr><th style="width:28%">聊天里说的</th><th style="width:22%">对应系统事件</th><th style="width:28%">校验逻辑</th><th>不匹配时的动作</th></tr></thead>
+<tbody>
+<tr><td>"这批 5000 颗已经到了"</td><td><code>GR.CONFIRMED</code></td><td>消息标签 number ↔ 收货事件 qty_received</td><td>聊天数 > 系统数：催 IDH 补录 GR</td></tr>
+<tr><td>"下周三能出 3000"</td><td><code>WO_LINE.due_date</code></td><td>消息标签 commitment ↔ 工单交期 + 实际出货日期</td><td>到期未出且聊天无新承诺 → 预警升级</td></tr>
+<tr><td>"贴片做完了，良率 98%"</td><td><code>WIP.REPORTED</code></td><td>消息标签 number ↔ 报工事件 qty_out / scrap</td><td>聊天数 ≠ 系统数 → 标记 D03（领用未报工）</td></tr>
+<tr><td>"有 12 颗报废了，掉料"</td><td><code>WIP.REPORTED.scrap</code></td><td>消息标签 issue ↔ 报废申报</td><td>只聊天不补单 → 标记 D04（报废未申报）</td></tr>
+<tr><td>"这批挪给 B 工单先用了"</td><td>差异引擎 → D05</td><td>消息标签 decision ↔ 串批调整单</td><td>聊天提到但无调整单 → 生成待办</td></tr>
+</tbody>
+</table>
+
+<div class="callout warn">
+<span class="ct">与差异归因引擎的联动</span>
+<p>当差异引擎（6.3 节）遇到未命中规则的差异时，除了检索历史案例库，还会检索该工单/料号的对话记录中带 <code>issue</code>/<code>reason</code>/<code>decision</code> 标签的消息，作为补充线索提供给 AI 归因模型。这使得"聊天中透露但未正式申报"的信息也能被纳入差异分析的上下文。</p>
+</div>
+
+<h3>6.7.4 可见性规则</h3>
+
+<p>完全遵循 <b>6.5 多租户数据可见性矩阵</b>——IDH 只能看到自己参与的对话，看不到其他 IDH 的沟通内容。技术上同样用 PostgreSQL RLS + 租户 ID 强制过滤。</p>
+
+<table>
+<thead><tr><th style="width:26%">对话类型</th><th style="width:24%">原厂</th><th style="width:24%">该 IDH</th><th>其他 IDH</th></tr></thead>
+<tbody>
+<tr><td>工单对话</td><td>✅</td><td>✅</td><td>❌</td></tr>
+<tr><td>差异申辩</td><td>✅</td><td>✅</td><td>❌</td></tr>
+<tr><td>预警处理线程</td><td>✅</td><td>✅</td><td>❌</td></tr>
+<tr><td>自由群聊（按需）</td><td>✅</td><td>✅（仅同群成员）</td><td>❌</td></tr>
+</tbody>
+</table>
+
+<h3>6.7.5 AI 智能分析</h3>
+
+<p>消息结构化存储后，AI 在三个维度产生价值（详见 <b>08 · AI 能力设计</b>补充）：</p>
+
+<ol>
+<li><b>承诺兑现追踪</b>：自动提取聊天中的交期承诺（标签 <code>commitment</code>），与工单实际交付日期对比，生成"承诺兑现率"指标和"频繁承诺失信"预警。</li>
+<li><b>信息断点检测</b>：当聊天中出现数量/问题相关描述但系统无对应事件时，AI 主动推送提醒"聊天中提到了 X，但系统中未记录对应事件，请确认是否需要补录"。</li>
+<li><b>争议回溯</b>：对账争议发生时，一键拉出该工单/差异的完整对话时间线 + 系统事件对照线，取代"翻聊天记录找证据"的人工操作。</li>
+</ol>
+
+<table data-page-node-id="SqCchjpuqC8tvgIYniIXTt">
+<thead data-page-node-id="LdorgWKdgc5KWFIUy5MZ7E"><tr data-page-node-id="VQA96YZcwrdhGVmath77yW"><th data-page-node-id="vWHbZl8xca97P1xIzKMie9" style="width:15%"><!--pnid:lqb0BlC5pjKSyjxsoT1kg4-->层次</th><th data-page-node-id="H0WGxGz5QdeDWQajEUG4QW" style="width:34%"><!--pnid:oKHhSu6WpxKvzQD3vNMPVk-->选型建议</th><th data-page-node-id="aOG4HYwewjiCBLj3v9wU1g"><!--pnid:Y4AEGyXlFAoQLVVxJ2pvgy-->理由</th></tr></thead>
+<tbody data-page-node-id="vdjgRXkAienZlRBhnBISxO">
+<tr data-page-node-id="xOGGy7JeAkptRrdQFKvqha"><td data-page-node-id="Ipp1WIJEPjt4kFhfVli3Vk"><!--pnid:OTuCEIdOiOAeL712X3uruv-->前端</td><td data-page-node-id="3ArkZ35PhXfdLoXMzMbHcW"><!--pnid:pnoXAyg1ec5lNVyNQsxiJv-->Vue 3 + TypeScript + Vite；移动端 H5（Vant）</td><td data-page-node-id="pc5yVwI8WfYqEsN0T9of3y"><!--pnid:60VEF9WyG3mwW0MmcK0Hwn-->内网系统，无需 SSR；H5 便于 IDH 车间扫码，不用装 App</td></tr>
+<tr data-page-node-id="RAYMgcn2VvUF7dXVIU5MCj"><td data-page-node-id="EaXSfPtjXbQ2biCcyWBAya"><!--pnid:92O9fzLpX6mwRnYXqiTgJy-->后端</td><td data-page-node-id="JWPfHxoNSj062JyHjfojHx"><!--pnid:uXMgLCPYyT8xr4XeMn3DOq-->Java 17 + Spring Boot 3（团队熟悉 Python 可用 FastAPI）</td><td data-page-node-id="pfURVfpfCpefNHPTCqfmg1"><!--pnid:Ko2WW4PUtlR9pHnbt0nKtM-->事务与并发控制成熟，适合单据类系统</td></tr>
+<tr data-page-node-id="vFdPZfgEeti7eHIL7dt30w"><td data-page-node-id="apP6TWAsH0idjUuIrYkfyB"><!--pnid:OjoY81shtdqMU3vmjOkKWO-->主库</td><td data-page-node-id="Czzjjh08ze64cJxzI7N5UX"><!--pnid:q6aw0jyl1dx6bEc9xxfOZ6-->PostgreSQL 15</td><td data-page-node-id="ICw0ejtBOfuNTsXJ1UalG8"><!--pnid:PzlZT54IoRDTsz6KYS4oNP-->RLS 做租户隔离；JSONB 存事件 payload；递归 CTE 做批次追溯</td></tr>
+<tr data-page-node-id="EMDIIvEgO3wwuyRcabUgWD"><td data-page-node-id="JJArTL7thmlLNrDGu9DKyC"><!--pnid:4sHeQFPR9rNw9ME6swLkLi-->缓存 / 队列</td><td data-page-node-id="k7KAf9v47FWbhgIxznz9Ut"><!--pnid:FplNk6kfAUiWsY1E605Dnp-->Redis + Kafka</td><td data-page-node-id="H3osyitOcZcrvKhLLM2Pvz"><!--pnid:uUyVGv5XzMF2qhKSdmGjx3-->Kafka 作为事件总线，天然支持"只追加"与重放</td></tr>
+<tr data-page-node-id="qbL6aiFL2cAcsjf4Nkr4zj"><td data-page-node-id="wb9uw1BZ8S6zNyh1NIv8sH"><!--pnid:xhLTJf6eqT94cF6zlLjPSQ-->分析库</td><td data-page-node-id="OQUSLXmxQDqnau9NtKRiLU"><!--pnid:AuWcIJjwrkJeXkLxheDtpJ-->Doris 或 ClickHouse</td><td data-page-node-id="YO37AX8xWOldiwlO174SKt"><!--pnid:PZeJdzEWMEb7pHoI5D1JfC-->对账与看板的聚合查询，避免压主库</td></tr>
+<tr data-page-node-id="VV8wlq9u6JnIc5qDyYFcvz"><td data-page-node-id="Q8sKxkaAefd0HE0zLXlH3a"><!--pnid:9YQJJMdT4AXdhNQ6wLag6T-->对象存储</td><td data-page-node-id="vvxCu4kORcjaX51Y5bIpFY"><!--pnid:Pu8DO8m1QeVpBIwWvZPHMw-->MinIO</td><td data-page-node-id="hfybBHG3i7GGAZGNDIR4B8"><!--pnid:BM4oLufq1bHO62rHm7ZJlo-->单据影像、盘点照片、签收单，私有化部署友好</td></tr>
+<tr data-page-node-id="iDsPRRXZRI2flruoYYmRrg"><td data-page-node-id="sZDwnwrcoKfjfNyLiwMGie"><!--pnid:gDdy8tZhBDmEUbCPxGVmIj-->AI 推理</td><td data-page-node-id="jkf7fSfUcHS90vhd3OVfFr"><!--pnid:UYXIB0FEP9anR634gGAaJu-->vLLM + Qwen2.5-32B/72B-Instruct（或 DeepSeek 系列）；嵌入 bge-m3；向量库 pgvector</td><td data-page-node-id="v9OjBxTbMwtdwlDXJgn2Ck"><b data-page-node-id="N5jsTk1JBUCEMI2J2oIqbp"><!--pnid:jRmxsplCb3MpLZBjfGsRvJ-->必须私有化</b><!--pnid:f1IfvJX3ku0edU7HnHgXas-->：价格、产能、良率是核心机密，不能走公有云 API</td></tr>
+<tr data-page-node-id="xvTHrh5bumbQ5HyE5Y8eiP"><td data-page-node-id="4D4j2mQVD4jWRiQsRTZHoh"><!--pnid:AokH74XQ7AkralYyTrcfF3-->OCR</td><td data-page-node-id="wCjBTXHj1JfyjIhTeqShhZ"><!--pnid:p1P65U7xai5pK8ontS3JQv-->PaddleOCR（私有化）或云 OCR（非敏感单据）</td><td data-page-node-id="kPaeouZgow534F1Y0O1glx"><!--pnid:YuSZgNC86zhEQshp1NQ6HV-->工单合同、装箱单结构化录入</td></tr>
+<tr data-page-node-id="9iWATRrQrIkZurq0j86dUc"><td data-page-node-id="1zz3I9hB8xT1TZVcX09kov"><!--pnid:RFvL9yDyWy9gLVGNmZWLjF-->部署</td><td data-page-node-id="HTBp48KhQHsgATjDLg6jHl"><!--pnid:lJA5DZf0DDj6BSwq7PpX9e-->私有化 K8s（规模大）/ Docker Compose（首期）；IDH 侧通过 VPN 或专线接入</td><td data-page-node-id="b74awq1jpC6iqnpP0wG4mA"><!--pnid:iODlsnuijlFiDn1fsVxmKn-->芯片原厂数据不出内网是硬约束</td></tr>
+</tbody>
+</table>
+
+<h3 data-page-node-id="oWshLGhoCRR35nnSqAuPBd"><!--pnid:etAJ5ti3eJnPcDnEE9YuJd-->7.1 与 IDH 现有系统的三种对接模式</h3>
+
+<table data-page-node-id="wg72ZQxUzp0qlOfnqgWcd1">
+<thead data-page-node-id="2wzOsww2ByMRcTwvBnM8tt"><tr data-page-node-id="cWm5WanxHNs25qWKTCt4cC"><th data-page-node-id="ByicPCUEuxxMGyXZgNK3Ct" style="width:18%"><!--pnid:yRVtuHpa5GWsv9mdOZkrKF-->模式</th><th data-page-node-id="Aq70ClG6Rwl7nIS6bOo5R6" style="width:22%"><!--pnid:hjtMc3cwk1Su0cyidiITO5-->适用对象</th><th data-page-node-id="qRYGkFUx5x5XqfDoh933l9" style="width:24%"><!--pnid:umZTLc2bJxExM13mjYwJVx-->优点</th><th data-page-node-id="D28jm6D51oGgHhoBBnJWlR"><!--pnid:BBfFftvHRBTYvC56dvft2e-->代价 / 风险</th></tr></thead>
+<tbody data-page-node-id="9jyVN2lht3FYNeOzuCqthL">
+<tr data-page-node-id="DxB5bZ7Ru2Ri3KgBIZvZAb"><td data-page-node-id="KuPGXW3qJ2FizVIzhWwBeJ"><b data-page-node-id="gDJ1WwzhvbA5oQpYBivEh0"><!--pnid:10hvPEH8sQz5XPaXBS6w9c-->A · API 双向对接</b></td><td data-page-node-id="0O8Z17H1zH1BcF5vKMCpsh"><!--pnid:eZD2GRMKsnjc88TXXiEyVU-->有 ERP（金蝶/用友/SAP B1）且 IT 能力强的 IDH</td><td data-page-node-id="3nvqH1v4xI2eWlkwItsLJa"><!--pnid:S1GRnm6WxRwXvTyreekX09-->无重复录入，数据实时，长期最省人力</td><td data-page-node-id="wuiaNOhEgvKKAWJCk2OIhm"><!--pnid:0XMkWnxLat6YsxClnNddar-->对接周期 4–8 周/家，需对方 IT 投入</td></tr>
+<tr data-page-node-id="Io05znGfzIDVSF7y3NgzyV"><td data-page-node-id="8LJ5kpknX4NnQ9SePN6VHN"><b data-page-node-id="eJilxfiuw5Dlv6rWHuOQT3"><!--pnid:nceXXzb6eS8t1n6mx2aS3m-->B · 标准 Excel 模板</b></td><td data-page-node-id="RKgxcdpr9wFZpljE23osTF"><!--pnid:C4pES3lSueDptltuar1sxR-->绝大多数中小 IDH</td><td data-page-node-id="sNkCxuEa7XmXU1op35Q8lw"><!--pnid:tTJQTElMDtqLWucs1XR83O-->零门槛，1 天可上线</td><td data-page-node-id="DcSqGnCP5drApzbfEuYwHF"><!--pnid:jx0xYwGBWN4snx3Qykdfbm-->滞后 T+1，格式易错，需强校验与错误回执</td></tr>
+<tr data-page-node-id="5H7LwCRiGYS8zzqlDDd4l3"><td data-page-node-id="jMHIECcxkODZJUTPQ60yTN"><b data-page-node-id="odqEzkxUMjtQvXfPv7SKGY"><!--pnid:8jtNmoCgXeznSiS1Y6oca9-->C · H5/PDA 直接作业</b></td><td data-page-node-id="xLCxP0OaNeQ9ps4eyxrhEV"><!--pnid:BzoiR2QAIvdfuoEhVvpV59-->无系统的 IDH</td><td data-page-node-id="Z3qfsKbsRyOAmzEYhlmxuh"><!--pnid:xaLP6RrdQTjVO6PLlwmQFs-->扫码即录入，数据质量最高</td><td data-page-node-id="RBOV6OhQy7B81fLTieMNfq"><!--pnid:BwwAXsiVLJx78sxUyeetKg-->需提供扫码设备与现场培训</td></tr>
+</tbody>
+</table>
+
+<div data-page-node-id="jwNu9WPFIJbmk4Jjy1uTUj" class="callout note">
+<span data-page-node-id="mlfFoYPScizC39IK5H8eda" class="ct"><!--pnid:KazgLjr4RE03NdAG8GCpJ1-->务实做法：先 B，再 C，最后 A</span>
+<p data-page-node-id="E9UfFGURI34OHDicBWg5pg"><!--pnid:00gyPL2PIr3Td1GwneeBLl-->首期全部走 B（Excel + 强校验），让业务先跑起来、让双方先尝到对账自动化甜头；第二期给重点 IDH 上 C（扫码）；第三期再对头部 IDH 做 A。反过来先做 API 对接，项目会在接口联调上耗掉半年，业务方早已失去耐心。</p>
+</div>
+
+<h3 data-page-node-id="MQngolOE71wtA8pxen4Rx1"><!--pnid:9qXzeNmYBQAnKzEubTubH6-->7.2 容量与性能</h3>
+
+<p data-page-node-id="UYCqeHkgoMJQFzAD251Omc"><!--pnid:tvwytza1SC3Qklf62GcMUC-->以 10 家 IDH、月均 200 张工单、500 批发货、约 2 万次扫码事件估算，年事件量在百万级，单台 PG 完全够用。真正的瓶颈是<b data-page-node-id="8zTtLsI3FwunwSBOIUkUbg"><!--pnid:kELkUGtl8eld2YSkQ1KjYz-->月末对账的聚合查询</b><!--pnid:LVWE1BpyMg9StCLroz5Zmr-->与<b data-page-node-id="84dm6cq2Fus1zfMKC83QS5"><!--pnid:B7EmruT5zK5QEm86E5lwja-->扫码高峰的并发写入</b><!--pnid:SKpJP0XUHfv2AG4SUeI65S-->，前者用分析库分流，后者用消息队列削峰即可。</p>
+
+<h2 data-page-node-id="RIZCc68bUkeIQtMbEKtT6Z" id="s8"><!--pnid:xv7YvNhN0LWOpueM5PNHV7-->08 · AI 能力设计：先做"省人力"，再做"给判断"</h2>
+
+<p data-page-node-id="ueHF35Vi6m0wt4KCKIUm5J"><!--pnid:eEBF7cke6Soj0OnuYTwrXI-->AI 在这个场景里不是噱头，但顺序必须对。先用 AI 解决"录入太慢、差异看不懂"这两个高频痛点，让它天天被用；等数据积累 3–6 个月，再上预测类能力。</p>
+
+<table data-page-node-id="9qbDgQLq7ZSThhMbM7gxm5">
+<thead data-page-node-id="ruMZdpVC1fSWIsXVP1tv2l"><tr data-page-node-id="m64bxVwAnLCHyPCAXHgygf"><th data-page-node-id="KpR2CW2bGrlpZKudMNETZU" style="width:15%"><!--pnid:QRg1MYUjrQaKOS1wQxpM7q-->场景</th><th data-page-node-id="B7dI6m9M9BrrLqXcvF7oxt" style="width:22%"><!--pnid:v4pQUslINGJgklfIxwk5Uq-->输入</th><th data-page-node-id="lkjluyPGjLdqCs2rfRuW7B" style="width:26%"><!--pnid:R5i0V2e99LWvqi46VnBfeK-->技术方案</th><th data-page-node-id="yWMKam3fTytBdHtUsjMh6V" style="width:20%"><!--pnid:z7ehHa0CGdvU0iUDHeR2yC-->输出</th><th data-page-node-id="DH5nlns9l98FLegXJqgcTK"><!--pnid:lOKEjiDOO18PM9uJsFOhZY-->优先级</th></tr></thead>
+<tbody data-page-node-id="1ZKvruuXZUZXzUSilYFoNe">
+<tr data-page-node-id="qCwdfLQpmKCwAo3ZF0uzkk"><td data-page-node-id="0oC8l8LWoFXErXBVlAPWc2"><b data-page-node-id="gX4BT0uphKQBv4ueDa3xgF"><!--pnid:ORcgUQGPkCsfzFSBppodTr-->单据结构化</b></td><td data-page-node-id="fjZ5f3JUTTsouIUrBZBCqL"><!--pnid:7C2y0oU9cCJISYB6Fsn9MK-->工单合同 PDF、装箱单、送货单、报关单</td><td data-page-node-id="FFrCXbJFHeLuKldCEbpWx2"><!--pnid:Bqs0ZbPD94s9sr49cCMdnA-->版面分析 + OCR + 多模态大模型抽取 + 规则校验</td><td data-page-node-id="uC2Zy6D7TUQPPC8XS4e9tE"><!--pnid:OgoevO39VqCTdKujp08WNV-->结构化草稿，人工确认后入账</td><td data-page-node-id="enXLq6GlLf5Ll82MD1CTCW"><b data-page-node-id="IaNBRnsU19ndfK33VH6DYL"><!--pnid:G6veOaSbVOhayxBb2EfZbL-->P0</b></td></tr>
+<tr data-page-node-id="weNUJO2lyc9uYcvhxRk3tL"><td data-page-node-id="ljNOvmE8lpcoDCv5YXkgBK"><b data-page-node-id="txoJia30PgsRehyIa2WU6d"><!--pnid:JOf5vEyES0DWLX5ygFWU2b-->差异归因</b></td><td data-page-node-id="heZQoln36InZiQt2xNIntx"><!--pnid:sjl0BTap9h5N7OTkPjqvPg-->差异明细 + 近 90 天相关事件流 + 历史相似案例</td><td data-page-node-id="8KIjHHpBPk61wv53A8Z3sm"><!--pnid:93LX1N0I0PVxEQSfnxwLrc-->规则引擎初筛 + RAG 检索相似案例 + LLM 生成结论</td><td data-page-node-id="hpxvRAyZieuD7cjQNwutcw"><!--pnid:NbaRu5IzLDybKgyjLESzLG-->Top3 原因 + 建议核查清单 + 责任方建议</td><td data-page-node-id="EzQ514QNyF9hqq4OLvWP38"><b data-page-node-id="HudLnOfyGzS81FTiflFSa9"><!--pnid:kBOdWGYfCT0Bu1BfigWrFt-->P0</b></td></tr>
+<tr data-page-node-id="guyFeQnGMlfYwrFzOOhACQ"><td data-page-node-id="V0oIIeVYuto1qdsUWVdH28"><b data-page-node-id="pKGLH5aOph3KPRvuMwIkl5"><!--pnid:H8hZHsVb9toZUqwZwjQgLy-->自然语言问数</b></td><td data-page-node-id="MGyTDHMqDDRSnfoUDBMrws"><!--pnid:Q9UfRXEawupzDgmGxQbUeV-->"上个月 A 型号在 XX 的差异多少，主因是什么"</td><td data-page-node-id="YcFjvRipH2iKxvjcPLjt4L"><!--pnid:INdaH7ST3ffsXk2VWx0GrP-->指标语义层 + Text2SQL + 结果校验 + 图表生成</td><td data-page-node-id="WAhrISdn3JwiyzT8rw6TQB"><!--pnid:XJWLVbEnnwy6ETAPey4nBC-->答案 + 可展开的 SQL + 图表</td><td data-page-node-id="Ha1S6gDBeaIYxt4Wt8x8MU"><!--pnid:lG2ukNRjXYUGTymyQtbcy9-->P1</td></tr>
+<tr data-page-node-id="Jl38KCb6T85WGBOXSw4ktt"><td data-page-node-id="1RArGel6llT1tzLBolkNcI"><b data-page-node-id="Xdme3szJfSe9ZYjzlfokLF"><!--pnid:c0uscmTBUw5kVTjevu35o2-->异常预警</b></td><td data-page-node-id="VZH6L9a6WIEkg71EXrf8Ic"><!--pnid:PTrgcNDhP41HhhZuE9llfS-->消耗速率、账龄、良率、报工时延序列</td><td data-page-node-id="iIxPEHjtzxwzxs5Y3uFKQq"><!--pnid:5I9FJx9cMR8onEUe5K0jPa-->统计基线（EWMA/STL 分解）+ 孤立森林</td><td data-page-node-id="I3LxpbFtIfAmSiRvivWn1r"><!--pnid:KjpshgfhAXW2iM2eJcC7wt-->预警卡片 + 一句话解释 + 建议动作</td><td data-page-node-id="BS2wKLfQMu8GX93InyIhqy"><!--pnid:v7S56IoxEHiYHKTXvl2893-->P1</td></tr>
+<tr data-page-node-id="6E42CudwrGj19iY5aNKwfv"><td data-page-node-id="yIhI22gwBmjNr87d9kY3V7"><b data-page-node-id="QKnPtfD273jv2WL1XY2ZDo"><!--pnid:NagfEOpXb1EFs6PUfdpV7q-->合同条款抽取</b></td><td data-page-node-id="5FKKiDwQ6APqkYVztO99uJ"><!--pnid:HHfAE8vNfalDDyXXuVA34y-->工单合同、补充协议</td><td data-page-node-id="WYdvaK3gnJ5odnptk60Tf6"><!--pnid:QT0vEWexE0JSwKX9LpZCAy-->LLM + 条款模板 + 字段级置信度</td><td data-page-node-id="Y88A4WPSURlETwJA0n1OVg"><!--pnid:RD4NXEkRK3si0jSSaSC1V5-->数量/交期/损耗率/结算方式自动填单</td><td data-page-node-id="18QAnVSEEhOUIcNHedDUtg"><!--pnid:wJrWTLMHXCKaOx1Zq1onSd-->P1</td></tr>
+<tr data-page-node-id="c_ai01"><td data-page-node-id="c_ai02"><b data-page-node-id="c_ai03">沟通智能分析</b></td><td data-page-node-id="c_ai04">消息标签（commitment/number/issue）+ 关联工单/差异事件流</td><td data-page-node-id="c_ai05">标签聚合 + 事件流对照 + LLM 摘要；承诺提取 → 交期对比 → 兑现率计算</td><td data-page-node-id="c_ai06">承诺兑现率、信息断点提示（聊天提到但系统未记录）、争议回溯时间线</td><td data-page-node-id="c_ai07"><b>P1</b></td></tr>
+<tr data-page-node-id="pRZvR8gRVGILg2y77duUN3"><td data-page-node-id="x0hEbpdX7d1lqI06N3I5CW"><b data-page-node-id="a966yehKSeIltfwqq0KJom"><!--pnid:cjJKzQ1Pc8MURDiloBvZDR-->需求预测</b></td><td data-page-node-id="15nnNSPQw9ofK2msb2w4q1"><!--pnid:7YJ1mNLwFbsZSU2KM4J63S-->历史消耗 + 在手工单 + 终端预测</td><td data-page-node-id="LPMN0KcIEvNvEquO6iS060"><!--pnid:7lBBLki2upFvvPP80APq4b-->时序模型（Prophet / LightGBM）+ 人工修正</td><td data-page-node-id="FCVVAKmRalxAobbmTE3Lkp"><!--pnid:hRrab6Ty9DH9jMmt4G4T79-->未来 8–13 周滚动需求与缺料风险</td><td data-page-node-id="gwPxCcC1gZglVDNJ4j2gOG"><!--pnid:nKW2xMLjus6MaVY4Kpix4Y-->P2</td></tr>
+</tbody>
+</table>
+
+<h3 data-page-node-id="wykMfXGa2J1IqIlrAe1OHC"><!--pnid:I0tq9quNlH2yl6q0X9a8sl-->8.1 差异归因的具体做法（P0 场景拆解）</h3>
+
+<p data-page-node-id="vNPbKh2n9SiwfjfeUTwdZZ"><!--pnid:U7kRN3dayjZhNnaixqbrID-->不要一上来就让大模型"看一堆数据自己找原因"，那会得到一堆正确但无用的话。正确做法是<b data-page-node-id="qGByhwbqlP6PMrSfKBsEi3"><!--pnid:pdfDYp2QsCzx7L0qwIfTPq-->规则先算、模型后解释</b><!--pnid:uN9TlVO8Cqf9nuoYZiv5VR-->：</p>
+
+<ol data-page-node-id="UCJWEyKNTSW5R2pB9Xw17p">
+<li data-page-node-id="RO7vdDMkfPGVbDnAeqCH4t"><b data-page-node-id="H6nl2mVGWfZFWkhhlf81WQ"><!--pnid:KzicMN8T1UEId0YaW2wOVT-->规则层</b><!--pnid:p8f739Vob3uXF9KGcTGmIy-->用 6.3 节的判定表做硬匹配，能命中 70%–85% 的差异，直接给结论码。</li>
+<li data-page-node-id="6oJfmJDqg6hIBjjzsICc4m"><b data-page-node-id="bIMAkl5opYaqnHQqjobThR"><!--pnid:hDdnUKBQOipzLVMwwCpUKM-->检索层</b><!--pnid:5IpnJgPTtpFAXY31X3oa5h-->对未命中的差异，从历史案例库召回 3–5 个相似案例（同料号、同 IDH、同原因码、金额相近）。</li>
+<li data-page-node-id="EBlddMRl83iKhTaAGRurlY"><b data-page-node-id="JAkU62eNIP3SuniTZfu4VO"><!--pnid:Ehkw98D0eCm08J7ZrDkYUF-->生成层</b><!--pnid:DDoYlxHsMs7XFRnbkgAnjY-->让模型基于"差异数字 + 事件时序 + 相似案例"输出归因假设与核查动作，<b data-page-node-id="Fb96CndHhzWJ69xxWHGpig"><!--pnid:99vFthAZdFaAGhmyL27RrJ-->每条假设必须引用具体事件 ID 或单据号</b><!--pnid:lZ8QaU6smUSzeKG52nGXoO-->。</li>
+</ol>
+
+<div data-page-node-id="7ISFdXIE8oBgg4DE2guIQw" style="background:#0f172a; color:#e2e8f0; border-radius:8px; padding:18px 20px; margin:20px 0; font-size:12.5px; line-height:1.95; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; overflow-x:auto">
+<div data-page-node-id="71dzsBo4ht9gOzbYMEesrR" style="color:#7dd3fc; font-size:11px; letter-spacing:.1em; margin-bottom:8px"><!--pnid:PXy8L17f4EI4Ta4ECO9Nix-->PROMPT 骨架 · 差异归因（示例）</div><!--pnid:3YOGosMHILzQG6uCGypW4A-->
+系统：你是芯片供应链对账分析师。只能基于给定数据推理，不得编造。<br data-page-node-id="W4nz0g1BVCYbwmvLJwrflA"><!--pnid:z2oPofFOMdF1q01Y2SNLRP-->
+每条结论必须标注依据的事件 ID；无法确定时输出"证据不足"。<br data-page-node-id="BR3IFdbdU9TBv5nEdkf8Q5"><br data-page-node-id="Rrfl8EWKU1ya0Rr8mCV0sF"><!--pnid:icOuhFxWXOSvNJuLcdGsMH-->
+输入：<br data-page-node-id="a7HNAC9cerMF6Iq731nf4W"><!--pnid:h9GYdIUDde4KUyY01WYMoI-->
+- 差异：料号 BM1684X，期间 2026-10，A=1800，B=1820，C=1790<br data-page-node-id="osxENWGd8k347BCzu2yr6c"><!--pnid:8xwThAnkEjyTHRr1jxFtPs-->
+- 事件流：DN-10021（发货 5000，10-03）… ISSUE-3087（领用 1200，10-21）…<br data-page-node-id="NBB0bXIDOvEwgXt5r5qhrx"><!--pnid:m3y8uND2z7KIiKzhh8oHmy-->
+- 报工：WO-2211 于 10-22 报工 1180，scrap=12<br data-page-node-id="niWnIOpeYxgovk2LA2Z8U7"><!--pnid:rpUHEaVltFHQRENzHEBocq-->
+- 历史相似案例：3 条（含处理动作与最终责任判定）<br data-page-node-id="Agn9O6OAg89kDkIQILyYKm"><br data-page-node-id="jwPRPgMHCKxMTWDNh4Jm7H"><!--pnid:pxMCd8mPkZzli8wDs8hM8E-->
+输出格式：<br data-page-node-id="wXN9H5EYiqimB4V4WmhLUf"><!--pnid:hlTXJFVE1XfCZ0YW5TvxoM-->
+1) 差异分解（系统差异 / 实物差异）<br data-page-node-id="NyO4SMGAq3KgmFq2ZFEggh"><!--pnid:CceffApvTAKr8KqZZ9670o-->
+2) 归因假设（按可能性排序，每条附依据事件 ID）<br data-page-node-id="ZYBgHcjG0hbUIjoXftgEhm"><!--pnid:8Fuk80p2w9PgbdLa4mNnXM-->
+3) 建议核查动作（谁、查什么、看哪张单据）<br data-page-node-id="RUXhwBSU55PLuHsOXawMAj"><!--pnid:qTp7dw6WDqJS3WcGUxoEUo-->
+4) 责任方建议 + 置信度（高/中/低）
+</div>
+
+<div data-page-node-id="JxkSerxYmRcl96Pan39BL8" class="callout warn">
+<span data-page-node-id="snWZ1KDuL8MHHyG6tJFa4A" class="ct"><!--pnid:3Ni9zAx5KzuVjRw5SlSw9r-->AI 的三条红线</span>
+<p data-page-node-id="dsqjTklxelCvdLu52JMnpJ"><b data-page-node-id="f3fFPSuTOkFwnag6e1ymqz"><!--pnid:HJYNNN8WXa7izgCRoS05N3-->不自动扣款</b><!--pnid:4iPLKgRuao5tOyLCrmVbiC-->：任何金额判定必须人工确认。<b data-page-node-id="HQLdRvbQnAhBnSENSrHcM3"><!--pnid:GCCqCdyS6bqjb51DkuNd4x-->不自动定责</b><!--pnid:4kueodgoFPLyTxkMLcdEPG-->：责任归属涉及商业关系，AI 只给建议。<b data-page-node-id="Jch8WACq3byljxnpgloPDq"><!--pnid:2Grllkt7R1JpIfXTGxuZuK-->不脱离证据说话</b><!--pnid:a8tsBqNbZJFVV0kmW2NhaH-->：所有结论可点回原始单据，否则视为无效输出。</p>
+</div>
+
+<h3 data-page-node-id="YwD91b3AsrCHCbhoVwfYz4"><!--pnid:G0FktWVYYyyk0unZJEvAal-->8.2 模型选型与成本</h3>
+
+<p data-page-node-id="c4oyNWhluqnyq9VNK63KYS"><!--pnid:yOTGAMyHARx6KSL5vruhwV-->考虑到价格、良率、产能都属于核心机密，<b data-page-node-id="3whbcQn8IZOq7gqjHZlo5r"><!--pnid:uDurjhczBdKEP8j004uZmR-->建议私有化部署开源模型</b><!--pnid:PbMVLMUiqmFU3F4NKY4Bhp-->，不要走公有云 API。以下为量级参考：</p>
+
+<table data-page-node-id="YWorV8nBgnM91QQXIDxBc7">
+<thead data-page-node-id="8D1bofIv9wgTYLRqr4kB5X"><tr data-page-node-id="SIJgSc4oQKawitnkHhJQ6x"><th data-page-node-id="Pt2oplIyR0FIjDdW9GKL2m" style="width:22%"><!--pnid:HFEtvEkmUYtrI1BKgxMjit-->用途</th><th data-page-node-id="3r6LQ4Sjy0yB4XnjXavt7O" style="width:32%"><!--pnid:eZTD7SkqzcIR4aJN3jXS8o-->推荐模型</th><th data-page-node-id="MBpkjl0gc3GU0Xb9OLh19K"><!--pnid:fcWzyfun3SgXEIJEUf4qgH-->硬件与成本量级</th></tr></thead>
+<tbody data-page-node-id="flZyXYNph5pz3aSPSUk4VY">
+<tr data-page-node-id="j7K93QctVsHLFuXi1veF3M"><td data-page-node-id="YrmgG6etLJWWf2HuyU3CD3"><!--pnid:SyIp91ZJ5TkDNYHOtrC2Z2-->单据抽取 / 归因 / 问数</td><td data-page-node-id="oszo7z4AW2iNJQciMZB98r"><!--pnid:L3VVQ3S80PZ3P3EfczL1uo-->Qwen2.5-32B-Instruct 或同级中文模型</td><td data-page-node-id="18NhlSMfm1ojF1I9FH8407"><!--pnid:09jH3NHbXVyJsjpneBVsHX-->2×L20（48G）可跑，推理服务约 15–25 万</td></tr>
+<tr data-page-node-id="IeVcVFNn40syz1X8ipwWVm"><td data-page-node-id="QSej5PHsZdEzpmUglrerQr"><!--pnid:ef6B5Owtre3K42C1P6ENjD-->复杂推理（可选）</td><td data-page-node-id="fauLyq8mk13q2d6jNA0Yqk"><!--pnid:73jF3wrfukSQ2nWIUzK3Cz-->Qwen2.5-72B-Instruct / DeepSeek-V3 级</td><td data-page-node-id="KO5IHd039YWImrkL5HCVsO"><!--pnid:zdDLD9bD5XRLOLevrvnYOB-->8 卡服务器，约 60–120 万</td></tr>
+<tr data-page-node-id="4ZICN1q0JZKY6a90IPAUmx"><td data-page-node-id="0TPOS9aGqFBijRT5zA9Q16"><!--pnid:fYQ37ZWzkbE5DNlGbNW6IB-->向量检索</td><td data-page-node-id="7rbxuTJfpTlw30axHn39DR"><!--pnid:fu68suj4JjtmDl44i15pDc-->bge-m3 + pgvector</td><td data-page-node-id="yNLUVGdRnZlWS9vfAvYnkj"><!--pnid:PYkSc4RdE1YIyGpnTahSuz-->复用现有服务器，成本可忽略</td></tr>
+<tr data-page-node-id="aLn5el8Sg1BhoGA6MixfmA"><td data-page-node-id="kJFCmMYAkfkVli0yivyD81"><!--pnid:KoPHiHOOLah3yjoz5L2m0L-->OCR</td><td data-page-node-id="KXlelOBUVVMFIpMpofV0Fq"><!--pnid:UZcZFzXBhQXY7oiCWXdwmG-->PaddleOCR（私有化）</td><td data-page-node-id="mPXrn1Mmduz2zyoZ2wBrY8"><!--pnid:9ogdb7u9nyKfVFxrHCPrlm-->CPU 即可，成本可忽略</td></tr>
+</tbody>
+</table>
+
+<p data-page-node-id="2FQQyVps69krJg8o1Rfm7K"><!--pnid:yRDttwBEfk3VKRUKNHcvHq-->如果首期预算紧张，P0 两个场景用 32B 级模型 + 规则引擎即可，效果足够；预测类（P2）在数据量不足时用传统时序模型反而更稳，不必上大模型。</p>
+
+<h2 data-page-node-id="6XGDGx7yuh1ZCgUqDwuiTl" id="s9"><!--pnid:1nMfOyy3KBd5J2sGn3ThUz-->09 · 实施路线：四期，12–16 周跑通闭环</h2>
+
+<div data-page-node-id="foNoSoJhOdgO3nMkcNsD7Z" class="road">
+  <div data-page-node-id="ivrTNI4mXjhMzsOK2FGkGJ" class="phase">
+    <div data-page-node-id="Ir2lQGFGb1PgxVXeiVj9Fp" class="ph"><!--pnid:jGueOuufqPpctBKrD1apGP-->第 0 期 · 定基（2–3 周）<em data-page-node-id="JVXDqxUR3ncteVSVN4MiwZ"><!--pnid:jvyqZDgmdwUeqgNed2rk8s-->不写代码，但决定成败</em></div>
+    <ul data-page-node-id="wqCYZ0d0ZutMnSxn4T19yO">
+      <li data-page-node-id="vU1wWHW3v3FxOdB9Ca1t65"><!--pnid:Gpi6hYkovwKMaEM8hDCRMO-->料号 / 批次 / 容器 / SN 编码规则定稿并公告，写入合同附件</li>
+      <li data-page-node-id="vJmgihNiE8TJpr5qS8IcQQ"><!--pnid:JgqQBi58m7kwb8BOireWKt-->差异原因字典（D01–D10）与责任判定规则定稿</li>
+      <li data-page-node-id="9b1xRkFNVo6BP9YuloeN22"><b data-page-node-id="VwA9XQ1TaIR25DxEMGwU6P"><!--pnid:Kp63DmWhq0Sl1IygBpb2Gz-->全量期初盘点</b><!--pnid:4j0D1u5CKJJqQY2GD1yhjB-->：原厂账、IDH 账、实物三方对一次，签字确认基线</li>
+      <li data-page-node-id="8F2p6l9aRJtG6jV1xKcp4Q"><!--pnid:OLEHX4WanmrgV000JvZmOe-->选出 1–2 家试点 IDH（配合度高、量大、IT 有基础）</li>
+    </ul>
+    <p data-page-node-id="9LLU7Zlhv0AhWQJyV3PtfX" style="font-size:13px; color:#64748b; margin:6px 0 0"><!--pnid:TDIahs1chcPtFV15ahbyM5-->交付物：编码规范 v1.0、差异字典、期初盘点报告、试点协议。验收：三方签字的期初数。</p>
+  </div>
+  <div data-page-node-id="dOt531SSPiIRTjydx6yysp" class="phase">
+    <div data-page-node-id="Jv9IeWJumzRjOCeaVAhLP9" class="ph"><!--pnid:js3z0BcTgCpBnbcMGGYM2z-->第 1 期 · 三账闭环 MVP（6–8 周）<em data-page-node-id="EEQ19Gd3RwfZnnPN66BUdT"><!--pnid:u39kpzTcXNaduSoRVtkwP1-->本期核心</em></div>
+    <ul data-page-node-id="xIgipUj4sFGc1ZBjcrrSZF">
+      <li data-page-node-id="1RF8qcCxmwpfD1OcYuRtPI"><!--pnid:pptpMuaiNNvGm4kHkjzkoN-->主数据、工单下达与接单、发货、收货、领用、库存台账</li>
+      <li data-page-node-id="2IfyFAJLaikBHqkdmo8hgH"><!--pnid:QUTQvNbpfkiHu3jBWWMjNl-->三账计算引擎 + 差异明细 + 月度对账单（PDF 导出 + 电子签）</li>
+      <li data-page-node-id="qHbeCCUsksdQzKNHCQ77BR"><!--pnid:QAwvZqlQtryGUzJQnGug9v-->Excel 模板导入 + 强校验（先走 B 模式，不碰接口）</li>
+      <li data-page-node-id="c_ph1c"><b>协同沟通台模式 A + B</b>：工单对话（自动关联工单上下文）+ 差异申辩对话（48h 窗口），消息结构化存储，替代微信群</li>
+      <li data-page-node-id="zSwrkGX67e3g7ESZbCmMq2"><!--pnid:MBbkOcTLCIU0f3hdmSNc0v-->试点 IDH 真实跑 2 个完整对账周期</li>
+    </ul>
+    <p data-page-node-id="Pn4UzGGJgr1tcbDl2igcVY" style="font-size:13px; color:#64748b; margin:6px 0 0"><!--pnid:js6IOiZc0MfBHo7nr2otGo-->验收：账实相符率 ≥ 99%，差异 100% 有原因码，对账周期 ≤ 3 天。</p>
+  </div>
+  <div data-page-node-id="4be7rvRROQDrgmxbkgXc2Y" class="phase">
+    <div data-page-node-id="EyKnheiqhcS5zCVDJCre3G" class="ph"><!--pnid:4fyqwD6b35N0AaVX5ALZLO-->第 2 期 · 生产透明与追溯（6–8 周）</div>
+    <ul data-page-node-id="WfS3G5jsYVetsGAflnWKQc">
+      <li data-page-node-id="FKgBTA71ag5JTTv056LYNB"><!--pnid:3urjuhwkTONI2xuWJVmfOQ-->关键工序报工（贴片/测试/老化/包装）、良率、报废、返工</li>
+      <li data-page-node-id="wgnrJ5GmhZLjFlQxh2NvRX"><!--pnid:IGX1lGEBXmGPVirbN0JpTK-->成品 SN 与批次绑定，批次正反向追溯</li>
+      <li data-page-node-id="2Ouut6yzk9TPzE9lkaBJHg"><!--pnid:PauO8tz6Fqy3NkCr9sT0iT-->预警体系：库存安全线、账龄、交期、差异超容差</li>
+      <li data-page-node-id="c_ph2a"><b>协同沟通台模式 C</b>：预警处理线程（强制关闭摘要），消息标签（人工/自动），系统事件自动关联消息</li>
+      <li data-page-node-id="8nVE2LBjf0bZIGP896EzA7"><!--pnid:ZXmNB3VqRuoQ2mSSCwen3V-->头部 IDH 上 PDA 扫码（C 模式）与 ERP 对接（A 模式）</li>
+    </ul>
+    <p data-page-node-id="J33euJzliExWrVpMOWoP5N" style="font-size:13px; color:#64748b; margin:6px 0 0"><!--pnid:xoJSAGkZvprw8ttLIJio8w-->验收：批次追溯 &lt; 30 分钟；报工及时率 ≥ 95%；交期延误可提前 7 天预警。</p>
+  </div>
+  <div data-page-node-id="eN3YquFTLzONr0aMiKKR3w" class="phase">
+    <div data-page-node-id="MscEmUs5PQ8rwko8s7EXCt" class="ph"><!--pnid:LXK5a7ZWOxgQ1fdlqhOdF9-->第 3 期 · AI 与预测协同（8–12 周）</div>
+    <ul data-page-node-id="8k1IcWS8uJH18I8SA2gsRy">
+      <li data-page-node-id="B8yrLT4XszTWSSf6wqSBkM"><!--pnid:vJWhyaFGzwK6V3DvHJJHQz-->单据 OCR 结构化、差异归因助手、自然语言问数</li>
+      <li data-page-node-id="Uu9Ax8R4w0kPWWWHfoTsU1"><!--pnid:YOVi0ts4U7GFUQE5eQMwPs-->滚动需求预测 + 安全库存建议 + 产能匹配</li>
+      <li data-page-node-id="QTWRm1In1RqPmcwsJXjTic"><!--pnid:fx1qpfVBwoFno5hnZXbh8P-->对账结果与 ERP 结算、开票、付款联动</li>
+      <li data-page-node-id="c_ph3a"><b>沟通智能分析</b>：承诺兑现率追踪、信息断点检测（聊天 vs 事件对照）、争议回溯时间线</li>
+      <li data-page-node-id="SEtwJlCI7cJHByWLpyz5eH"><!--pnid:EKNTyxPLrerlFXhKYUnVQe-->IDH 绩效画像（交付准时率、质量、配合度）</li>
+    </ul>
+    <p data-page-node-id="otOT4VrDh1lw9lSOdlxezT" style="font-size:13px; color:#64748b; margin:6px 0 0"><!--pnid:CFzviD6EOLfWU2FiBBuBpr-->验收：单据录入工时下降 60%；差异归因人工处理量下降 50%。</p>
+  </div>
+</div>
+
+<div data-page-node-id="um66YNxJzRVL0RWmkYDCfs" class="callout note">
+<span data-page-node-id="Feue3r9McAlFTsGExZ1OTv" class="ct"><!--pnid:n8e7h8otPlETlTGtng2HnM-->范围冻结原则</span>
+<p data-page-node-id="Pmw0T9ULBu9akIWeUeqoCv"><!--pnid:tjkB9g6U5CfQUSSck9ZZp7-->每一期开始前冻结范围，中途新增需求一律进下一期。这类项目最常见的死法是"顺手把 MES 也做了"——第 1 期一旦扩到工序级管控，交付日期会从 8 周变成 8 个月，且业务方在第 3 个月就失去信心。</p>
+</div>
+
+<h2 data-page-node-id="ZBGvFhxWpTesJASx3BniUD" id="s10"><!--pnid:jCXlLoW0EPA978GssZEDGP-->10 · 组织与推行机制：技术只占三成</h2>
+
+<p data-page-node-id="uOoA69Ivxz3PgwAVSOR8V3"><!--pnid:wpt4PE9FvfyL2UKYvSOZFy-->这类平台 70% 的难度在组织，不在代码。IDH 不愿报实数，是理性的——数据就是议价权。所以必须让"配合"的收益大于"隐瞒"的收益。</p>
+
+<h3 data-page-node-id="2FYelZBiZE4Zmrke8UBIKE"><!--pnid:0AAioyBiY05j5G3YzdGSxF-->10.1 合同层面：把数据义务写死</h3>
+
+<table data-page-node-id="Cgu25RRq7pykng7moBhCno">
+<thead data-page-node-id="xYT2PHHOr7oCcMAhKWR6un"><tr data-page-node-id="qK1p7v7SJEabtuEQvHshCh"><th data-page-node-id="SAjjAYJAg346pwnvBXF3zW" style="width:30%"><!--pnid:BSxhLFeBivmQjVu7Yng7Gy-->条款</th><th data-page-node-id="Jcv1UDGvdtrMw5PIAk9Q2F"><!--pnid:BIcwiEsexURDrTTdmBfs8C-->写法要点</th></tr></thead>
+<tbody data-page-node-id="LVXUzGEYFQ4ierH1bV5YOx">
+<tr data-page-node-id="rliNCuj3eE8d43itFlC4bM"><td data-page-node-id="HNxYTPiIilOCT0QGqU9YBC"><!--pnid:nBsHdLKZBy2pvzINAU1tCJ-->数据同步义务</td><td data-page-node-id="a3qEm8kfK7QtDGiJYltIcU"><!--pnid:xPUtlv7HbN4hQF890dXtTC-->IDH 须在收货/领用/完工后 X 小时内回传数据；逾期未回传，原厂有权按"发货量扣减已确认消耗"暂估结算</td></tr>
+<tr data-page-node-id="y3abdYHTWovbqcZxODbQfm"><td data-page-node-id="PhYWmZWlnGyhh4wpTluTD4"><!--pnid:9ezHHyPE9xHiVmOoUVbQz7-->结算依据</td><td data-page-node-id="mUkSsDT2hsqYBt8EHDoYjP"><!--pnid:KkZJzqRXDq5qlu7OZEKuA0-->双方确认：平台锁账对账单为结算唯一依据，邮件/微信/口头约定不作为结算凭证</td></tr>
+<tr data-page-node-id="GMrhrQTEEAY5zbNMWq9uK4"><td data-page-node-id="40P0GOmgyfmjgkjINnqccM"><!--pnid:wojijMZPOnKG2uhZOhXzOW-->盘点与核查权</td><td data-page-node-id="Ird5Tb1USVKAOcOOsfXWzx"><!--pnid:0cFW9IB1xEH04ymKqyboqO-->原厂有权每季度现场抽盘，差异超容差部分按合同价扣减；连续两次超标触发审计</td></tr>
+<tr data-page-node-id="vVEd339i15CimF0zYzrKSq"><td data-page-node-id="rYoaXElXjkPsAhsuHIGAI8"><!--pnid:e9nX1tNEJdCGeu1PlcNPXh-->批次管理</td><td data-page-node-id="tbi1PZ5n6wsOiX2Fc3BE0E"><!--pnid:jCTZTQuKTXlDXJ3xxgWFzW-->禁止自编批次、禁止跨工单挪用；违规导致的追溯失效由 IDH 承担</td></tr>
+<tr data-page-node-id="0NiI913sC08mDR8DY6LMT0"><td data-page-node-id="5cBVomPvH7cB3eRkaRb0GN"><!--pnid:xiiCnticJUpZX9PY8277FU-->数据权属与保密</td><td data-page-node-id="oVdSG7Fwfnis4WzchPWY2D"><!--pnid:s7Y6jHX2xzJk15bN6iQ4Qe-->数据归原厂与 IDH 共有，平台不得向第三方披露；明确退出时的数据导出方式</td></tr>
+<tr data-page-node-id="ofg6RE6STmyT7SrJlGjcye"><td data-page-node-id="aZSzpMNPUjM1EmiXt5RGxd"><!--pnid:G1N1lcacm3wtnzTHKisktK-->系统接入</td><td data-page-node-id="Iadk67wTg9H3kMjMpLi0y4"><!--pnid:r0IIbmcz4o3hrjwCmeDFzg-->新 IDH 准入前置条件：完成平台接入并通过首期盘点</td></tr>
+</tbody>
+</table>
+
+<h3 data-page-node-id="eqRZvTozVmzpYxx0MEMwIN"><!--pnid:69pJpyiOCpGiWf3DSc0Zkv-->10.2 给 IDH 的四个"甜头"</h3>
+
+<ol data-page-node-id="UXWKBS8LdDMbW6bKhRa9PJ">
+<li data-page-node-id="9VSZTQz2Ei6WUWUXqlo2zO"><b data-page-node-id="y215CQj7rOM6ztpP9b5nGl"><!--pnid:mTMwrA11qx6eRYOPtCUTBQ-->对账自动化</b><!--pnid:lQSNBpIVibSSGMx7tIX7Ud-->：从每月 10 天人工扯皮，变成 3 天系统出单，财务人力直接省下来。</li>
+<li data-page-node-id="5IOI5mn44O2MjIfiwYFtEb"><b data-page-node-id="XU0YWPZwuqZdNz0Rc9jkv3"><!--pnid:37BCl1GTpZL3UOfdaU7sWB-->结算加速</b><!--pnid:yMqV3FVgovc6swlP1iPvXh-->：锁账即开票，账期从"对完再算"变成固定 T+3，现金流改善。</li>
+<li data-page-node-id="NsrC2tngUAjlhGKhwWA6zF"><b data-page-node-id="gcVztcyGRV75xahJ8ANNuo"><!--pnid:i5daFneC2eWwePnSE8D1wn-->VMI / 寄售</b><!--pnid:9yUMQGRXD8rE1rpaSmJRv2-->：芯片放在 IDH 仓库但产权归原厂，IDH 不占资金、不担呆滞，只按实际领用结算。</li>
+<li data-page-node-id="ylZGPWu6UtpnLddb12v1oG"><b data-page-node-id="HFt4BxhetM6RxMOHh4NBVE"><!--pnid:Klyi1abPwLJpwub6hR2Guu-->自己的经营看板</b><!--pnid:odMPriE7VTZCxNuZp3scaM-->：IDH 能看到自己的良率趋势、批次账龄、交期达成率——这些数据它自己也想要。</li>
+</ol>
+
+<h3 data-page-node-id="5PumRjPJp5f3GhDjIMV5qL"><!--pnid:x1ArHUIRhhZDnoGeR8CVGx-->10.3 组织分工</h3>
+
+<table data-page-node-id="joSwZqgxiojMMSyMnBQzFT">
+<thead data-page-node-id="2Q7pTHzlvHgXewPycJeR0B"><tr data-page-node-id="EhH14T9muFtxrQSMs1wrNY"><th data-page-node-id="rUyB1ql3Z0Baagw9JyX60f" style="width:24%"><!--pnid:2aboDkR5cXqe9lUTzUZzeY-->角色</th><th data-page-node-id="88VRdcXDFsUplFqCSkO6cP" style="width:20%"><!--pnid:3k2JQMX5XcmAySHtISar1p-->人选</th><th data-page-node-id="iWbxaRCr74krzKUIXmB9tI"><!--pnid:pBmtqozeyUdBKnfO9uGG4q-->职责</th></tr></thead>
+<tbody data-page-node-id="aj9hO3UK0A6vA9NI4NCFtC">
+<tr data-page-node-id="2vvicSuDNsAUBzUMnw39ph"><td data-page-node-id="BaBs8QluOW7J7GctKRcUVK"><!--pnid:xKHd4eddCebfIF3JNccO49-->指导委员会</td><td data-page-node-id="NAuPE74FePNFmexoCOYArQ"><!--pnid:XzDcIMfHXUGmFYebfxvYOy-->供应链 VP / COO</td><td data-page-node-id="jQurGQW596UjxFd6py2Fja"><!--pnid:28C8XsYp5SLWIysRUhwesn-->月度例会，裁决跨部门争议，批准范围变更</td></tr>
+<tr data-page-node-id="y0iAqi0anF0Hsr0oWxXz4Z"><td data-page-node-id="hM78pYE4lpAAF4edEH0E8q"><!--pnid:GskdH5pceguPVnLQFoDiH6-->项目经理</td><td data-page-node-id="XB2QEdboDwBgQ3es1yc3sx"><!--pnid:ZlJcQyCPciih2HEyItYd1q-->供应链数字化负责人</td><td data-page-node-id="O37vKbMCQwI2GTGSL4br3U"><!--pnid:6DcuflguWolIhR8YCRGmbq-->进度、风险、双方协调</td></tr>
+<tr data-page-node-id="jOxysGMkbyhtsQbcZW9bX3"><td data-page-node-id="8Bm2NreCmvfHG3H0Qj22S6"><!--pnid:5ey9FIQoTkZBZt2InDNidN-->业务 Owner</td><td data-page-node-id="3wh3wwJn2jzpzIRIYMIRCj"><!--pnid:zIp1DMtKzhtwXxxMujdZzX-->采购 + 计划 + 财务各一人</td><td data-page-node-id="nKmMuKnEaFRcGb9jwWE8dS"><!--pnid:FKgA8KOV2YlPKpFjTJHDYn-->规则定义、验收签字</td></tr>
+<tr data-page-node-id="eP4Om9vdd92PYit01YekBM"><td data-page-node-id="Njup25QEA9rQUAPrIZ3VIU"><!--pnid:oNVV1av3lPvbGgyaQ4bjgz-->数据 Owner</td><td data-page-node-id="IocSj7bSwLjV1I0kZqRJ0n"><!--pnid:V2EwWk6pupxa3GKYj0MzaE-->原厂、IDH 各一名</td><td data-page-node-id="WNRvW5s0YyOxNWQiie5Ym5"><!--pnid:N1SpIkeJkMiMzTa9EtCm7f-->主数据质量、盘点组织、差异解释</td></tr>
+<tr data-page-node-id="N29fDWHDFQpb5PX8QIbL4S"><td data-page-node-id="Y4D98cOgOgcb5QwIoLlRtq"><!--pnid:xJLomkohnrSQblPpJie25C-->IT / 实施</td><td data-page-node-id="3EKzSmywkzXTO8nHeiu33y"><!--pnid:5xjGOnteKcdxp1aGS4KRkY-->内部 IT + 外部实施商</td><td data-page-node-id="qFxr5mUAZV4rxkTP0JpWdl"><!--pnid:dOMEj72948UU688z8NnRcJ-->开发、集成、运维</td></tr>
+</tbody>
+</table>
+
+<h2 data-page-node-id="DX2ZM7A5mGfirRelEBlqgF" id="s11"><!--pnid:oVlHgEZNIAO2Fenlxz23b4-->11 · 风险与对策</h2>
+
+<table data-page-node-id="232d6jrksHx2sEgBtlVrpx">
+<thead data-page-node-id="yZWcWSxsfPlgslzkXjxUbY"><tr data-page-node-id="DvJqOso6xyyaocUsej3enL"><th data-page-node-id="FG5QZRGm3GKl1koD3GjMEc" style="width:24%"><!--pnid:7weRuS43v2w2V5xSxCHo1M-->风险</th><th data-page-node-id="zvGxWqHZUduPvTIALkJrGt" style="width:8%"><!--pnid:aNIUvsRQOTR7sfRv80ZrDl-->概率</th><th data-page-node-id="el3UlZH4YYAaseTPXjPvZN" style="width:8%"><!--pnid:aZM0iJxO560cxTJQsDxAV7-->影响</th><th data-page-node-id="QxDOsHjzbLYtKQ1vklrza0"><!--pnid:007DhHaLgYCNAUVuTzkpl1-->对策</th></tr></thead>
+<tbody data-page-node-id="9RsJqALsdCgqtJDMjsO9ez">
+<tr data-page-node-id="1AS193AGvXtCFWTgQcNrDk"><td data-page-node-id="ljAVxwhCHOxu0VC4s5gzhC"><b data-page-node-id="kQwdoBlkVjglAsBcWikf5R"><!--pnid:a2omy5m7riZUXpnyrr384w-->IDH 抵触或填假数</b></td><td data-page-node-id="GemKYqvcnEr9rbymwlDzO6"><!--pnid:ReHQZSevmCQnNUEIlWhbCb-->高</td><td data-page-node-id="ep3HUAUTPv2wPVl0ULRdCe"><!--pnid:6N6FHsJ1S81KWwCta31vAL-->高</td><td data-page-node-id="LSSdyHMIQayxQDOZfnkvGh"><!--pnid:v35xbdvYuiJCWoa4tNR0pa-->合同条款 + 四个甜头 + 单耗校验 + 随机抽盘 + 影像留证；把"平台记录"设为结算唯一入口</td></tr>
+<tr data-page-node-id="btJRYC0fnmAnfDig7F69VE"><td data-page-node-id="yvGIEGCEEDi1mMq7253whK"><b data-page-node-id="cHTlWYyTcdMoGfGRChnBCd"><!--pnid:jj1PG9lRxyiwtBfVYSoHXk-->编码不统一</b></td><td data-page-node-id="EIgPPaeA6GlYX5sASU9YD9"><!--pnid:JaQYPICM9gaXDfX8kgeMnb-->高</td><td data-page-node-id="jP23izsxulZLYXa8TQOsmS"><!--pnid:HSxlxMBgf3QZEEDqqdxxpC-->高</td><td data-page-node-id="z7IbctaFRHc73xa1mk4C9m"><!--pnid:TvYrihfb2whQlOwRKh9uf6-->第 0 期专项，编码规范写入合同附件；系统层做料号别名映射兜底</td></tr>
+<tr data-page-node-id="uElgkvFykVkmu3HTvyd5D5"><td data-page-node-id="SxVEiOYndF6ijqHhuNfuE1"><b data-page-node-id="uLzsKl58nGwdERFvW6cI2S"><!--pnid:hJhREgOc1Hr8SgdXOeAeXx-->期初账不准</b></td><td data-page-node-id="Of45V86i2h4BwaqpxVtYPC"><!--pnid:X8CzuRclsk2D63Gvzfh1PH-->高</td><td data-page-node-id="Hfn8ZYB2aYbAJXJ3In4ese"><!--pnid:uvrucYy1qm2pxerg7EO2nR-->高</td><td data-page-node-id="OK4qewHvPHBx2xgNcG7naR"><!--pnid:71q2cEmLTA0Lezscmps6iA-->上线前全量盘点定基并三方签字；不接受"先上系统再慢慢对"</td></tr>
+<tr data-page-node-id="u72RZuU8tAFcJCVADPT0kB"><td data-page-node-id="Omz2GGt3kmStoAEl3CluUG"><b data-page-node-id="gXnq6OzrWU0juD1YseSWGe"><!--pnid:fyix2Dxd46S1Zh85Cr0Bzz-->双录负担导致弃用</b></td><td data-page-node-id="qe7IpIXSEsY2bUeYHUjJvE"><!--pnid:6Ngp71mt60JQxws76PvEse-->中</td><td data-page-node-id="k5uZ1LzNbhyb8r82eHu4ZI"><!--pnid:KA5A8iIbscr1L1wWi6tjRt-->高</td><td data-page-node-id="qW0PoLe4YrEfBlGk4vFge0"><!--pnid:VF3K4lPtPszu7k494s2UCH-->最小采集（4–5 个节点）；Excel 模板一键导入；二期起逐步 API 对接</td></tr>
+<tr data-page-node-id="9qHJvXtAHcMi3oQFREyeBP"><td data-page-node-id="3la7xGyNjENYPIj3ByXIDc"><b data-page-node-id="G6dm9lHmaYaeF39FMJ4wgB"><!--pnid:qgCg1DZofMOd5sHzHkqJAn-->做成监控工具，IDH 对抗</b></td><td data-page-node-id="gGOAbEWEJsdVJCke529Leh"><!--pnid:9HWnrTDLdqSnAzK5tdeyiQ-->中</td><td data-page-node-id="HwG00o2lACyI99QPV7D4vR"><!--pnid:dniiftQsK7grRxabwyr1Ay-->高</td><td data-page-node-id="G2IC2uRurhL0ln19x3eqLN"><!--pnid:5lL4ryCpGeUUMOfVljlhax-->强制双向可见；原厂的配额、在途、结算进度也必须透明给 IDH</td></tr>
+<tr data-page-node-id="k0hsyg3L1IIpPovFR1Z4i0"><td data-page-node-id="GUXswJefn0419h4RR9Pi41"><b data-page-node-id="ShKWEHam0vCYedY4a5uWZQ"><!--pnid:pbzPKet3JUVWBN4ee79baP-->范围失控（做成 MES）</b></td><td data-page-node-id="CZvFQP2um43cYEzCKtZWI3"><!--pnid:ERSB0d5dcswWv0K2zpib51-->中</td><td data-page-node-id="cXR1Kel5PjwaWkqKmC8nNd"><!--pnid:i1RDgKIecOV8jUM8iVHq89-->中</td><td data-page-node-id="OVbCvw3eXy08UwkBC4CZz0"><!--pnid:UkfiR6h8Ypis1vPHn6ACBp-->分期冻结范围；工序只采关键节点；变更走委员会审批</td></tr>
+<tr data-page-node-id="8cXXSlVoLzW1G8axv8MVn4"><td data-page-node-id="9RExbfOriwm0O5mkZLuruT"><b data-page-node-id="ywU4UHOjBwJykvXul1xGOI"><!--pnid:ksbzafj8ZLoOe3p9Qb1ySO-->AI 幻觉导致误判</b></td><td data-page-node-id="peR3OWsnWBeYYbnmjtPAjN"><!--pnid:CIcaAdUawIZ5vygm6TjsWK-->中</td><td data-page-node-id="IH6nx66gaobUT5FO2zpogY"><!--pnid:2p7ihHINn32CgaRAWCdLUM-->中</td><td data-page-node-id="PJfEGxjQeWBO7Pv450QNGM"><!--pnid:DMPiZypjakmN0hxbT2BSnP-->结论必须可溯源；AI 只建议不判定；关键结论人工复核并留痕</td></tr>
+<tr data-page-node-id="UMbEB9MABni7DVeQhls3qK"><td data-page-node-id="KvJFi6R5exWxfz5VHgbRT9"><b data-page-node-id="qtDfbUnRJHkNCZaH9RllSM"><!--pnid:yuS41O2nLlYCD1FxZnhyoH-->组织推不动、无考核</b></td><td data-page-node-id="5LyJmeoYoI740aQr6OS3T1"><!--pnid:JeWYccfHkvciobnSFVzWVb-->高</td><td data-page-node-id="Hq6Y1S1KWGCAyI0WRIWpPx"><!--pnid:8am3uzjjbohCRYYzE3Jv89-->中</td><td data-page-node-id="QyWdJl2xidEj4v01gVEm9P"><!--pnid:j20I2QIS8DMI1RV3Dd5Qh0-->高层挂帅；把"报工及时率、账实相符率"纳入 IDH 年度评分与配额分配</td></tr>
+</tbody>
+</table>
+
+<h2 data-page-node-id="u5LyEHbIBgjwYITsWdz9Yc" id="s12"><!--pnid:eaj3IWHfCiHOidZhO6bEd4-->12 · 投入、KPI 与验收</h2>
+
+<h3 data-page-node-id="BzpeSZsfZG9ht3SsNqymK7"><!--pnid:kpmhmaUZgZic7DGSSZT8mo-->12.1 投入量级（参考，需按实际询价）</h3>
+
+<table data-page-node-id="I0MqlZ0nVt3bOhcRFojYIs">
+<thead data-page-node-id="bgpXoD9zv7Mwy3QyMJu3GK"><tr data-page-node-id="i99pnKwYXUWnwqN383tu8U"><th data-page-node-id="4vUje7Notyzr4Xv1CrQUB9" style="width:26%"><!--pnid:mtkxGAkoadVAyC9zExMy2r-->项目</th><th data-page-node-id="mmniU3ODt1DmXAUbMbGzx7" style="width:24%"><!--pnid:CMMebZ3CllzvgLVx4vQW0Z-->量级</th><th data-page-node-id="4zL364WpSpsyVIZpWAQhSv"><!--pnid:XaPygVFNujAKPhRnrB6fu4-->说明</th></tr></thead>
+<tbody data-page-node-id="0pkfxRlRuhrT0DaD5Dm8xr">
+<tr data-page-node-id="mSrE8AUmJBrJluvJJZBL1D"><td data-page-node-id="f1Z4diXuiGy3O5fLXKSGDB"><!--pnid:yZUCadoztY48DiSIlazEKP-->实施团队</td><td data-page-node-id="FRQGs3aAI4slHdtp0TCdai"><!--pnid:NMbPla5hue8o9ALWaj4Lhl-->8 人 × 7 个月 ≈ 56 人月</td><td data-page-node-id="sriJN8QilEBLktjDbAuSEc"><!--pnid:pFHlrYPGXCCpwdiXP2WmeN-->产品 1、后端 2、前端 2、数据/AI 1、测试 1、PM 1</td></tr>
+<tr data-page-node-id="mFIgcV23aHp4PsIKMBBHgC"><td data-page-node-id="V2FGA3hBEcIBK8P2gxsOQ5"><!--pnid:IgSrjwrzpeENxPWwyoRy1n-->自建人力成本</td><td data-page-node-id="YUkosPW4k7bl0n080VnBHL"><!--pnid:wey5xzsOQ0xykrofLxmN3C-->170–280 万</td><td data-page-node-id="9pF1HHeeRVLfc9zleQNpaS"><!--pnid:4FFBcTMVLJSlevuJKRP8R1-->按 3–5 万/人月</td></tr>
+<tr data-page-node-id="UBSXHGkT717T5L2743KKta"><td data-page-node-id="Ohcra4K1mKeKCHlXQU3L9N"><!--pnid:MtF46DPRHXuIPOF2TTACFP-->外部实施（如外包）</td><td data-page-node-id="tFTybGUvijeJfeE2iRIES6"><!--pnid:MygZNStTr5B53iH8ADR7Ex-->MVP 60–90 万；全量 180–250 万</td><td data-page-node-id="87iFIh08Yj25PaccDzDA1U"><!--pnid:x4DT7isriUz7FRi9uujCIh-->含行业模板与对接</td></tr>
+<tr data-page-node-id="LnnrDRtzwTzgKwcvuBdvBq"><td data-page-node-id="60t45I3KAlxEdDai3deNDU"><!--pnid:JiFhurtcmD5MaITJujuuxM-->私有化 AI 推理</td><td data-page-node-id="eJG7QPEIJ9nbRZRrTGGNmV"><!--pnid:F1WVHamOinmwdyb4DcYnuj-->15–25 万（32B 级）</td><td data-page-node-id="iw3iA5RJyxXpBE5n0FM6zP"><!--pnid:NEhxsFh8Q5gGg5s9JoOgEF-->8 卡机型另计 60–120 万</td></tr>
+<tr data-page-node-id="EahzCBV5r9PMpqBnth13yR"><td data-page-node-id="FLwMDmBTRtsefh4vwdmdH0"><!--pnid:PRk09tmNRKV2rJClktWGR1-->硬件与云资源</td><td data-page-node-id="p0inLEFtX6wFKiMVT5zcdr"><!--pnid:ilQWhNMKxnuM44gB3lYbNZ-->10–30 万/年</td><td data-page-node-id="yOgw85Ct6HSsxa84XqHahG"><!--pnid:aaybFZjMyuGhYpwzAf5W6H-->小规模可复用现有虚机</td></tr>
+<tr data-page-node-id="rQNyTQ87A2fVuKU0CNBWz1"><td data-page-node-id="PbkKF3n8HJRja2FyEXj9mu"><!--pnid:xhO0s8YXilIfrlEQQXqpyd-->年运维</td><td data-page-node-id="UIzhief1gvPbu1LCePDlUk"><!--pnid:EjQ038LA4pw9toAJUdJSKs-->建设费的 20%–25%</td><td data-page-node-id="HeBDhWXrjg6dlQO9AjvTuY"><!--pnid:RFOsj8vMm3ew6mpCmUal7f-->含 1–2 人运维 + 迭代</td></tr>
+</tbody>
+</table>
+
+<h3 data-page-node-id="Oxl1F5F0CwBHa4sesKh3sR"><!--pnid:S8RIRtSIEOdOydxKxWDP47-->12.2 目标 KPI</h3>
+
+<table data-page-node-id="q07dk6rRmKSKwFEU8cc2f3">
+<thead data-page-node-id="R7cDsvLc9UmIQhMl3ciSor"><tr data-page-node-id="q4FardNlwoHC39P1rEPknT"><th data-page-node-id="PrNU7Rzc73Q32lbw69GEdX" style="width:30%"><!--pnid:2GqEwhuSNXIlPXF3EF8Hif-->指标</th><th data-page-node-id="rMZPkgObo2Qrs93ya2iAd4" style="width:16%"><!--pnid:OUN5aVbpLbCmLldLzhY3Bn-->现状（典型）</th><th data-page-node-id="UwYCJuUTHmqUJoYcvVhcLt" style="width:16%"><!--pnid:JI5k7MMSSREniWVE2VYmjl-->目标</th><th data-page-node-id="rpZ0OJoLNlp75fJ2eClXYu"><!--pnid:qIjicY2Dsxsudg8uyLEMuW-->度量方式</th></tr></thead>
+<tbody data-page-node-id="bxpNeASBkJkxDM6zY3VEhI">
+<tr data-page-node-id="R6CcUQ6i5qOWwAkZeQrd8P"><td data-page-node-id="kQwJyQI3H7jn0osn8n0uDy"><!--pnid:ltK77fqI0b9O7JyPqqrxGS-->账实相符率</td><td data-page-node-id="nF0SgawO4ERXKtnqisUSK4"><!--pnid:xtEIbLrBcmbeoTsfDNJYJm-->92%–96%</td><td data-page-node-id="bdzle1599fkdsYn3XizHj8"><!--pnid:5uG1eV27qVtA0pvzjzDVGP-->≥ 99.5%</td><td data-page-node-id="jWlBdIzzJ5HObJNfCIyBXM"><!--pnid:eaUcoRUOia6g54870MkCcb-->1 − |A−C| / A，按月按料号</td></tr>
+<tr data-page-node-id="0wdkXyEYGvoouMsSWOO2Nu"><td data-page-node-id="bBGEMkrj4rnDjBiLKXW0TV"><!--pnid:gquvYysToJRKKIATLLIctO-->月度对账周期</td><td data-page-node-id="qsuJHfVuD1phwXZdxi6ODN"><!--pnid:03s0Pe3TZi731yqctCUOuV-->10–15 天</td><td data-page-node-id="vHMe7AtWYikw6yFK0kC2xx"><!--pnid:AF0CRDEvSnJ8o1nvaoxSIW-->≤ 3 天</td><td data-page-node-id="RrX7kWzHqphIpl91oZnnM7"><!--pnid:JTbSURnWv0xVQIkAbtVu8i-->期间结束到锁账签字</td></tr>
+<tr data-page-node-id="gmr7W7kQAHSj7l0iOtadBU"><td data-page-node-id="IkJTJDu2GC2fL6Jik34NGP"><!--pnid:EUh8xYWtCSu0QUXUfI7YB2-->差异平均关闭时长</td><td data-page-node-id="wRFdTIC3W4oUxULf1FRj9P"><!--pnid:i7Ic33a0Li2ZbYL79Nh48z-->5–7 天</td><td data-page-node-id="Dg5qLCbvI6MOj3kgBmXANl"><!--pnid:tJRN21aS8iSrrdRUeTapGs-->≤ 1 天</td><td data-page-node-id="ahP0M57lbZ58bGOGpg6IwB"><!--pnid:0N2mC0WVzeGDLFukXOwsU8-->差异产生到关闭</td></tr>
+<tr data-page-node-id="iodNlSuOW6k4IzjUqhxcE6"><td data-page-node-id="BdwzQtp36UuiTMA4yNt5hP"><!--pnid:9oqE99sDAsUz7Tipd98OJI-->批次追溯耗时</td><td data-page-node-id="qWzau4WEjVTVmXMLb60KBv"><!--pnid:cjQL4DAuue4uGrQL7de8Ub-->1–2 天</td><td data-page-node-id="8Q152ts5QEauuFGuh7slKx"><!--pnid:4Zi3RA6jUmPxl0lr1BJPzS-->≤ 30 分钟</td><td data-page-node-id="0IHRsoDL8uUQX5x3UbZBoW"><!--pnid:YkZc98E67aeMmXJjATmHbu-->随机抽 SN 反查至晶圆批</td></tr>
+<tr data-page-node-id="CVJAStyNFu9EOJPDqvcr5O"><td data-page-node-id="RMvCgBt3KmyZ9fAzoKl661"><!--pnid:H6Laa23b5SRa0TKkYrAPfC-->报工/回传及时率</td><td data-page-node-id="lH2sgmCUYG4Vc5zqB9A109"><!--pnid:fLECKVtBtcmCp1HYZeYRlI-->无统计</td><td data-page-node-id="J1w83hLlNrfw8jTThkH2cU"><!--pnid:Cmii0Qv0oG0fLxruUaDZ9a-->≥ 95%</td><td data-page-node-id="z4p6jL6EcOXwVX4TJqlAbM"><!--pnid:LgA8K88OR27yjWOFQXsDKG-->规定时限内回传的事件占比</td></tr>
+<tr data-page-node-id="zxAiE3hVgirES1u35sagyO"><td data-page-node-id="jZz7TI4MT3OrSPsEkfnfgd"><!--pnid:iNRtLdaL5SaeOSIVwP5mSJ-->单耗偏差</td><td data-page-node-id="XDffg9Jybcep0xc4pfz5kt"><!--pnid:OLE3Zj2ynESIZ2BSvmO9ql-->无统计</td><td data-page-node-id="9x64ECGFsSVAmjQ7dSBBI6"><!--pnid:ftvame5s6We1yFIvG398FI-->≤ 2%</td><td data-page-node-id="EpKERXtxbACuJVzzZ6r1kQ"><!--pnid:LbdBLeaWSmIgqscRWwu1VU-->实际领用 / 理论用量</td></tr>
+<tr data-page-node-id="OLB30WzvFbLJOze7R0hKM7"><td data-page-node-id="ixfIFbr62VRxuIV67ZDW2M"><!--pnid:cS1acTqFEGHFQEhJTsCsPy-->呆滞库存金额</td><td data-page-node-id="XciydfeEoZ0XkWNH01Wujn"><!--pnid:p0hNoOrKbgTRDtnIILvCJI-->基线</td><td data-page-node-id="UTEqzML7aSLtbEvUTMoPWL"><!--pnid:K3I4RPMNejcDeiBd5QPfNs-->下降 30%</td><td data-page-node-id="TsR1CKcbYMqG0h6Ptyy2zr"><!--pnid:mApjAarmpBogg34zTfriXL-->账龄 &gt; 180 天库存金额</td></tr>
+<tr data-page-node-id="Jx5q2XK9TsspU898o1ZzED"><td data-page-node-id="upZMFT9iUl73IKal0Mlsk4"><!--pnid:B6T7mllpbFNKsgBzuOcsEl-->急单可承诺率</td><td data-page-node-id="dzAoFrAK75PDwvCWCw6DCW"><!--pnid:odwOlWDBncNayPt9H36F6g-->&lt; 50%</td><td data-page-node-id="LnyAI2RbdL1SBV6BiKOkus"><!--pnid:KBPj4jeJxSYSzy3KYfYuR5-->≥ 90%</td><td data-page-node-id="6RRxodYw4QtezFrcG2YPWc"><!--pnid:yey61s2nUpV6a6Bwo3FN2b-->1 小时内可答复"可动用 + 交期"的比例</td></tr>
+</tbody>
+</table>
+
+<h3 data-page-node-id="lDXXfhYKUh9usuJwfvseFJ"><!--pnid:7jkHzGPFJhZbe2k5QOo8T3-->12.3 上线验收清单</h3>
+
+<ul data-page-node-id="10rcwj8DEkcJ3fIikZ7HiI" class="chk">
+<li data-page-node-id="ZmMovBwlJfhbQGnKiMpjqx"><!--pnid:jSfFgrG5zayDE9wiocBWOJ-->连续 3 个对账期间账实相符率 ≥ 99%，且差异全部有原因码</li>
+<li data-page-node-id="nGbFpzzld9rToHfxYg1Tr9"><!--pnid:02PO8Ll1aPtMB3OCKOBy32-->锁账后无任何手工改数记录（只有调整单）</li>
+<li data-page-node-id="fWHidzcXcrfntMagxd6Xjy"><!--pnid:gtl8V5RF3PPyMsSjLfDz1c-->随机抽 5 个成品 SN，30 分钟内追溯到晶圆批与对应发货单</li>
+<li data-page-node-id="2xFCNl0Oda0S0QMe2TjXYt"><!--pnid:kYXbVTsTLseQ1FzR2yoy8r-->IDH 报工及时率连续 4 周 ≥ 95%</li>
+<li data-page-node-id="3ElZFrE24gBa4wD1TA1pFw"><!--pnid:JiNxNxe0FWng9r5cGf1vMc-->双方财务书面认可：平台对账单可直接作为结算依据</li>
+<li data-page-node-id="Puk7kK44RwCVtgDYJp0bDA"><!--pnid:Yja80MuH2GQA6vgFC9CBGy-->期初盘点报告三方签字归档</li>
+<li data-page-node-id="c_acc01">所有工单沟通均在 CollabChat 内完成，微信/邮件沟通零依赖；差异申辩有完整对话记录归档</li>
+</ul>
+
+<h2 data-page-node-id="Ujw6FAah96uo2TIAkPfpsT"><!--pnid:lqcW0K83xrKfNJ630CpN9x-->附录</h2>
+
+<h3 data-page-node-id="IzHySs2egLHS4I2GZ8LYlt"><!--pnid:aAlihQUomn9uz3LfGn1kiG-->A · 对账差异原因字典</h3>
+
+<table data-page-node-id="pnYfu2VzFaYnekqUSf6dyJ">
+<thead data-page-node-id="BwJ2FeCnV69r6xND17uVsF"><tr data-page-node-id="5lPR73HgJZxzLF14cOYeBM"><th data-page-node-id="qHoqE6zTx3LQ4TWg4IRiDO" style="width:8%"><!--pnid:S6EKbfMR8tW1gQ6neIioyE-->代码</th><th data-page-node-id="fhUj6Kd2DNaUnqA1Tti980" style="width:24%"><!--pnid:S20kL2dCR5glUlu2m2C0Wt-->原因</th><th data-page-node-id="8pPQG5sDZKbioxQ8zM6FBP" style="width:14%"><!--pnid:lXmTdS3E8XkPow2b2y40ns-->责任方</th><th data-page-node-id="H0UjzEOzjkjF75izSdf4Mp" style="width:26%"><!--pnid:VvrK6173EHDF72DA5H3AHX-->标准处理动作</th><th data-page-node-id="ETu7AzHvT5KFvkYVaFIGgj"><!--pnid:V30jIb2Ruoo3aK70SohXDu-->容差</th></tr></thead>
+<tbody data-page-node-id="KOnD94gPGehpEYO0Qk2BOD">
+<tr data-page-node-id="wVFyCr51zZ5P01YRTeSZMx"><td data-page-node-id="b0Ga5Ks2t4VF5bIX8zBMMf"><code data-page-node-id="EsJ1DRpodeOzj470DnBT3Q" data-pnid-children="xhtHBaLGJMfy4Bjp302JRQ">D01</code></td><td data-page-node-id="p18y6oSPBOS654M1LrE7Ds"><!--pnid:1TECcCRN9rBHRHvx408NWW-->在途未达</td><td data-page-node-id="a3XLIj46hU2Pp1xkmgKhAn"><!--pnid:tDhvi8Na3sPh8A90Bz1jCM-->物流 / 原厂</td><td data-page-node-id="jJFD4DDVhiJKuomXkViamr"><!--pnid:xLSLzP1MkAgcjg9NPAQIa2-->核 ETA，超期升级，不调账</td><td data-page-node-id="txl9ZM6zDDBo2o0nEVFKbb"><!--pnid:giqex9Er7MA9JCDKDSI5YY-->≤ 3 天</td></tr>
+<tr data-page-node-id="48TaR6A6nNMh4hsOT9QMx5"><td data-page-node-id="QMj7g5fLPTe6tpUBqcigPi"><code data-page-node-id="gBFywqZYcjatAGwrojlYGV" data-pnid-children="YPaAtHP8pdCJwWkOySKSP7">D02</code></td><td data-page-node-id="0mS4QZSU72gWAA5OboMqec"><!--pnid:qV4vzdjzOYCTKs6ch4KKsu-->收货未确认</td><td data-page-node-id="4w0b1334U0N5sQz9ffXrSI"><!--pnid:GynLt1kvCO9ExlDcPhubzK-->IDH</td><td data-page-node-id="8KL4SBryy97xqYQz5SPXu3"><!--pnid:ZtPTeyf5RnOBNYMRwZNKWb-->补录 GR，或反向冲销</td><td data-page-node-id="L33JLDAQxiYRnrz0uBP9fo"><!--pnid:dvQPUmO6wkWBnviKVBrGFQ-->0</td></tr>
+<tr data-page-node-id="lCSjmUa0Nn10ye6RDdMDZx"><td data-page-node-id="uMvHhwWiKAHTlDx3co5rm2"><code data-page-node-id="tCnMvdqYGxISOraptXfAY0" data-pnid-children="ifDDEvyJYcWlnhqIA1BYl8">D03</code></td><td data-page-node-id="mgiyRsuioCFxb83Fb0NzYe"><!--pnid:m3yozahHm0op0I71Y2dRBC-->领用未报工</td><td data-page-node-id="qK59jEFvcQeRx3ThN0AAmv"><!--pnid:D4slVWqqaRxIA2KFxLNeZP-->IDH</td><td data-page-node-id="odL1HVWf3CDfc3m3QAHRPa"><!--pnid:yKTFWTuWarlQOuwPle9Gj1-->补报工，锁定工单直至补齐</td><td data-page-node-id="G8lGhrf9W2gzme3XqrUpZz"><!--pnid:GGOM7ZJEhZtPc6CtJIqXeV-->0</td></tr>
+<tr data-page-node-id="8V94LBkHxbnumgOGMvXbXh"><td data-page-node-id="kGcrIctvo23sSDVgElbKrM"><code data-page-node-id="yRSSVMqJvyq1oPDe6MY7MB" data-pnid-children="GeIyYDBYYQEvBeEZCBSUaS">D04</code></td><td data-page-node-id="Mnrkd8VKV0dnjV3OJ5efCb"><!--pnid:oiosCXlnA0MABjIM6IpaQ5-->报废未申报</td><td data-page-node-id="B8YweSVX7JPvdbafYpZEdw"><!--pnid:7ZabU9HRTMysSi1HiJ46nH-->IDH</td><td data-page-node-id="OZfKoM0PZGSfVux4LJiKta"><!--pnid:Fy8G06rFMhTDyDcis0iZkN-->补报废单；超标准损耗部分按合同价扣减</td><td data-page-node-id="mWhKVZG4nBGPGx7Iq05OWS"><!--pnid:vsbbvSCA1i7hz3t96gQbAO-->标准损耗率内免罚</td></tr>
+<tr data-page-node-id="CflRqxnpM48rtTdXB0AjKn"><td data-page-node-id="mxopjqTv1S6HxSsweAqtgf"><code data-page-node-id="Ho4pu19Rc99uTbeE0uomJ1" data-pnid-children="UMxJvQcUevQNe20LHlIHA5">D05</code></td><td data-page-node-id="Ai8v6J7L68MmiOJigStb4I"><!--pnid:B4p8TpB7nrRAIo3JLkyhvW-->批次串用 / 挪用</td><td data-page-node-id="0vLjPqr0lRg3h29U6qJHvF"><!--pnid:fiBGiRFVM09k6ArZuc4BAZ-->IDH</td><td data-page-node-id="b7pJr0gotlHujmhrbA2789"><!--pnid:PNypOoJNhpj7SaJfQKbeGQ-->现场核查，登记串批调整，追溯影响面</td><td data-page-node-id="kpwhx1eD90nqpofY2AuqSS"><!--pnid:UUst3ZOwwmifLJ7TY0gC5s-->0</td></tr>
+<tr data-page-node-id="J3Bqn9fCK6ReMxaDOzVBFf"><td data-page-node-id="fOkNRnWp4NkrLhPDMa0tvu"><code data-page-node-id="ZNuJuVAjd63c9tGJy0G3AH" data-pnid-children="iaolj3pJsmIWzzT58iYNb7">D06</code></td><td data-page-node-id="PF5Aowrbd3FHT0UShWgBX4"><!--pnid:knx471yp4qAVpKoESqiXBy-->单位换算错误</td><td data-page-node-id="7ozm6kf94C52gDPytpi6tV"><!--pnid:x6tRAJCP2M1oEmwNnJ3sS5-->双方</td><td data-page-node-id="FvNoTkkdj7tWqHHD3Zb8qH"><!--pnid:WlIpFtprqlSs8Nysry9EXh-->核对容器码与换算率，重算</td><td data-page-node-id="Qjmbgjs93hUnnlYmRP1kAa"><!--pnid:twJzBmjVzg8WaLGJT51x9q-->0</td></tr>
+<tr data-page-node-id="z7gVdbhcDKViJpg7ZvIEpg"><td data-page-node-id="xGplW6NWq0SL11GMMcIH4m"><code data-page-node-id="tIG3btqnlWKej5h9k44Y4b" data-pnid-children="ZGa1U5o2NfydXbyONXNEEK">D07</code></td><td data-page-node-id="fa1V8Yo8BGmrKZPd1kMRms"><!--pnid:BFjxaOtbriZi9uRH7mtUTY-->退料未冲回</td><td data-page-node-id="Ng8FnYmPvgfwRAkAzqSN9g"><!--pnid:O1IVbXdJwwDbagIahKQkgF-->IDH</td><td data-page-node-id="EAr7I1laOgFOG76lXAbJWK"><!--pnid:9XDXg038oNsBcr4gvHA0Yv-->补退料单</td><td data-page-node-id="NJLnvqVWIM6LYiortZZRsr"><!--pnid:fZmsKUIIyyyNOIazU2hAPa-->0</td></tr>
+<tr data-page-node-id="lROLTgtZZfoVsDgRCa5vaC"><td data-page-node-id="SUiWbjT1Gzh9ca53b6yHPv"><code data-page-node-id="TMLLUbk23lYfd2WDkphxHS" data-pnid-children="hoxewE8FOSXUuOniLjpZkS">D08</code></td><td data-page-node-id="Wr1LxuLpz0lRbDQ8XvQVSQ"><!--pnid:q9Q55F2MCKS6soaee8us6C-->样品 / 借料未登记</td><td data-page-node-id="hbMSc4FIgjmTq4TM6TEodt"><!--pnid:f9iye0r4kNpGHhlZiGSu4W-->原厂</td><td data-page-node-id="fXkLRRdikZKkRNBeSnK2el"><!--pnid:YpMeRqkwoayTSINsEoLbfT-->补登记，转销售或核销</td><td data-page-node-id="KbgXiTNMyvHyJX0H5yMznZ"><!--pnid:p8f8NMFgnTdHgpLUMGJcWS-->按额度</td></tr>
+<tr data-page-node-id="eyFrWD09KAt0r9Fafkn3QE"><td data-page-node-id="DTvmj2M3p0rXdFOgVfwV0i"><code data-page-node-id="NbnRcNUmAJsSvUDs5lYjwf" data-pnid-children="Hso1ywf1F5m0LlNaJ8kZZf">D09</code></td><td data-page-node-id="9QmiZAmnVL7lm84sBgZRzJ"><!--pnid:6hOwelcyp9kNvXkhBWfgyI-->委外损耗超标准</td><td data-page-node-id="2ggvO5h581bXn5ewRCJffT"><!--pnid:15QPF9zRH6zSVOilMDfF83-->IDH</td><td data-page-node-id="XM0I7twS77OdhbNOL7JaWD"><!--pnid:ScJjVBN6ypOQUgNCF9ynQQ-->按合同扣减，纳入绩效</td><td data-page-node-id="q9IRcOJqQlBrDKGCAtwEIP"><!--pnid:hMKIoYapZYu028fpPfrUSS-->标准损耗率内免罚</td></tr>
+<tr data-page-node-id="yJvX8oOxchkKnteXMM5yXv"><td data-page-node-id="ACVNBCUpZY3JfguxDGjPOj"><code data-page-node-id="4RWlRGlihSu71HTXE39J1y" data-pnid-children="AgWvur3y4MEzOqZVaUk9eR">D10</code></td><td data-page-node-id="r6Y6szJkD9vDLjcy1N11iK"><!--pnid:yYqvBzWmSIhWnnkvO2KmBY-->重复录入 / 系统错录</td><td data-page-node-id="1uCU1e341WpkxWmN6iiYrO"><!--pnid:v82pthV3i1fR9l9D0XQ5Jb-->双方</td><td data-page-node-id="fZkATyVCN10021Lf64w34M"><!--pnid:4Qla4oEm3JAOmYpL17C0m4-->反向事件冲销，修正主数据</td><td data-page-node-id="SvSxN4TNBH1BUbl7Mjoopv"><!--pnid:YlQivjkS1zyBjBFnawoUHy-->0</td></tr>
+</tbody>
+</table>
+
+<h3 data-page-node-id="0dnjc9oiaL551WYFv2mAzN"><!--pnid:YXIzubT5UDqOgVmaNUaq1q-->B · 关键接口清单</h3>
+
+<table data-page-node-id="pgA0lNjIZ3SQRzh41QHZ38">
+<thead data-page-node-id="brfCyFaHaoODHHmbHkCQQL"><tr data-page-node-id="f46lRguCi7vW45wqqRx4GY"><th data-page-node-id="LwomTy5kPIGmn9l2Tvxn6j" style="width:24%"><!--pnid:NqzWUVZfVrY8x7VZBzqmsg-->接口</th><th data-page-node-id="utQ622YUWlLyd88jU7mBK0" style="width:12%"><!--pnid:CrN0tw4zKahrQjP02guq10-->方向</th><th data-page-node-id="1NKlI5o2owSq0tZJ8yoM3D"><!--pnid:ILeQ75vMVUOqJkrvPbCmOh-->说明</th></tr></thead>
+<tbody data-page-node-id="04rRbVN95SeL2xvRREsnG6">
+<tr data-page-node-id="csHPHhI6jU3fqeXFEKkkys"><td data-page-node-id="FGc9HWHZqcWJv3nFiZ3EXc"><code data-page-node-id="IbYs66qIxkWSbfDihHfZEs" data-pnid-children="Ks6p8PvYgi3G0fiXcTWlaz">POST /work-orders</code></td><td data-page-node-id="E6CQNBuarG24V8Iq1j0UKE"><!--pnid:wqxg2QxQPs6XVkIAFTVCwc-->原厂 → 平台</td><td data-page-node-id="JZAoudTlNm4kQEEzuTHX1b"><!--pnid:CuYp1pKnm6ykMhDW6Oxts7-->工单下达（含行项目、交期、BOM 版本）</td></tr>
+<tr data-page-node-id="KzrEDlzCIY0Jh2iss3U1Sd"><td data-page-node-id="9SohSwKqJn82PirPRWNoHm"><code data-page-node-id="DeHePeE0cEPVBwiDHnElre" data-pnid-children="uZMlZ9sOYHaJGO3N2TEHtO">POST /shipments</code></td><td data-page-node-id="zvfwTCEQScHXADGZXXEwdR"><!--pnid:Ka6RsCAmKiGEg7Ku2ARcWv-->原厂 → 平台</td><td data-page-node-id="bzeJXFtLEBFpWrF4sxoSnh"><!--pnid:PT80ucjRnsInas5VQmIH5z-->发货单 + 装箱明细（批次、容器码、数量）</td></tr>
+<tr data-page-node-id="Rhx32iEI4CUgWS9OWa1ddR"><td data-page-node-id="0J5iP4A1L5jJowv7N9FpcJ"><code data-page-node-id="wpdOb9Cp2EEiYqYMyRfcTu" data-pnid-children="Wocy5UV9dTYHr7pbGLj0PE">POST /goods-receipts</code></td><td data-page-node-id="JXmBza2C624UX7a77180G5"><!--pnid:5TcoIb8xJJD0kvv5qczA7X-->IDH → 平台</td><td data-page-node-id="Y4oTf0m5WmwP6OAbD8sMSX"><!--pnid:TWyn688StgY4gFquBV8FHY-->收货确认，含短装/破损差异</td></tr>
+<tr data-page-node-id="i20tbs63cusOCpBBUmAbiY"><td data-page-node-id="pNgPFID3KzV41SOT65KDfe"><code data-page-node-id="vvqt0DRyhYM6GlogQeCAPU" data-pnid-children="PWKx9jkMVy9B2PyzQCIom5">POST /issues</code></td><td data-page-node-id="poHR1gzIm9Q4zwfofQOLMS"><!--pnid:UnrA81wzd42ASo3qYXP3C1-->IDH → 平台</td><td data-page-node-id="flzZ6nagvM3KubqRAQNn0V"><!--pnid:Foesa0nQaKsjseScK9NBAQ-->领料（消耗确认的唯一来源）</td></tr>
+<tr data-page-node-id="azpEXtp7bmQjp8Ws0kn50l"><td data-page-node-id="qDOWNA0dRN2lApm80KiRui"><code data-page-node-id="WkUKUsHf2dUxFf9qCEEBdx" data-pnid-children="A79B7vZXhiSzNaHVi4R3Un">POST /wip-reports</code></td><td data-page-node-id="RcKGWZoZf2HcJRBZR5gOuG"><!--pnid:hH3tn59NY0Ddi2T8HuVdMl-->IDH → 平台</td><td data-page-node-id="ZUWspsFd62uIt7Wl4jdCit"><!--pnid:MpsG23pJOEHnkilRPP6p08-->工序报工（投入/产出/报废）</td></tr>
+<tr data-page-node-id="PoMVCLI3tRAaURhbPvLgsY"><td data-page-node-id="7lYTjKQamefJH0xenzTfPl"><code data-page-node-id="ULyQsBT6e7QsKAsapOtaSH" data-pnid-children="zAzTLCPfDhQxK4iSLzLXGD">POST /fg-receipts</code></td><td data-page-node-id="tJ2XSgZGAAccJNG0nCTDjk"><!--pnid:YjqCoCqAJLySIf92I7Z0nD-->IDH → 平台</td><td data-page-node-id="8utBpqvw2oskKWCgy9pt95"><!--pnid:5NeNCbCS8jFSSWiWUH3aE0-->成品入库（SN 与批次绑定）</td></tr>
+<tr data-page-node-id="ViEBImGkZ9jnXAaJzVUnOD"><td data-page-node-id="lD1e5OR6bu1mCGNbt6xMt0"><code data-page-node-id="hcqp2g6rIjSUEGFt3pe3jh" data-pnid-children="gFjzJjZa8Q5mdTGHjBb7uz">GET /stock-ledger</code></td><td data-page-node-id="d7Sl9v6Rs9b1hBsjSzrvPF"><!--pnid:EgorNIA85reA0kfzyq8Yjz-->双向</td><td data-page-node-id="9Mdxy2DWQRlJrr2cfD5sQF"><!--pnid:xzYZMdj37ESlP39kZqSPwe-->按料号/批次/归属方的库存查询</td></tr>
+<tr data-page-node-id="yBKCDNgkTuj57JPJSeB7Gb"><td data-page-node-id="fveohlMSJfco6EtFtODsWg"><code data-page-node-id="OAAV7rGlaoFJzJKXtpTqru" data-pnid-children="ZDqh24CSOCaKM383l8oReq">GET /reconciliation</code></td><td data-page-node-id="rVJEhzgo4vsZs3YpNcRTfF"><!--pnid:wL87Aqosf2ctmsbe3BEzfh-->双向</td><td data-page-node-id="tg9Ss0eZSuko8xKOAPcRBl"><!--pnid:x0O5ZnrPtORB0YzZo4P82t-->期间对账单与差异明细</td></tr>
+<tr data-page-node-id="beURyRdE3bL7RotNeDU0JX"><td data-page-node-id="5abVVVxq7imHDmNYsAfRud"><code data-page-node-id="7Sdq2noIZ1Ee5JmXsniYe1" data-pnid-children="YUHtBOMUI3lGdPzMzV9Y9l">POST /adjustments</code></td><td data-page-node-id="1PxZBldTgq3MuU7jVOLat6"><!--pnid:FiMV5mtXPBTIj4UaHD1GwK-->双向</td><td data-page-node-id="fpQt78vPoigmOIDo0DI4t1"><!--pnid:GXco0Q7qQ9gyDjsVE9IfxK-->调整单（双签后生效）</td></tr>
+<tr data-page-node-id="e2uqTarsvMaFXLILVyStmN"><td data-page-node-id="AZbb5JhDcuvvDoGXweTO3Q"><code data-page-node-id="DDk3Ze65BN0MQOU4X1n1Sd" data-pnid-children="E2ToUTEpN3X1wf0tWYpB70">WEBHOOK /events</code></td><td data-page-node-id="wW8bURR4lkrMR3gNV73c5R"><!--pnid:omMdT5a9BodyuSSpCUDB8N-->平台 → 双方</td><td data-page-node-id="vvbFfEWPq1bJQUIncTKnCD"><!--pnid:WJn9Czl8hMnyRPebS7lrJy-->状态变更推送（含幂等键与重试策略）</td></tr>
+</tbody>
+</table>
+
+<h3 data-page-node-id="L0gde5hRvWLbvCZVHaNw8b"><!--pnid:nHrhO7P8GH5IBHn6DQpB2K-->C · 未来 30 天可以立刻做的事</h3>
+
+<ol data-page-node-id="9fE5wP6LEH2qAoB5KlDPQX">
+<li data-page-node-id="Zy99BWe1YSotZwXtsdcV3u"><b data-page-node-id="uz1FxL1qZp3ANU24zSvx9u"><!--pnid:KZlannNeV1ihwU2tWEQ8NN-->第 1 周：</b><!--pnid:6gnNdaj9AyRVcABgzR73Nt-->拉一张"料号 × IDH × 批次"的当前账，把三方数字并排放一次。你会发现差异比想象的大，这比任何立项 PPT 都有说服力。</li>
+<li data-page-node-id="EI1ZrYehc1e0Kf0x6lh9gR"><b data-page-node-id="xOfijQuPGoInBRjc0fLTuP"><!--pnid:cncOMKNdEJ0sTenPxR7MR0-->第 2 周：</b><!--pnid:yTaogpYCq67kAK9FrRJKq5-->选 1 家配合度最高的 IDH，做一次 3 天的联合盘点，把差异逐条落原因码。这是编码规则的实战校验。</li>
+<li data-page-node-id="5UUt2URNHbvDoP1Egkwoce"><b data-page-node-id="Ebk16VPNl1Xk6cQ437zuL7"><!--pnid:WprRYrFdpeglFa69BI5zLy-->第 3 周：</b><!--pnid:ZQdjdr8S4MmHJqWbKJyyNs-->定稿编码规范与差异字典（各 2 页纸即可），找法务把"数据同步义务 + 结算依据"两条写进下一次工单合同。</li>
+<li data-page-node-id="n8D0ZN9RRNipsGp6t2VbQw"><b data-page-node-id="lBFOSgVZVcVWFfTw3BCwap"><!--pnid:IYL3bl5KxGKMw1NiNZ9yu1-->第 4 周：</b><!--pnid:gEh9xVAthNX1Rh6ZwUoMXd-->用 Excel 模板 + 人工对账先模拟跑一个期间，验证流程可行性，再决定系统开发范围。这一步几乎零成本，却能砍掉 30% 的无效需求。</li>
+</ol>
+
+<div data-page-node-id="R6WTqmIKhqzIaHklQuGQTZ" class="callout key">
+<span data-page-node-id="VHeS5ZJP3k13a0Y9b56Fus" class="ct"><!--pnid:ZiJBA2fW1PkFMadf3jK71H-->一句话总结</span>
+<p data-page-node-id="Lc5PnJoxbUgHr6YJD26ehl"><!--pnid:hxzw1Pr9v1ZxrhIIjuWShy-->先统编码、再定基线、后建系统、最后上 AI。三账能自动对上，生产透明与消耗可视是自然结果；三账对不上，再多看板也只是把错误的数据展示得更漂亮。</p>
+</div>
+
+<footer data-page-node-id="yjJ2jXC9lx4TqbH2r0zJct">
+<p data-page-node-id="lIwxMwOFlHwKZ9BYIEum19"><!--pnid:DTmlFxstan3ODUX88KJcb0-->本文档为方案设计建议，具体功能边界、投入与排期需结合 IDH 数量、年出货量、现有 ERP 状况、结算模式（购销 / 委外 / 寄售）做裁剪。建议在立项评审前完成一次"现状三账并表"与"试点 IDH 走访"，用真实差异数据校准范围。</p>
+<p data-page-node-id="T4EicNwYmW6dBOw4IPJZzc" style="margin-top:8px; color:#94a3b8"><!--pnid:DoBzTm3JAdoebQGPewevvZ-->IDH 协同平台建设方案 · V1.0</p>
+</footer>
+
+</div>
+</body>
+</html>
