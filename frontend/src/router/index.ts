@@ -21,21 +21,53 @@ const router = createRouter({
           name: 'dashboard',
           component: () => import('@/views/DashboardView.vue'),
         },
+        // Work orders
         {
           path: 'work-orders',
           name: 'work-orders',
           component: () => import('@/views/WorkOrderList.vue'),
         },
         {
+          path: 'work-orders/:id',
+          name: 'work-order-detail',
+          component: () => import('@/views/WorkOrderDetail.vue'),
+        },
+        // Shipments
+        {
           path: 'shipments',
           name: 'shipments',
           component: () => import('@/views/ShipmentList.vue'),
         },
         {
+          path: 'shipments/:id',
+          name: 'shipment-detail',
+          component: () => import('@/views/ShipmentDetail.vue'),
+        },
+        // Inventory
+        {
           path: 'inventory',
           name: 'inventory',
           component: () => import('@/views/InventoryStock.vue'),
         },
+        // Production
+        {
+          path: 'production',
+          name: 'production',
+          component: () => import('@/views/ProductionPage.vue'),
+        },
+        // Reconciliation
+        {
+          path: 'reconciliation',
+          name: 'reconciliation',
+          component: () => import('@/views/ReconciliationPage.vue'),
+        },
+        // Conversations
+        {
+          path: 'conversations',
+          name: 'conversations',
+          component: () => import('@/views/ConversationPage.vue'),
+        },
+        // Alerts
         {
           path: 'alerts',
           name: 'alerts',
