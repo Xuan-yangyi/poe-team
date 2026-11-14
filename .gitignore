@@ -1,0 +1,24 @@
+# Python/Backend
+__pycache__/
+*.pyc
+*.pyo
+.eggs/
+*.egg-info/
+.env
+.pytest_cache/
+.pgdata/
+
+# Frontend
+node_modules/
+dist/
+
+# Docker
+.pgdata/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

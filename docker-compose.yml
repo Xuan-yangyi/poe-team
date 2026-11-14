@@ -1,0 +1,53 @@
+# ── IDH CRM — Docker Compose ────────────────────────────────────────────────
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: idh-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: idh_crm
+      POSTGRES_USER: idh_app
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-idh_dev}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./backend/alembic:/alembic:ro
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U idh_app -d idh_crm"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    container_name: idh-backend
+    restart: unless-stopped
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: idh_crm
+      DB_USER: idh_app
+      DB_PASSWORD: ${DB_PASSWORD:-idh_dev}
+      JWT_SECRET: ${JWT_SECRET:-dev-secret-change-in-production}
+      CORS_ORIGINS: '["http://localhost:8080"]'
+      REDIS_URL: ${REDIS_URL:-}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    container_name: idh-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+
+volumes:
+  pgdata:
+    driver: local

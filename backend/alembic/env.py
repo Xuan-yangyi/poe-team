@@ -1,4 +1,5 @@
 import asyncio
+import os
 import sys
 from pathlib import Path
 from logging.config import fileConfig
@@ -14,7 +15,18 @@ config = context.config
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
+# Build database URL from environment (Docker-compatible), falling back to alembic.ini
+_db_url = config.get_main_option("sqlalchemy.url")
+_db_host = os.getenv("DB_HOST")
+if _db_host:
+    _db_url = (
+        f"postgresql+asyncpg://{os.getenv('DB_USER', 'idh_app')}:{os.getenv('DB_PASSWORD', 'idh_dev')}"
+        f"@{_db_host}:{os.getenv('DB_PORT', '5432')}/{os.getenv('DB_NAME', 'idh_crm')}"
+    )
+    config.set_main_option("sqlalchemy.url", _db_url)
+
 from app.models.base import Base
+from app.auth.models import User  # noqa: F401 — registers User in Base.metadata
 target_metadata = Base.metadata
 
 

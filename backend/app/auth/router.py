@@ -1,6 +1,8 @@
-from fastapi import APIRouter, HTTPException
-from app.auth.schemas import LoginRequest, TokenResponse, RefreshRequest
-from app.auth.service import authenticate, create_tokens, AuthError
+from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy.ext.asyncio import AsyncSession
+from app.database import get_db
+from app.auth.schemas import LoginRequest, RefreshRequest
+from app.auth.service import authenticate, create_tokens_for_user, AuthError
 from app.core.response import success_response, ErrorCode
 from app.core.security import decode_token, create_access_token, create_refresh_token
 
@@ -8,12 +10,12 @@ router = APIRouter(prefix="/auth", tags=["auth"])
 
 
 @router.post("/login")
-async def login(body: LoginRequest):
+async def login(body: LoginRequest, db: AsyncSession = Depends(get_db)):
     try:
-        user = authenticate(body.username, body.password)
+        user = await authenticate(db, body.username, body.password)
     except AuthError as e:
         raise HTTPException(status_code=401, detail={"code": e.code, "message": e.message})
-    tokens = create_tokens(user)
+    tokens = create_tokens_for_user(user)
     return success_response(data=tokens)
 
 
@@ -24,7 +26,6 @@ async def refresh(body: RefreshRequest):
         raise HTTPException(status_code=401, detail={
             "code": ErrorCode.UNAUTHORIZED, "message": "Invalid refresh token"
         })
-    # In production, also check refresh token blacklist / rotation
     user_id = payload["sub"]
     claims = {k: v for k, v in payload.items() if k not in ("sub", "exp", "type", "iat")}
     access_token = create_access_token(user_id, extra_claims=claims)

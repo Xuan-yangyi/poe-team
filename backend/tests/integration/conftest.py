@@ -5,18 +5,30 @@ from httpx import AsyncClient, ASGITransport
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
 from sqlalchemy import text
 from app.main import app
-from app.auth.models import USERS
 from app.core.security import hash_password
 from app.database import get_db
 
 DATABASE_URL = "postgresql+asyncpg://idh_app:idh_dev@localhost:5433/idh_crm"
 TENANT_ID = "factory"
 
+# Pre-compute password hashes (same for every test run)
+_ADMIN_HASH = hash_password("admin123")
+_IDH_HASH = hash_password("idh123")
 
-@pytest.fixture(autouse=True)
-def setup_users():
-    USERS["factory_admin"]["password_hash"] = hash_password("admin123")
-    USERS["idh_op"]["password_hash"] = hash_password("idh123")
+
+@pytest_asyncio.fixture(autouse=True)
+async def seed_test_users(db_session):
+    """Seed default users into the database before each test."""
+    await db_session.execute(text("""
+        INSERT INTO users (id, username, password_hash, display_name, role, tenant_id, idh_id, is_active)
+        VALUES
+            ('a0000000-0000-0000-0000-000000000001', 'factory_admin', :admin_hash,
+             'Factory Admin', 'factory_admin', 'factory', NULL, true),
+            ('b0000000-0000-0000-0000-000000000001', 'idh_op', :idh_hash,
+             'IDH Operator', 'idh_op', 'IDH001', 'IDH001', true)
+        ON CONFLICT (username) DO UPDATE SET password_hash = EXCLUDED.password_hash
+    """), {"admin_hash": _ADMIN_HASH, "idh_hash": _IDH_HASH})
+    await db_session.flush()
 
 
 @pytest_asyncio.fixture

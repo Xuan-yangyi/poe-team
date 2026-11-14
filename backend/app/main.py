@@ -1,8 +1,18 @@
+import logging
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import get_settings
 from app.core.response import JSONResponse
+from app.core.middleware import RequestIdMiddleware, RequestLoggingMiddleware
+
+
+# Configure application logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s %(message)s",
+    datefmt="%Y-%m-%dT%H:%M:%S",
+)
 
 
 @asynccontextmanager
@@ -21,6 +31,10 @@ def create_app() -> FastAPI:
         lifespan=lifespan,
         default_response_class=JSONResponse,
     )
+
+    # Middleware order: outermost first
+    app.add_middleware(RequestIdMiddleware)
+    app.add_middleware(RequestLoggingMiddleware)
     app.add_middleware(
         CORSMiddleware,
         allow_origins=settings.cors_origins,
