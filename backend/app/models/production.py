@@ -1,7 +1,8 @@
 import uuid
-from sqlalchemy import String, Integer, SmallInteger
+from datetime import datetime, timezone
+from sqlalchemy import String, Integer, SmallInteger, DateTime, func
 from sqlalchemy.orm import Mapped, mapped_column
-from app.models.base import Base, TimestampMixin, TenantMixin
+from app.models.base import Base, TenantMixin
 
 
 class Issue(Base, TenantMixin):
@@ -14,7 +15,8 @@ class Issue(Base, TenantMixin):
     qty: Mapped[int] = mapped_column(Integer, nullable=False)
     operator: Mapped[str] = mapped_column(String(100), default="")
     scan_method: Mapped[str] = mapped_column(String(20), default="h5")
-    created_at: Mapped[str] = mapped_column(nullable=False, default="")
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False)
 
 
 class WipReport(Base, TenantMixin):
@@ -29,7 +31,8 @@ class WipReport(Base, TenantMixin):
     qty_scrap: Mapped[int] = mapped_column(Integer, default=0)
     scrap_reason: Mapped[str] = mapped_column(String(50), default="")
     reported_by: Mapped[str] = mapped_column(String(100), default="")
-    created_at: Mapped[str] = mapped_column(nullable=False, default="")
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False)
 
 
 class FgReceipt(Base, TenantMixin):
@@ -41,4 +44,5 @@ class FgReceipt(Base, TenantMixin):
     qty: Mapped[int] = mapped_column(Integer, default=1)
     lot_id: Mapped[str] = mapped_column(nullable=False)
     received_by: Mapped[str] = mapped_column(String(100), default="")
-    created_at: Mapped[str] = mapped_column(nullable=False, default="")
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False)

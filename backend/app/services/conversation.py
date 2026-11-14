@@ -1,5 +1,4 @@
 import uuid
-from datetime import datetime, timezone
 from sqlalchemy import select, func
 from sqlalchemy.ext.asyncio import AsyncSession
 from app.models.conversation import Conversation, ConversationMember, Message, MsgTag
@@ -30,8 +29,7 @@ async def add_member(db: AsyncSession, conversation_id: str, user_id: str,
         conversation_id=conversation_id,
         user_id=user_id,
         tenant_id=tenant_id,
-        created_at=datetime.now(timezone.utc).isoformat(),
-    )
+            )
     db.add(m)
     await db.flush()
     return m
@@ -60,8 +58,7 @@ async def post_message(db: AsyncSession, data: MessageCreate, tenant_id: str, ac
         content=data.content,
         parent_msg_id=data.parent_msg_id,
         tenant_id=tenant_id,
-        created_at=datetime.now(timezone.utc).isoformat(),
-    )
+            )
     db.add(msg)
     await emit_event(db, "MSG.POSTED", "message", msg.id,
                      {"conversation_id": data.conversation_id}, actor_id, tenant_id)
@@ -88,8 +85,7 @@ async def add_tag(db: AsyncSession, data: TagCreate, tenant_id: str, actor_id: s
         tagged_by=data.tagged_by,
         confidence=data.confidence,
         tenant_id=tenant_id,
-        created_at=datetime.now(timezone.utc).isoformat(),
-    )
+            )
     db.add(tag)
     await db.flush()
     return tag

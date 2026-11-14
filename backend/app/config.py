@@ -8,8 +8,8 @@ class Settings(BaseSettings):
 
     # Database
     db_host: str = "localhost"
-    db_port: int = 5432
-    db_name: str = "idh_platform"
+    db_port: int = 5433
+    db_name: str = "idh_crm"
     db_user: str = "idh_app"
     db_password: str = "idh_dev"
 

@@ -1,5 +1,6 @@
 import uuid
-from sqlalchemy import String, Integer
+from datetime import datetime, timezone
+from sqlalchemy import String, Integer, DateTime, func
 from sqlalchemy.orm import Mapped, mapped_column
 from app.models.base import Base, TenantMixin
 
@@ -17,4 +18,5 @@ class StockLedger(Base, TenantMixin):
     qty_after: Mapped[int] = mapped_column(Integer, nullable=False)
     event_type: Mapped[str] = mapped_column(String(50), nullable=False)
     event_id: Mapped[str] = mapped_column(String(100), nullable=False)
-    created_at: Mapped[str] = mapped_column(nullable=False, default="")
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False)
