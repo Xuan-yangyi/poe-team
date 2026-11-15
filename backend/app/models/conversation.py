@@ -15,6 +15,8 @@ class Conversation(Base, TimestampMixin, TenantMixin):
     ref_id: Mapped[str] = mapped_column(String(100), nullable=False, index=True)
     title: Mapped[str] = mapped_column(String(200), default="")
     is_active: Mapped[bool] = mapped_column(Boolean, default=True)
+    last_msg_preview: Mapped[str | None] = mapped_column(String(200), nullable=True)
+    last_msg_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
 
 
 class ConversationMember(Base, TenantMixin):

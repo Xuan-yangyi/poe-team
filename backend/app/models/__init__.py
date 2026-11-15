@@ -8,6 +8,8 @@ from app.models.production import Issue, WipReport, FgReceipt
 from app.models.reconciliation import ReconPeriod, ReconItem, Adjustment
 from app.models.conversation import Conversation, ConversationMember, Message, MsgTag
 from app.models.alert import Alert
+from app.models.agent import Agent, AgentSkill
+from app.models.llm_config import LLMConfig
 
 __all__ = [
     "Base", "TimestampMixin", "TenantMixin",
@@ -19,4 +21,6 @@ __all__ = [
     "ReconPeriod", "ReconItem", "Adjustment",
     "Conversation", "ConversationMember", "Message", "MsgTag",
     "Alert",
+    "Agent", "AgentSkill",
+    "LLMConfig",
 ]

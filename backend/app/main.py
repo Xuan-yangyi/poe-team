@@ -1,7 +1,9 @@
 import logging
+import os
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from app.config import get_settings
 from app.core.response import JSONResponse
 from app.core.middleware import RequestIdMiddleware, RequestLoggingMiddleware
@@ -65,6 +67,9 @@ from app.routers.production import router as production_router
 from app.routers.reconciliation import router as recon_router
 from app.routers.conversation import router as conv_router
 from app.routers.alert import router as alert_router
+from app.routers.user import router as user_router
+from app.routers.agent import router as agent_router
+from app.routers.llm_config import router as llm_config_router
 
 app.include_router(wo_router)
 app.include_router(shipment_router)
@@ -73,3 +78,15 @@ app.include_router(production_router)
 app.include_router(recon_router)
 app.include_router(conv_router)
 app.include_router(alert_router)
+app.include_router(user_router)
+app.include_router(agent_router)
+app.include_router(llm_config_router)
+
+# File upload
+from app.routers.upload import router as upload_router
+app.include_router(upload_router)
+
+# Static files for uploaded media
+uploads_dir = os.path.join(os.path.dirname(__file__), "..", "uploads")
+os.makedirs(uploads_dir, exist_ok=True)
+app.mount("/uploads", StaticFiles(directory=uploads_dir), name="uploads")

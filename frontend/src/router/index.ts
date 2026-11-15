@@ -73,21 +73,36 @@ const router = createRouter({
           name: 'alerts',
           component: () => import('@/views/AlertList.vue'),
         },
+        // Agents
+        {
+          path: 'agents',
+          name: 'agents',
+          component: () => import('@/views/AgentListView.vue'),
+        },
+        // LLM Config
+        {
+          path: 'llm-config',
+          name: 'llm-config',
+          component: () => import('@/views/LLMConfigView.vue'),
+        },
+        // Settings
+        {
+          path: 'settings',
+          name: 'settings',
+          component: () => import('@/views/SettingsView.vue'),
+        },
       ],
     },
   ],
 })
 
 // Navigation guard
-router.beforeEach((to, _from, next) => {
+router.beforeEach((to) => {
   const auth = useAuthStore()
-  if (to.meta.public) {
-    next()
-  } else if (!auth.isLoggedIn) {
-    next('/login')
-  } else {
-    next()
+  if (to.meta.public || auth.isLoggedIn) {
+    return true
   }
+  return '/login'
 })
 
 export default router

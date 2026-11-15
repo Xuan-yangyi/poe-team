@@ -16,6 +16,14 @@ async def login(body: LoginRequest, db: AsyncSession = Depends(get_db)):
     except AuthError as e:
         raise HTTPException(status_code=401, detail={"code": e.code, "message": e.message})
     tokens = create_tokens_for_user(user)
+    tokens["user"] = {
+        "user_id": str(user.id),
+        "username": user.username,
+        "role": user.role,
+        "tenant_id": user.tenant_id,
+        "display_name": user.display_name,
+        "idh_id": user.idh_id,
+    }
     return success_response(data=tokens)
 
 

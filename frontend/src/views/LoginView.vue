@@ -20,7 +20,11 @@ async function handleLogin() {
     await auth.login(form.value.username, form.value.password)
     router.push('/')
   } catch (e: any) {
-    ElMessage.error(e.response?.data?.detail?.message || '登录失败')
+    const msg = e.response?.data?.detail?.message
+            || e.message
+            || JSON.stringify(e)
+            || '登录失败'
+    ElMessage.error(msg)
   } finally {
     loading.value = false
   }

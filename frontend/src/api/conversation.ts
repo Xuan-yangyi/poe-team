@@ -12,6 +12,10 @@ export function createConversation(data: Record<string, any>) {
   return api.post('/conversations', data)
 }
 
+export function createGroup(data: { title: string; member_ids: string[] }) {
+  return api.post('/conversations/group', data)
+}
+
 export function getMessages(convId: string, params?: Record<string, any>) {
   return api.get(`/conversations/${convId}/messages`, { params })
 }
@@ -22,4 +26,12 @@ export function postMessage(convId: string, data: Record<string, any>) {
 
 export function addTag(data: Record<string, any>) {
   return api.post('/conversations/tags', data)
+}
+
+export function getConversationMembers(convId: string) {
+  return api.get(`/conversations/${convId}/members`)
+}
+
+export function listUsers() {
+  return api.get('/users')
 }

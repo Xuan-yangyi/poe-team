@@ -1,1 +1,1 @@
-from app.routers import work_order, shipment, inventory, production, reconciliation, conversation, alert
+from app.routers import work_order, shipment, inventory, production, reconciliation, conversation, alert, user
